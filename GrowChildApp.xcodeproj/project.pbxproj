@@ -14,6 +14,7 @@
 		BF1CE8A422D5990800ACF7F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1CE8A222D5990800ACF7F8 /* LaunchScreen.storyboard */; };
 		BF1CE8AF22D5990800ACF7F8 /* GrowChildAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE8AE22D5990800ACF7F8 /* GrowChildAppTests.swift */; };
 		BF1CE8BA22D5990800ACF7F8 /* GrowChildAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE8B922D5990800ACF7F8 /* GrowChildAppUITests.swift */; };
+		BF1CE8C722D59D6500ACF7F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE89B22D5990700ACF7F8 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1CE8C722D59D6500ACF7F8 /* ViewController.swift in Sources */,
 				BF1CE8AF22D5990800ACF7F8 /* GrowChildAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
