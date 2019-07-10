@@ -49,6 +49,17 @@ class GrowChildAppUITests: XCTestCase {
       testbutton.tap()
       
       XCTAssertEqual(labb.label, "2")
+      XCTAssertTrue(testbutton.isEnabled)
+      
+      testbutton.tap()
+      testbutton.tap()
+      testbutton.press(forDuration: 1)
+      testbutton.tap()
+      testbutton.press(forDuration: 1)
+      testbutton.tap(withNumberOfTaps: 4, numberOfTouches: 4)
+      
+      XCTAssertEqual(labb.label, "11")
+      
     }
 
 }

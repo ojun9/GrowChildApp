@@ -21,9 +21,11 @@ class ViewController: UIViewController {
       b.addTarget(self, action: #selector(tapb(sender:)), for: .touchUpInside)
       b.backgroundColor = .blue
       b.tag = 0
+      b.accessibilityIdentifier = "b"
       self.view.addSubview(b)
       
       lab.text = String(b.tag)
+      lab.accessibilityIdentifier = "lab"
       self.view.addSubview(lab)
    }
    
