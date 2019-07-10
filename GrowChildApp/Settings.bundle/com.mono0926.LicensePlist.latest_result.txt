@@ -1,0 +1,9 @@
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 2.5.0
+
+add-version-numbers: false
+
+LicensePlist Version: 1.8.3
