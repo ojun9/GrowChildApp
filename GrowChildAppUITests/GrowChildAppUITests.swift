@@ -17,11 +17,11 @@ class GrowChildAppUITests: XCTestCase {
         continueAfterFailure = false
 
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        //XCUIApplication().launch()
 
-//      let app = XCUIApplication()
-//      setupSnapshot(app)
-//      app.launch()
+      let app = XCUIApplication()
+      setupSnapshot(app)
+      app.launch()
       
       
       
@@ -45,11 +45,17 @@ class GrowChildAppUITests: XCTestCase {
       
       XCTAssertEqual(labb.label, "0")
       
+      snapshot("0Launch")
+      
       testbutton.tap()
       testbutton.tap()
       
+      
+      
       XCTAssertEqual(labb.label, "2")
       XCTAssertTrue(testbutton.isEnabled)
+      
+      snapshot("1Launch")
       
       testbutton.tap()
       testbutton.tap()
@@ -60,6 +66,7 @@ class GrowChildAppUITests: XCTestCase {
       
       XCTAssertEqual(labb.label, "11")
       
+      snapshot("2Launch")
     }
 
 }
