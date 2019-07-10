@@ -34,7 +34,7 @@ class GrowChildAppUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+       func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
       
@@ -68,5 +68,28 @@ class GrowChildAppUITests: XCTestCase {
       
       snapshot("2Launch")
     }
+   
+   
+   
+   func testPart2() {
+      let app = XCUIApplication()
+      let bButton = app.buttons["b"]
+      bButton.tap()
+      bButton.tap()
+      app/*@START_MENU_TOKEN@*/.staticTexts["lab"]/*[[".staticTexts[\"4\"]",".staticTexts[\"lab\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+      bButton.tap()
+      bButton.tap()
+      app/*@START_MENU_TOKEN@*/.staticTexts["lab"]/*[[".staticTexts[\"7\"]",".staticTexts[\"lab\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+      
+      let bElement = app.otherElements.containing(.button, identifier:"b").element
+      bElement.tap()
+      bElement.tap()
+      bElement.tap()
+      XCUIDevice.shared.orientation = .portrait
+      XCUIDevice.shared.orientation = .portrait
+      XCUIDevice.shared.orientation = .faceUp
+      XCUIDevice.shared.orientation = .portrait
+      XCUIDevice.shared.orientation = .faceUp
+   }
 
 }
