@@ -18,12 +18,19 @@ default_platform(:ios)
 platform :ios do
 
   before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
     cocoapods
   end
 
-
   desc "Push a new release build to the App Store"
+
+
+  lane :test do
+    increment_build_number
+    scan(scheme: "GrowChildApp")
+  end
+
+
   lane :release do
 
     increment_build_number
@@ -34,8 +41,6 @@ platform :ios do
 		skip_metadata: true,)
     #build_app(workspace: "GrowChildApp.xcworkspace", scheme: "GrowChildApp")
     #upload_to_app_store
-
-
   end
 
   lane :beta do
@@ -43,3 +48,21 @@ platform :ios do
     build_app(workspace: "GrowChildApp.xcworkspace", scheme: "GrowChildApp")
     upload_to_testflight
   end
+
+
+
+
+  after_all do |lane|
+    slack(
+	message: "Fast Lane Success."
+    )
+  end
+
+  error do |lane, exception |
+    slack(
+	message: exception.message,
+	success: false
+    )
+  end
+
+end
