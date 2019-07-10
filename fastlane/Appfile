@@ -1,0 +1,8 @@
+app_identifier("com.Taped.GrowChildApp") # The bundle identifier of your app
+apple_id("eu.bkw7jdcpa2r@gmail.com") # Your Apple email address
+
+itc_team_id("119130838") # App Store Connect Team ID
+team_id("9R4W53MKG7") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
