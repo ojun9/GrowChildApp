@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		BF1CE8C722D59D6500ACF7F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE89B22D5990700ACF7F8 /* ViewController.swift */; };
 		BF1CE8CA22D5A19500ACF7F8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF1CE8C922D5A19500ACF7F8 /* Settings.bundle */; };
 		BF6D3C5822D5CB4A00237F07 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */; };
+		BF6D3C5C22D5ED9500237F07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5B22D5ED9500237F07 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		BF1CE8BB22D5990800ACF7F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF1CE8C922D5A19500ACF7F8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		BF6D3C5B22D5ED9500237F07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		DD4BC87DB6DD16D0812D35BE /* Pods-GrowChildAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 		BF1CE89822D5990700ACF7F8 /* GrowChildApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF6D3C5B22D5ED9500237F07 /* R.generated.swift */,
 				BF1CE89922D5990700ACF7F8 /* AppDelegate.swift */,
 				BF1CE89B22D5990700ACF7F8 /* ViewController.swift */,
 				BF1CE89D22D5990700ACF7F8 /* Main.storyboard */,
@@ -180,6 +183,7 @@
 			buildConfigurationList = BF1CE8BE22D5990800ACF7F8 /* Build configuration list for PBXNativeTarget "GrowChildApp" */;
 			buildPhases = (
 				F76FA2E69A281550A4639F68 /* [CP] Check Pods Manifest.lock */,
+				BF6D3C5A22D5EC9800237F07 /* ShellScript */,
 				BF1CE89222D5990700ACF7F8 /* Sources */,
 				BF1CE89322D5990700ACF7F8 /* Frameworks */,
 				BF1CE89422D5990700ACF7F8 /* Resources */,
@@ -361,6 +365,25 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ $CONFIGURATION = \"Debug\" ]; then\n${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Settings.bundle\nfi\n";
 		};
+		BF6D3C5A22D5EC9800237F07 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		BFF812AE85F0C5A84CD283F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,6 +437,7 @@
 			files = (
 				BF1CE89C22D5990700ACF7F8 /* ViewController.swift in Sources */,
 				BF1CE89A22D5990700ACF7F8 /* AppDelegate.swift in Sources */,
+				BF6D3C5C22D5ED9500237F07 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
