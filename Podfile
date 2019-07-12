@@ -23,16 +23,24 @@ target 'GrowChildApp' do
   pod 'PopupDialog', '~> 1.1'
   pod 'VegaScrollFlowLayout'
 
+end
 
-
-  target 'GrowChildAppTests' do
+target 'GrowChildAppTests' do
     inherit! :search_paths
+    pod 'ChameleonFramework/Swift'
+    pod 'SCLAlertView'
+    pod 'TapticEngine'
+    pod 'NVActivityIndicatorView'
+    pod "ViewAnimator"
     # Pods for testing
   end
 
   target 'GrowChildAppUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'ChameleonFramework/Swift'
+    pod 'SCLAlertView'
+    pod 'TapticEngine'
+    pod 'NVActivityIndicatorView'
+    pod "ViewAnimator"
   end
-
-end

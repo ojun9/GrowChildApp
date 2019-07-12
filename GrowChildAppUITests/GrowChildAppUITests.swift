@@ -34,62 +34,20 @@ class GrowChildAppUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-       func testExample() {
+   func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
       
-      let app = XCUIApplication()
       
-      let testbutton = app.buttons["b"]
-      let labb = app.staticTexts["lab"]
-      
-      XCTAssertEqual(labb.label, "0")
-      
-      snapshot("0Launch")
-      
-      testbutton.tap()
-      testbutton.tap()
-      
-      
-      
-      XCTAssertEqual(labb.label, "2")
-      XCTAssertTrue(testbutton.isEnabled)
-      
-      snapshot("1Launch")
-      
-      testbutton.tap()
-      testbutton.tap()
-      testbutton.press(forDuration: 1)
-      testbutton.tap()
-      testbutton.press(forDuration: 1)
-      testbutton.tap(withNumberOfTaps: 4, numberOfTouches: 4)
-      
-      XCTAssertEqual(labb.label, "11")
-      
-      snapshot("2Launch")
     }
    
+
    
    
-   func testPart2() {
-      let app = XCUIApplication()
-      let bButton = app.buttons["b"]
-      bButton.tap()
-      bButton.tap()
-      app/*@START_MENU_TOKEN@*/.staticTexts["lab"]/*[[".staticTexts[\"4\"]",".staticTexts[\"lab\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-      bButton.tap()
-      bButton.tap()
-      app/*@START_MENU_TOKEN@*/.staticTexts["lab"]/*[[".staticTexts[\"7\"]",".staticTexts[\"lab\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+   func testPart3() {
       
-      let bElement = app.otherElements.containing(.button, identifier:"b").element
-      bElement.tap()
-      bElement.tap()
-      bElement.tap()
-      XCUIDevice.shared.orientation = .portrait
-      XCUIDevice.shared.orientation = .portrait
-      XCUIDevice.shared.orientation = .faceUp
-      XCUIDevice.shared.orientation = .portrait
-      XCUIDevice.shared.orientation = .faceUp
+      
+      
    }
 
 }

@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2767A04333FB8A4389A56B0B /* Pods_GrowChildAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195F50D7C4612FE97F199363 /* Pods_GrowChildAppUITests.framework */; };
+		14EE3893CDF2A00A0C47FC43 /* libPods-GrowChildAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C61E1ED0DB60C0D90887C7 /* libPods-GrowChildAppUITests.a */; };
 		7BB0B722F53B858995E4B531 /* Pods_GrowChildApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B26642AF8B76A502286FDD /* Pods_GrowChildApp.framework */; };
-		97455F1499C882D37BD6DF95 /* Pods_GrowChildAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995CB5A648D5860A9720AF41 /* Pods_GrowChildAppTests.framework */; };
 		BF1CE89A22D5990700ACF7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE89922D5990700ACF7F8 /* AppDelegate.swift */; };
 		BF1CE89C22D5990700ACF7F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE89B22D5990700ACF7F8 /* ViewController.swift */; };
 		BF1CE89F22D5990700ACF7F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1CE89D22D5990700ACF7F8 /* Main.storyboard */; };
@@ -20,6 +19,11 @@
 		BF1CE8CA22D5A19500ACF7F8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF1CE8C922D5A19500ACF7F8 /* Settings.bundle */; };
 		BF6D3C5822D5CB4A00237F07 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */; };
 		BF6D3C5C22D5ED9500237F07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5B22D5ED9500237F07 /* R.generated.swift */; };
+		BF7FE28422D886330027B3FE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE28322D886330027B3FE /* MainTabBarViewController.swift */; };
+		BF7FE28722D886EC0027B3FE /* ChildCanDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE28622D886EC0027B3FE /* ChildCanDoViewController.swift */; };
+		BF7FE28C22D887EC0027B3FE /* BreastFeedingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE28B22D887EB0027B3FE /* BreastFeedingMainViewController.swift */; };
+		BF7FE28E22D8881D0027B3FE /* SettingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE28D22D8881D0027B3FE /* SettingMainViewController.swift */; };
+		E08221CF2E697363FD7F7718 /* libPods-GrowChildAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9D75C561C9A7B9559E816 /* libPods-GrowChildAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		195F50D7C4612FE97F199363 /* Pods_GrowChildAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowChildAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		201A5BF13DD3A33D7D1D08A7 /* Pods-GrowChildApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildApp.debug.xcconfig"; path = "Target Support Files/Pods-GrowChildApp/Pods-GrowChildApp.debug.xcconfig"; sourceTree = "<group>"; };
+		52C61E1ED0DB60C0D90887C7 /* libPods-GrowChildAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GrowChildAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		552004489C9EA1859B5D3913 /* Pods-GrowChildAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-GrowChildAppUITests/Pods-GrowChildAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		58133FD64DC17B02164D3E1F /* Pods-GrowChildAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildAppTests.release.xcconfig"; path = "Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		64B26642AF8B76A502286FDD /* Pods_GrowChildApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowChildApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		995CB5A648D5860A9720AF41 /* Pods_GrowChildAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowChildAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73B9D75C561C9A7B9559E816 /* libPods-GrowChildAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GrowChildAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA1FDC5A471ED3D47C5E8A1 /* Pods-GrowChildApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildApp.release.xcconfig"; path = "Target Support Files/Pods-GrowChildApp/Pods-GrowChildApp.release.xcconfig"; sourceTree = "<group>"; };
 		A2A89AC8424258AB5EE7F56A /* Pods-GrowChildAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildAppUITests.release.xcconfig"; path = "Target Support Files/Pods-GrowChildAppUITests/Pods-GrowChildAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF1CE89622D5990700ACF7F8 /* GrowChildApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowChildApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +68,10 @@
 		BF1CE8C922D5A19500ACF7F8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		BF6D3C5B22D5ED9500237F07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		BF7FE28322D886330027B3FE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		BF7FE28622D886EC0027B3FE /* ChildCanDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCanDoViewController.swift; sourceTree = "<group>"; };
+		BF7FE28B22D887EB0027B3FE /* BreastFeedingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreastFeedingMainViewController.swift; sourceTree = "<group>"; };
+		BF7FE28D22D8881D0027B3FE /* SettingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMainViewController.swift; sourceTree = "<group>"; };
 		DD4BC87DB6DD16D0812D35BE /* Pods-GrowChildAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97455F1499C882D37BD6DF95 /* Pods_GrowChildAppTests.framework in Frameworks */,
+				E08221CF2E697363FD7F7718 /* libPods-GrowChildAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2767A04333FB8A4389A56B0B /* Pods_GrowChildAppUITests.framework in Frameworks */,
+				14EE3893CDF2A00A0C47FC43 /* libPods-GrowChildAppUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				64B26642AF8B76A502286FDD /* Pods_GrowChildApp.framework */,
-				995CB5A648D5860A9720AF41 /* Pods_GrowChildAppTests.framework */,
-				195F50D7C4612FE97F199363 /* Pods_GrowChildAppUITests.framework */,
+				73B9D75C561C9A7B9559E816 /* libPods-GrowChildAppTests.a */,
+				52C61E1ED0DB60C0D90887C7 /* libPods-GrowChildAppUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -146,6 +154,10 @@
 				BF6D3C5B22D5ED9500237F07 /* R.generated.swift */,
 				BF1CE89922D5990700ACF7F8 /* AppDelegate.swift */,
 				BF1CE89B22D5990700ACF7F8 /* ViewController.swift */,
+				BF7FE28A22D887AB0027B3FE /* RootViewController */,
+				BF7FE28522D886660027B3FE /* ChildCanDoViewCon */,
+				BF7FE28822D887750027B3FE /* BreastFeedingViewController */,
+				BF7FE28922D887960027B3FE /* SettingViewController */,
 				BF1CE89D22D5990700ACF7F8 /* Main.storyboard */,
 				BF1CE8A022D5990800ACF7F8 /* Assets.xcassets */,
 				BF1CE8A222D5990800ACF7F8 /* LaunchScreen.storyboard */,
@@ -172,6 +184,38 @@
 				BF1CE8BB22D5990800ACF7F8 /* Info.plist */,
 			);
 			path = GrowChildAppUITests;
+			sourceTree = "<group>";
+		};
+		BF7FE28522D886660027B3FE /* ChildCanDoViewCon */ = {
+			isa = PBXGroup;
+			children = (
+				BF7FE28622D886EC0027B3FE /* ChildCanDoViewController.swift */,
+			);
+			path = ChildCanDoViewCon;
+			sourceTree = "<group>";
+		};
+		BF7FE28822D887750027B3FE /* BreastFeedingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF7FE28B22D887EB0027B3FE /* BreastFeedingMainViewController.swift */,
+			);
+			path = BreastFeedingViewController;
+			sourceTree = "<group>";
+		};
+		BF7FE28922D887960027B3FE /* SettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF7FE28D22D8881D0027B3FE /* SettingMainViewController.swift */,
+			);
+			path = SettingViewController;
+			sourceTree = "<group>";
+		};
+		BF7FE28A22D887AB0027B3FE /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF7FE28322D886330027B3FE /* MainTabBarViewController.swift */,
+			);
+			path = RootViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,7 +479,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1CE89C22D5990700ACF7F8 /* ViewController.swift in Sources */,
+				BF7FE28422D886330027B3FE /* MainTabBarViewController.swift in Sources */,
+				BF7FE28E22D8881D0027B3FE /* SettingMainViewController.swift in Sources */,
 				BF1CE89A22D5990700ACF7F8 /* AppDelegate.swift in Sources */,
+				BF7FE28C22D887EC0027B3FE /* BreastFeedingMainViewController.swift in Sources */,
+				BF7FE28722D886EC0027B3FE /* ChildCanDoViewController.swift in Sources */,
 				BF6D3C5C22D5ED9500237F07 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 20;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildApp/Info.plist;
@@ -637,7 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
