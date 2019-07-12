@@ -160,7 +160,7 @@
 				BF7FE28522D886660027B3FE /* ChildCanDoViewCon */,
 				BF7FE28822D887750027B3FE /* BreastFeedingViewController */,
 				BF7FE28922D887960027B3FE /* SettingViewController */,
-				BF7FE28F22D88BEF0027B3FE /* Child */,
+				BF7FE28F22D88BEF0027B3FE /* ChildData */,
 				BF1CE89D22D5990700ACF7F8 /* Main.storyboard */,
 				BF1CE8A022D5990800ACF7F8 /* Assets.xcassets */,
 				BF1CE8A222D5990800ACF7F8 /* LaunchScreen.storyboard */,
@@ -221,12 +221,12 @@
 			path = RootViewController;
 			sourceTree = "<group>";
 		};
-		BF7FE28F22D88BEF0027B3FE /* Child */ = {
+		BF7FE28F22D88BEF0027B3FE /* ChildData */ = {
 			isa = PBXGroup;
 			children = (
 				BF7FE29022D88C070027B3FE /* Child.swift */,
 			);
-			path = Child;
+			path = ChildData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
