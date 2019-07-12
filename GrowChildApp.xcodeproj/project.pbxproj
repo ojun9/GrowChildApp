@@ -25,6 +25,7 @@
 		BF7FE28E22D8881D0027B3FE /* SettingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE28D22D8881D0027B3FE /* SettingMainViewController.swift */; };
 		BF7FE29122D88C070027B3FE /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE29022D88C070027B3FE /* Child.swift */; };
 		BF7FE29322D88C4B0027B3FE /* ChildCanDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE29222D88C4B0027B3FE /* ChildCanDo.swift */; };
+		BF7FE29522D88CC50027B3FE /* BreastFeedingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE29422D88CC50027B3FE /* BreastFeedingManager.swift */; };
 		E08221CF2E697363FD7F7718 /* libPods-GrowChildAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9D75C561C9A7B9559E816 /* libPods-GrowChildAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		BF7FE28D22D8881D0027B3FE /* SettingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMainViewController.swift; sourceTree = "<group>"; };
 		BF7FE29022D88C070027B3FE /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		BF7FE29222D88C4B0027B3FE /* ChildCanDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCanDo.swift; sourceTree = "<group>"; };
+		BF7FE29422D88CC50027B3FE /* BreastFeedingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreastFeedingManager.swift; sourceTree = "<group>"; };
 		DD4BC87DB6DD16D0812D35BE /* Pods-GrowChildAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +230,7 @@
 			children = (
 				BF7FE29022D88C070027B3FE /* Child.swift */,
 				BF7FE29222D88C4B0027B3FE /* ChildCanDo.swift */,
+				BF7FE29422D88CC50027B3FE /* BreastFeedingManager.swift */,
 			);
 			path = ChildData;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1CE89C22D5990700ACF7F8 /* ViewController.swift in Sources */,
+				BF7FE29522D88CC50027B3FE /* BreastFeedingManager.swift in Sources */,
 				BF7FE28422D886330027B3FE /* MainTabBarViewController.swift in Sources */,
 				BF7FE29122D88C070027B3FE /* Child.swift in Sources */,
 				BF7FE28E22D8881D0027B3FE /* SettingMainViewController.swift in Sources */,
