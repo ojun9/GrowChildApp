@@ -1,5 +1,5 @@
 //
-//  Child.swift
+//  ChildDateOfBirth.swift
 //  GrowChildApp
 //
 //  Created by jun on 2019/07/12.
@@ -7,17 +7,19 @@
 //
 
 import Foundation
-import UIKit
 
 
-class Child {
+class ChildDateOfBirth {
    
+   var Year: Int
+   var Month: Int
+   var Day: Int
    
-   private let Name = ""
-   private let Image = UIImage()
-   private let DateOfBirth = ChildDateOfBirth()
    
    init() {
-      
+      Year = 0
+      Month = 0
+      Day = 0
    }
+   
 }
