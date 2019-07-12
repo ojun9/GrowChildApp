@@ -12,14 +12,13 @@ import SCLAlertView
 
 class ChildCanDoMainViewController: UIViewController {
    
-   
-
-   
+      
    override func viewDidLoad() {
       super.viewDidLoad()
       InitViewSetting()
       SetUpNavigationItemSetting()
       
+  
    }
    
    private func InitViewSetting() {
