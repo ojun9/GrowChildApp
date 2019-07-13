@@ -37,8 +37,50 @@ class GrowChildAppUITests: XCTestCase {
    func testExample() {
       
       
- 
       
+      let app = XCUIApplication()
+      let candoregibuttonButton = app.buttons["CanDoRegiButton"]
+      candoregibuttonButton.tap()
+      XCUIDevice.shared.orientation = .portrait
+      
+      snapshot("1")
+      
+      let button = app.navigationBars["でき"].buttons["できたこと"]
+      button.tap()
+      
+      snapshot("2")
+      
+      let candoseebuttonButton = app.buttons["CanDoSeeButton"]
+      candoseebuttonButton.tap()
+      XCUIDevice.shared.orientation = .faceUp
+      button.tap()
+      
+      snapshot("3")
+      
+      let tabBarsQuery = app.tabBars
+      let mostViewedButton = tabBarsQuery.buttons["Most Viewed"]
+      mostViewedButton.tap()
+      
+      snapshot("4")
+      
+      let favoritesButton = tabBarsQuery.buttons["Favorites"]
+      favoritesButton.tap()
+      candoregibuttonButton.tap()
+      app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+      mostViewedButton.tap()
+      favoritesButton.tap()
+      button.tap()
+      
+      snapshot("5")
+      
+      candoseebuttonButton.tap()
+      tabBarsQuery.buttons["Bookmarks"].tap()
+      mostViewedButton.tap()
+      favoritesButton.tap()
+      button.tap()
+      
+   
+      snapshot("6")
       
     }
    

@@ -22,6 +22,8 @@ class NavigationBarCustomView: UIView {
    override init(frame: CGRect) {
       super.init(frame: frame)
 
+      //self.backgroundColor = .black
+      
       SetUpaccessibilityIdentifierForAllObject()
       
       InitChildName()
@@ -105,7 +107,7 @@ class NavigationBarCustomView: UIView {
       ChildNameLabel.snp.makeConstraints { make in
          make.height.equalTo(self.snp.height)
          make.leading.equalTo(ChildImageView.snp.trailing).offset(10)
-         make.trailing.equalTo(self.snp.trailing)
+         make.trailing.equalTo(self.snp.trailing).offset(-self.frame.height / 4)
       }
    }
    
