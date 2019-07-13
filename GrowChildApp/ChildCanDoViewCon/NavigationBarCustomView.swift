@@ -24,12 +24,14 @@ class NavigationBarCustomView: UIView {
       
       InitChildName()
       InitStringOFChildNameLabel()
+      SetUpChildNameLabel()
       
       InitChildImage()
       InitImageOFChildImageView()
+      SetUpChildImageView()
       
-      SetUpImageViewPoition()
-      SetUpChildNameLabel()
+      SetUpImageViewMakeConstraints()
+      SetUpChildNameLabelMakeConstraints()
    }
    
    private func SetUpaccessibilityIdentifierForAllObject() {
@@ -37,10 +39,12 @@ class NavigationBarCustomView: UIView {
       ChildImageView.accessibilityIdentifier = "ChildImageView"
    }
    
+   //名前の取得をどっかからする
    private func InitChildName() {
       ChildName = "TMP"
    }
    
+   //名前のを取り出してLabelに反映させる
    private func InitStringOFChildNameLabel() {
       if let name = ChildName {
          self.ChildNameLabel.text = name
@@ -48,13 +52,19 @@ class NavigationBarCustomView: UIView {
          print("名前が取得できません")
          self.ChildNameLabel.text = "None"
       }
+   }
+   
+   //Labelの各種設定をする
+   private func SetUpChildNameLabel() {
       self.addSubview(ChildNameLabel)
    }
    
+   //Imageの取得をどっかからする
    private func InitChildImage() {
       ChildImage = UIImage(named: "test.png")
    }
    
+   //Imageの反映をImageVeiwにする
    private func InitImageOFChildImageView() {
       if let image = ChildImage {
          ChildImageView.image = image
@@ -62,11 +72,14 @@ class NavigationBarCustomView: UIView {
          print("画像は登録されてません")
          ChildImageView.image = UIImage(named: "flare")
       }
-      
+   }
+   
+   //ImageViewの各種設定をする
+   private func SetUpChildImageView() {
       self.addSubview(ChildImageView)
    }
    
-   private func SetUpImageViewPoition() {
+   private func SetUpImageViewMakeConstraints() {
       ChildImageView.snp.makeConstraints { make in
          make.height.equalTo(self.snp.height)
          make.leading.equalTo(self.snp.leading)
@@ -74,7 +87,7 @@ class NavigationBarCustomView: UIView {
       }
    }
    
-   private func SetUpChildNameLabel() {
+   private func SetUpChildNameLabelMakeConstraints() {
       ChildNameLabel.snp.makeConstraints { make in
          make.height.equalTo(self.snp.height)
          make.leading.equalTo(ChildImageView.snp.trailing).offset(5)
