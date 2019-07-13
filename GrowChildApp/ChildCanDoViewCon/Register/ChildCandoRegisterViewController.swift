@@ -18,6 +18,12 @@ class ChildCandoRegisterViewController: UIViewController {
       super.viewDidLoad()
       InitViewSetting()
       SetUpNavigationItemSetting()
+      
+      InitNotification()
+   }
+   
+   private func InitNotification() {
+      
    }
    
    private func InitViewSetting() {
@@ -25,13 +31,10 @@ class ChildCandoRegisterViewController: UIViewController {
    }
    
    private func SetUpNavigationItemSetting() {
-      
       let ImageAndNameView = NavigationBarCustomViewImageAndText(
             frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: (self.navigationController?.navigationBar.frame.size.height)!),
             ViewText: "できたこと")
       self.navigationItem.titleView = ImageAndNameView
-      
-      self.navigationController?.navigationBar
   
       self.navigationController?.navigationBar.barTintColor = UIColor.flatWatermelon()
       self.navigationController?.navigationBar.tintColor = .white

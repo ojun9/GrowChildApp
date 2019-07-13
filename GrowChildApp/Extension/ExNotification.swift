@@ -9,5 +9,6 @@
 import Foundation
 
 extension Notification.Name {
-   static let TapTodoImage = Notification.Name("TapTodoImage")
+   static let SellectImageNowSellected = Notification.Name("SellectImageNowSellected")
+   static let SellectImageNowNotSellected = Notification.Name("SellectImageNowNotSellected")
 }

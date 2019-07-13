@@ -99,7 +99,6 @@ class GrowChildAppUITests: XCTestCase {
    func testPart3() {
       
       
-      
       let app = XCUIApplication()
       let tabBarsQuery = app.tabBars
       tabBarsQuery.buttons["Bookmarks"].tap()
@@ -146,18 +145,10 @@ class GrowChildAppUITests: XCTestCase {
       favoritesButton.tap()
       childcandomainviewcontrollerviewElement.tap()
       element.tap()
-      childcandomainviewcontrollerviewElement.tap()
-      candoregibuttonButton.tap()
+
+      
       
       snapshot("16")
-      
-      let navigationbarcustomviewimageandtextStaticText = childcandomainviewcontrollernabitabbarNavigationBar.staticTexts["NavigationBarCustomViewImageAndText"]
-      navigationbarcustomviewimageandtextStaticText.tap()
-      navigationbarcustomviewimageandtextStaticText.tap()
-      navigationbarcustomviewimageandtextStaticText.tap()
-      
-      
-      snapshot("17")
    }
 
 }

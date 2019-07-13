@@ -17,6 +17,9 @@
 		BF1CE8AF22D5990800ACF7F8 /* GrowChildAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE8AE22D5990800ACF7F8 /* GrowChildAppTests.swift */; };
 		BF1CE8BA22D5990800ACF7F8 /* GrowChildAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE8B922D5990800ACF7F8 /* GrowChildAppUITests.swift */; };
 		BF1CE8CA22D5A19500ACF7F8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF1CE8C922D5A19500ACF7F8 /* Settings.bundle */; };
+		BF1FB7E522D9BE5D005E80BA /* RegisterScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7E422D9BE5D005E80BA /* RegisterScrollView.swift */; };
+		BF1FB7E722D9C024005E80BA /* SellectImageViewForSpuare.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7E622D9C024005E80BA /* SellectImageViewForSpuare.swift */; };
+		BF1FB7E922D9C622005E80BA /* ExShowAlart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7E822D9C622005E80BA /* ExShowAlart.swift */; };
 		BF6D3C5822D5CB4A00237F07 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */; };
 		BF6D3C5C22D5ED9500237F07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5B22D5ED9500237F07 /* R.generated.swift */; };
 		BF7FE28422D886330027B3FE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE28322D886330027B3FE /* MainTabBarViewController.swift */; };
@@ -76,6 +79,9 @@
 		BF1CE8B922D5990800ACF7F8 /* GrowChildAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowChildAppUITests.swift; sourceTree = "<group>"; };
 		BF1CE8BB22D5990800ACF7F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF1CE8C922D5A19500ACF7F8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		BF1FB7E422D9BE5D005E80BA /* RegisterScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScrollView.swift; sourceTree = "<group>"; };
+		BF1FB7E622D9C024005E80BA /* SellectImageViewForSpuare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellectImageViewForSpuare.swift; sourceTree = "<group>"; };
+		BF1FB7E822D9C622005E80BA /* ExShowAlart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExShowAlart.swift; sourceTree = "<group>"; };
 		BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		BF6D3C5B22D5ED9500237F07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BF7FE28322D886330027B3FE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +280,9 @@
 			isa = PBXGroup;
 			children = (
 				BF7FE29B22D982A00027B3FE /* ChildCandoRegisterViewController.swift */,
+				BF1FB7E822D9C622005E80BA /* ExShowAlart.swift */,
+				BF1FB7E422D9BE5D005E80BA /* RegisterScrollView.swift */,
+				BF1FB7E622D9C024005E80BA /* SellectImageViewForSpuare.swift */,
 				BF7FE2A822D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift */,
 			);
 			path = Register;
@@ -550,9 +559,12 @@
 			files = (
 				BF1CE89C22D5990700ACF7F8 /* ViewController.swift in Sources */,
 				BF7FE29E22D982EC0027B3FE /* ChildCanDoSeeViewController.swift in Sources */,
+				BF1FB7E922D9C622005E80BA /* ExShowAlart.swift in Sources */,
+				BF1FB7E522D9BE5D005E80BA /* RegisterScrollView.swift in Sources */,
 				BF7FE29A22D8910E0027B3FE /* ChildDateOfBirth.swift in Sources */,
 				BF7FE29C22D982A00027B3FE /* ChildCandoRegisterViewController.swift in Sources */,
 				BF7FE29522D88CC50027B3FE /* BreastFeedingManager.swift in Sources */,
+				BF1FB7E722D9C024005E80BA /* SellectImageViewForSpuare.swift in Sources */,
 				BF7FE28422D886330027B3FE /* MainTabBarViewController.swift in Sources */,
 				BF7FE29122D88C070027B3FE /* Child.swift in Sources */,
 				BF7FE28E22D8881D0027B3FE /* SettingMainViewController.swift in Sources */,
@@ -742,7 +754,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 28;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildApp/Info.plist;
@@ -765,7 +777,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
