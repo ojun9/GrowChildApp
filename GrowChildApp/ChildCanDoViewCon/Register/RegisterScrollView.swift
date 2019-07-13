@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import ChameleonFramework
+import SnapKit
 
 class RegisterScrollView: UIScrollView {
    
@@ -44,6 +45,14 @@ class RegisterScrollView: UIScrollView {
       
       InitCanDoRegisterButton()
       InitCanDoCancelButton()
+      
+      SetUpCanDoTextLabel()
+      SetUpCanDoTextField()
+      SetUpMemoOfCanDOTextLabel()
+      SetUpMemoOfTextView()
+      SetUpSellectImageView()
+      SetUpCanDoRegisterButton()
+      SetUpCanDoCancelButton()
    }
    
    
@@ -86,6 +95,35 @@ class RegisterScrollView: UIScrollView {
    private func InitCanDoCancelButton() {
       CanDoCancelButton.backgroundColor = UIColor.flatMint()
       self.addSubview(CanDoCancelButton)
+   }
+   
+   
+   private func SetUpCanDoTextLabel() {
+      
+   }
+   
+   private func SetUpCanDoTextField() {
+         
+   }
+   
+   private func SetUpMemoOfCanDOTextLabel() {
+            
+   }
+   
+   private func SetUpMemoOfTextView() {
+               
+   }
+   
+   private func SetUpSellectImageView() {
+                  
+   }
+   
+   private func SetUpCanDoRegisterButton() {
+                     
+   }
+   
+   private func SetUpCanDoCancelButton() {
+                        
    }
    
    required init?(coder aDecoder: NSCoder) {
