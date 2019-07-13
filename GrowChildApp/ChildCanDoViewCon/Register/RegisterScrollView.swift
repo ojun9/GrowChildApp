@@ -53,6 +53,11 @@ class RegisterScrollView: UIScrollView {
       SetUpSellectImageView()
       SetUpCanDoRegisterButton()
       SetUpCanDoCancelButton()
+      
+      self.snp.makeConstraints { make in
+         make.bottom.equalTo(CanDoCancelButton.snp.bottom).offset(20)
+         make.top.equalTo(CanDoTextLabel.snp.top).offset(30)
+      }
    }
    
    
