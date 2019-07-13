@@ -25,6 +25,8 @@ target 'GrowChildApp' do
 
 
   pod 'SnapKit', '~> 5.0.0'
+  pod 'SwiftFontName', '~> 4.0.0'
+
 
 end
 
@@ -36,6 +38,7 @@ target 'GrowChildAppTests' do
     pod 'NVActivityIndicatorView'
     pod "ViewAnimator"
     pod 'SnapKit', '~> 5.0.0'
+    pod 'SwiftFontName', '~> 4.0.0'
     # Pods for testing
   end
 
@@ -48,4 +51,5 @@ target 'GrowChildAppTests' do
     pod 'NVActivityIndicatorView'
     pod "ViewAnimator"
     pod 'SnapKit', '~> 5.0.0'
+    pod 'SwiftFontName', '~> 4.0.0'
   end

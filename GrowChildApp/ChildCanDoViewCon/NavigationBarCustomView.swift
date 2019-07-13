@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import SnapKit
+import SwiftFontName
+import ChameleonFramework
 
 class NavigationBarCustomView: UIView {
    
@@ -19,6 +21,8 @@ class NavigationBarCustomView: UIView {
    
    override init(frame: CGRect) {
       super.init(frame: frame)
+      
+      self.backgroundColor = .brown
       
       SetUpaccessibilityIdentifierForAllObject()
       
@@ -41,7 +45,7 @@ class NavigationBarCustomView: UIView {
    
    //名前の取得をどっかからする
    private func InitChildName() {
-      ChildName = "TMP"
+      ChildName = "とりあえず"
    }
    
    //名前のを取り出してLabelに反映させる
@@ -56,6 +60,13 @@ class NavigationBarCustomView: UIView {
    
    //Labelの各種設定をする
    private func SetUpChildNameLabel() {
+      ChildNameLabel.minimumScaleFactor = 0.3
+      ChildNameLabel.adjustsFontSizeToFitWidth = true
+      ChildNameLabel.numberOfLines = 1
+      ChildNameLabel.textAlignment = .center
+      ChildNameLabel.baselineAdjustment = .alignCenters
+      ChildNameLabel.font = UIFont(name: FontName.HiraMaruProNW4, size: 22)
+      ChildNameLabel.textColor = UIColor.flatWhite()
       self.addSubview(ChildNameLabel)
    }
    
@@ -76,21 +87,26 @@ class NavigationBarCustomView: UIView {
    
    //ImageViewの各種設定をする
    private func SetUpChildImageView() {
+      ChildImageView.layer.borderColor = UIColor.black.cgColor
+      ChildImageView.layer.borderWidth = 0.5
+      ChildImageView.clipsToBounds = true
+      ChildImageView.layer.cornerRadius = self.frame.height / 2
       self.addSubview(ChildImageView)
    }
    
    private func SetUpImageViewMakeConstraints() {
       ChildImageView.snp.makeConstraints { make in
          make.height.equalTo(self.snp.height)
-         make.leading.equalTo(self.snp.leading)
+         make.leading.equalTo(self.snp.leading).offset(2)
          make.width.equalTo(self.snp.height)
       }
+      
    }
    
    private func SetUpChildNameLabelMakeConstraints() {
       ChildNameLabel.snp.makeConstraints { make in
          make.height.equalTo(self.snp.height)
-         make.leading.equalTo(ChildImageView.snp.trailing).offset(5)
+         make.leading.equalTo(ChildImageView.snp.trailing).offset(10)
          make.trailing.equalTo(self.snp.trailing)
       }
    }
