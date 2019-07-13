@@ -49,7 +49,7 @@ class ChildCanDoMainViewController: UIViewController {
    
 
    @objc func AddAnotherChild(_ sender: UIBarButtonItem) {
-      print("勉強追加ボタン押されたよ")
+      print("Child追加ボタン押されたよ")
    }
    
    private func SetUpaccessibilityIdentifierForAllObject() {

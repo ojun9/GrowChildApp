@@ -21,9 +21,7 @@ class NavigationBarCustomView: UIView {
    
    override init(frame: CGRect) {
       super.init(frame: frame)
-      
-      self.backgroundColor = .brown
-      
+
       SetUpaccessibilityIdentifierForAllObject()
       
       InitChildName()
@@ -97,7 +95,7 @@ class NavigationBarCustomView: UIView {
    private func SetUpImageViewMakeConstraints() {
       ChildImageView.snp.makeConstraints { make in
          make.height.equalTo(self.snp.height)
-         make.leading.equalTo(self.snp.leading).offset(2)
+         make.leading.equalTo(self.snp.leading)
          make.width.equalTo(self.snp.height)
       }
       
