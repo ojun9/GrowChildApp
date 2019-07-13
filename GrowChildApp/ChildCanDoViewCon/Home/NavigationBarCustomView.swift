@@ -12,7 +12,7 @@ import SnapKit
 import SwiftFontName
 import ChameleonFramework
 
-class NavigationBarCustomView: UIView {
+class NavigationBarCustomViewImageAndName: UIView {
    
    var ChildName: String?
    var ChildNameLabel = UILabel()

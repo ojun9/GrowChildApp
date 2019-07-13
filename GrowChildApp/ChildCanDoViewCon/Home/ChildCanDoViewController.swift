@@ -34,7 +34,7 @@ class ChildCanDoMainViewController: UIViewController {
    private func SetUpNavigationItemSetting() {
       
       
-      let ImageAndNameView = NavigationBarCustomView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: (self.navigationController?.navigationBar.frame.size.height)!))
+      let ImageAndNameView = NavigationBarCustomViewImageAndName(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: (self.navigationController?.navigationBar.frame.size.height)!))
       self.navigationItem.titleView = ImageAndNameView
       
       let AddAnotherChildBarButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.AddAnotherChild(_:)))
