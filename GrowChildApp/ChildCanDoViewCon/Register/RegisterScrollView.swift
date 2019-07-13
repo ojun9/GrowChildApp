@@ -99,31 +99,66 @@ class RegisterScrollView: UIScrollView {
    
    
    private func SetUpCanDoTextLabel() {
-      
+      CanDoTextLabel.snp.makeConstraints { make in
+         make.top.equalTo(self.snp.top).offset(30)
+         make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20)
+         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 5)
+         make.height.equalTo(self.frame.width / 20 * 2)
+      }
    }
    
    private func SetUpCanDoTextField() {
-         
+      CanDoTextField.snp.makeConstraints { make in
+         make.top.equalTo(CanDoTextLabel.snp.bottom).offset(self.frame.width / 20 / 2)
+         make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 2)
+         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 2)
+         make.height.equalTo(self.frame.width / 20 * 2)
+      }
    }
    
    private func SetUpMemoOfCanDOTextLabel() {
-            
+      MemoOfCanDOTextLabel.snp.makeConstraints { make in
+         make.top.equalTo(CanDoTextField.snp.top).offset(self.frame.width / 20 / 2)
+         make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20)
+         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 5)
+         make.height.equalTo(self.frame.width / 20 * 2)
+      }
    }
    
    private func SetUpMemoOfTextView() {
-               
+      MemoOfTextView.snp.makeConstraints { make in
+         make.top.equalTo(CanDoTextField.snp.bottom).offset(self.frame.width / 20 / 2)
+         make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 2)
+         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 2)
+         make.height.equalTo(self.frame.width / 20 * 5)
+      }
    }
    
    private func SetUpSellectImageView() {
-                  
+      SellectImageView?.snp.makeConstraints { make in
+         make.top.equalTo(MemoOfTextView.snp.bottom).offset(self.frame.width / 20 / 2)
+         make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 4)
+         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 4)
+         make.height.equalTo(self.frame.width / 20 * 12)
+      }
    }
    
    private func SetUpCanDoRegisterButton() {
-                     
+      CanDoRegisterButton.snp.makeConstraints { make in
+         make.top.equalTo(SellectImageView!.snp.bottom).offset(self.frame.width / 20 * 3)
+         make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 2)
+         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 2)
+         make.height.equalTo(self.frame.width / 20 * 2.5)
+      }
    }
    
    private func SetUpCanDoCancelButton() {
-                        
+      CanDoCancelButton.snp.makeConstraints { make in
+         make.top.equalTo(CanDoRegisterButton.snp.bottom).offset(self.frame.width / 20 * 3)
+         make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 2)
+         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 2)
+         make.height.equalTo(self.frame.width / 20 * 2.5)
+      }
    }
    
    required init?(coder aDecoder: NSCoder) {
