@@ -12,11 +12,14 @@ import UIKit
 class SellectImageViewForSpuare: UIImageView {
    
    var SellectedImage = UIImage()
+   var DefaultImage = UIImage(named: "NoSellectedImage.png")
    
    var isSellectedImage = false
    
    override init(frame: CGRect) {
       super.init(frame: frame)
+      
+      SetUpDefaultImage()
       
       self.isUserInteractionEnabled = true
       self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.TapSellectImageView(_ :))))
@@ -34,6 +37,22 @@ class SellectImageViewForSpuare: UIImageView {
    public func ChangeTrueisSellectedImage() { isSellectedImage = true }
    public func ChangeFalseisSellectedImage() { isSellectedImage = false }
    
+   
+   //現在セットされている写真を削除する
+   public func DeletNowImage() {
+      self.image = DefaultImage
+      ChangeFalseisSellectedImage()
+   }
+   
+   //ある写真をセットする関数
+   public func SetUserSellectedImaeg(image: UIImage) {
+      self.image = image
+      ChangeTrueisSellectedImage()
+   }
+   
+   private func SetUpDefaultImage() {
+      self.image = DefaultImage
+   }
    
    required init?(coder aDecoder: NSCoder) {
       fatalError("Error Init")
