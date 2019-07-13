@@ -23,7 +23,8 @@ class ChildCandoRegisterViewController: UIViewController {
    }
    
    private func InitNotification() {
-      
+      NotificationCenter.default.addObserver(self, selector: #selector(OpenActionSheetNowSellectedImageCatchNotification(notification:)), name: .SellectImageNowSellected, object: nil)
+      NotificationCenter.default.addObserver(self, selector: #selector(OpenActionSheetNotSellectedImageCatchNotification(notification:)), name: .SellectImageNowNotSellected, object: nil)
    }
    
    private func InitViewSetting() {
