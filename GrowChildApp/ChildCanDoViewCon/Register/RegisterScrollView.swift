@@ -11,7 +11,7 @@ import UIKit
 import ChameleonFramework
 import SnapKit
 
-class RegisterScrollView: UIScrollView {
+class RegisterScrollView: UIScrollView, UITextFieldDelegate {
    
    var CanDoText = ""
    var CanDoTextLabel = UILabel()
@@ -29,7 +29,11 @@ class RegisterScrollView: UIScrollView {
    var CanDoCancelButton = UIButton()
    
    override init(frame: CGRect) {
-      super.init(frame: CGRect(x: 0, y: 0, width: frame.width, height: 1000))
+      super.init(frame: frame)
+      
+      let vi = UIView(frame: CGRect(x: 10, y: 100, width: 100, height: 100))
+      self.addSubview(vi)
+      
       
       self.backgroundColor = UIColor.flatPink()
       print("\(self.frame)\n\n\n")
@@ -64,6 +68,12 @@ class RegisterScrollView: UIScrollView {
 //      }
    }
    
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      // キーボードを閉じる
+      textField.resignFirstResponder()
+      return true
+   }
+   
    
    private func InitCanDoText() {
       CanDoText = "できたこと・"
@@ -71,10 +81,13 @@ class RegisterScrollView: UIScrollView {
    
    private func InitCanDoTextLabel() {
       CanDoTextLabel.text = CanDoText
+      CanDoTextLabel.backgroundColor = UIColor.blue
       self.addSubview(CanDoTextLabel)
    }
    
    private func InitCanDoTextField() {
+      CanDoTextField.backgroundColor = UIColor.blue
+      CanDoTextField.delegate = self
       self.addSubview(CanDoTextField)
    }
    
@@ -88,6 +101,7 @@ class RegisterScrollView: UIScrollView {
    }
    
    private func InitMemoOfTextView() {
+      MemoOfTextView.backgroundColor = UIColor.blue
       self.addSubview(MemoOfTextView)
    }
    
@@ -111,7 +125,7 @@ class RegisterScrollView: UIScrollView {
       CanDoTextLabel.snp.makeConstraints { make in
          make.top.equalTo(self.snp.top).offset(30)
          make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20)
-         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 5)
+         make.width.equalTo(self.frame.width / 20 * 14)
          make.height.equalTo(self.frame.width / 20 * 2)
       }
    }
@@ -120,25 +134,25 @@ class RegisterScrollView: UIScrollView {
       CanDoTextField.snp.makeConstraints { make in
          make.top.equalTo(CanDoTextLabel.snp.bottom).offset(self.frame.width / 20 / 2)
          make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 2)
-         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 2)
+         make.width.equalTo(self.frame.width / 20 * 16)
          make.height.equalTo(self.frame.width / 20 * 2)
       }
    }
    
    private func SetUpMemoOfCanDOTextLabel() {
       MemoOfCanDOTextLabel.snp.makeConstraints { make in
-         make.top.equalTo(CanDoTextField.snp.top).offset(self.frame.width / 20 / 2)
+         make.top.equalTo(CanDoTextField.snp.bottom).offset(self.frame.width / 20 / 2)
          make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20)
-         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 5)
+         make.width.equalTo(self.frame.width / 20 * 14)
          make.height.equalTo(self.frame.width / 20 * 2)
       }
    }
    
    private func SetUpMemoOfTextView() {
       MemoOfTextView.snp.makeConstraints { make in
-         make.top.equalTo(CanDoTextField.snp.bottom).offset(self.frame.width / 20 / 2)
+         make.top.equalTo(MemoOfCanDOTextLabel.snp.bottom).offset(self.frame.width / 20 / 2)
          make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 2)
-         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 2)
+         make.width.equalTo(self.frame.width / 20 * 16)
          make.height.equalTo(self.frame.width / 20 * 5)
       }
    }
@@ -147,7 +161,7 @@ class RegisterScrollView: UIScrollView {
       SellectImageView?.snp.makeConstraints { make in
          make.top.equalTo(MemoOfTextView.snp.bottom).offset(self.frame.width / 20 / 2)
          make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 4)
-         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 4)
+         make.width.equalTo(self.frame.width / 20 * 12)
          make.height.equalTo(self.frame.width / 20 * 12)
       }
    }
@@ -156,7 +170,7 @@ class RegisterScrollView: UIScrollView {
       CanDoRegisterButton.snp.makeConstraints { make in
          make.top.equalTo(SellectImageView!.snp.bottom).offset(self.frame.width / 20 * 3)
          make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 2)
-         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 2)
+         make.width.equalTo(self.frame.width / 20 * 16)
          make.height.equalTo(self.frame.width / 20 * 2.5)
       }
    }
@@ -165,7 +179,7 @@ class RegisterScrollView: UIScrollView {
       CanDoCancelButton.snp.makeConstraints { make in
          make.top.equalTo(CanDoRegisterButton.snp.bottom).offset(self.frame.width / 20 * 3)
          make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 2)
-         make.trailing.equalTo(self.snp.leading).offset(-self.frame.width / 20 * 2)
+         make.width.equalTo(self.frame.width / 20 * 16)
          make.height.equalTo(self.frame.width / 20 * 2.5)
       }
    }

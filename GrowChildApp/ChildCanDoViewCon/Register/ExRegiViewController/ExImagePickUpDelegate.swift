@@ -13,13 +13,16 @@ import RSKImageCropper
 extension ChildCandoRegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
       // キャンセルボタンを押された時に呼ばれる
+      print("イメージピッカーでキャンセル押された")
    }
    
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
    
       let image = info[.originalImage] as! UIImage
    
-      picker.dismiss(animated: true, completion: nil)
+      picker.dismiss(animated: false, completion: {
+         self.ShowCropView(image: image)
+      })
    }
    
    

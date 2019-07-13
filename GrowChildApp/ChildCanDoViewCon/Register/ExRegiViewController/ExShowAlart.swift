@@ -30,6 +30,7 @@ extension ChildCandoRegisterViewController {
       
       let ChoseImageFromLibraryAction = UIAlertAction(title: "ライブラリから選択", style: .default, handler: { (action: UIAlertAction!) -> Void in
          print("")
+         self.ShowUIImagePickerController()
       })
       
       let CancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: { (action: UIAlertAction!) -> Void in
@@ -52,6 +53,7 @@ extension ChildCandoRegisterViewController {
       
       let ChoseImageFromLibraryAction = UIAlertAction(title: "ライブラリから選択", style: .default, handler: { (action: UIAlertAction!) -> Void in
          print("")
+         self.ShowUIImagePickerController()
       })
       
       let CancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: { (action: UIAlertAction!) -> Void in

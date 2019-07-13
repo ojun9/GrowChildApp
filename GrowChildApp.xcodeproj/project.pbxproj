@@ -102,6 +102,7 @@
 		BF7FE29F22D9859B0027B3FE /* NavigationBarCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarCustomView.swift; sourceTree = "<group>"; };
 		BF7FE2A122D99B610027B3FE /* ExUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExUIImage.swift; sourceTree = "<group>"; };
 		BF7FE2A822D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarCustomViewImageAndText.swift; sourceTree = "<group>"; };
+		BF8871F222D9ECDB0036E008 /* RSKImageCropper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RSKImageCropper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4BC87DB6DD16D0812D35BE /* Pods-GrowChildAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +137,7 @@
 		2077467E9BEE24E3822D8D59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF8871F222D9ECDB0036E008 /* RSKImageCropper.framework */,
 				64B26642AF8B76A502286FDD /* Pods_GrowChildApp.framework */,
 				73B9D75C561C9A7B9559E816 /* libPods-GrowChildAppTests.a */,
 				52C61E1ED0DB60C0D90887C7 /* libPods-GrowChildAppUITests.a */,
