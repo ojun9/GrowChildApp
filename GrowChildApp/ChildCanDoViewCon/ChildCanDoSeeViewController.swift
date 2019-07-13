@@ -16,6 +16,20 @@ class ChildCanDoSeeViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      InitViewSetting()
+      SetUpNavigationItemSetting()
+   }
+   
+   private func InitViewSetting() {
+      self.view.backgroundColor = UIColor.flatWhite()
+   }
+   
+   private func SetUpNavigationItemSetting() {
+      
+      self.navigationItem.title = "でき"
+      self.navigationController?.navigationBar.barTintColor = UIColor.flatWatermelon()
+      self.navigationController?.navigationBar.tintColor = .white
+      self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
    }
    
 }

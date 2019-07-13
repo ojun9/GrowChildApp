@@ -81,11 +81,13 @@ class ChildCanDoMainViewController: UIViewController {
    
    //MARK:- Touch Event
    @objc func TapCanDoRegiButton(_ sender: UIButton) {
-      
+      let CanDoRegisterVC = ChildCandoRegisterViewController()
+      navigationController?.pushViewController(CanDoRegisterVC, animated: true)
    }
    
    @objc func TapCanDoSeeButton(_ sender: UIButton ) {
-      
+      let CanDOSeeVC = ChildCanDoSeeViewController()
+      navigationController?.pushViewController(CanDOSeeVC, animated: true)
    }
 
 }
