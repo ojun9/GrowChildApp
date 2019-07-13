@@ -29,7 +29,11 @@ class RegisterScrollView: UIScrollView {
    var CanDoCancelButton = UIButton()
    
    override init(frame: CGRect) {
-      super.init(frame: frame)
+      super.init(frame: CGRect(x: 0, y: 0, width: frame.width, height: 1000))
+      
+      self.backgroundColor = UIColor.flatPink()
+      print("\(self.frame)\n\n\n")
+      self.contentSize = CGSize(width:self.frame.width, height:1000)
    
       InitCanDoText()
       InitCanDoTextLabel()
@@ -54,10 +58,10 @@ class RegisterScrollView: UIScrollView {
       SetUpCanDoRegisterButton()
       SetUpCanDoCancelButton()
       
-      self.snp.makeConstraints { make in
-         make.bottom.equalTo(CanDoCancelButton.snp.bottom).offset(20)
-         make.top.equalTo(CanDoTextLabel.snp.top).offset(30)
-      }
+//      self.snp.makeConstraints { make in
+//         make.bottom.equalTo(CanDoCancelButton.snp.bottom).offset(20)
+//         make.top.equalTo(CanDoTextLabel.snp.top).offset(30)
+//      }
    }
    
    
@@ -71,7 +75,7 @@ class RegisterScrollView: UIScrollView {
    }
    
    private func InitCanDoTextField() {
-      self.addSubview(CanDoTextLabel)
+      self.addSubview(CanDoTextField)
    }
    
    private func InitMemoOfCanDOText() {

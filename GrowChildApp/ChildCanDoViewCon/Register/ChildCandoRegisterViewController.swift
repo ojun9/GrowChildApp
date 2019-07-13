@@ -14,12 +14,15 @@ import TapticEngine
 
 class ChildCandoRegisterViewController: UIViewController {
    
+   var RegiScrollView: RegisterScrollView?
+   
    override func viewDidLoad() {
       super.viewDidLoad()
       InitViewSetting()
       SetUpNavigationItemSetting()
       
       InitNotification()
+      InitRegiScrollView()
    }
    
    private func InitNotification() {
@@ -27,8 +30,14 @@ class ChildCandoRegisterViewController: UIViewController {
       NotificationCenter.default.addObserver(self, selector: #selector(OpenActionSheetNotSellectedImageCatchNotification(notification:)), name: .SellectImageNowNotSellected, object: nil)
    }
    
+   
    private func InitViewSetting() {
       self.view.backgroundColor = UIColor.flatWhite()
+   }
+   
+   private func InitRegiScrollView() {
+      RegiScrollView = RegisterScrollView(frame: self.view.frame)
+      self.view.addSubview(RegiScrollView!)
    }
    
    private func SetUpNavigationItemSetting() {
@@ -41,6 +50,9 @@ class ChildCandoRegisterViewController: UIViewController {
       self.navigationController?.navigationBar.tintColor = .white
       self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
    }
+   
+   
+   
 
    
 }
