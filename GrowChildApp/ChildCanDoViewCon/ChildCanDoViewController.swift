@@ -52,10 +52,11 @@ class ChildCanDoMainViewController: UIViewController {
       CanDoSeeButton.accessibilityIdentifier = "CanDoSeeButton"
    }
    
-   //MARK:- 初期化
+   //MARK:- Init
    private func InitCanDoRegiButton() {
       CanDoRegiButton.backgroundColor = .purple
-      //self.view.addSubview(CanDoRegiButton)
+      CanDoRegiButton.addTarget(self, action: #selector(TapCanDoRegiButton(_:)), for: .touchUpInside)
+      self.view.addSubview(CanDoRegiButton)
       
       CanDoRegiButton.snp.makeConstraints { make in
          make.leading.equalTo(self.view.snp.leading).offset(20)
@@ -63,11 +64,27 @@ class ChildCanDoMainViewController: UIViewController {
          make.top.equalTo(self.view.snp.top).offset(200)
          make.height.equalTo(self.view.frame.height / 5)
       }
-      self.view.addSubview(CanDoRegiButton)
-
    }
    
    private func InitCanDoSeeButton() {
+      CanDoSeeButton.backgroundColor = .blue
+      CanDoSeeButton.addTarget(self, action: #selector(TapCanDoSeeButton(_:)), for: .touchUpInside)
+      self.view.addSubview(CanDoSeeButton)
+      
+      CanDoSeeButton.snp.makeConstraints { make in
+         make.leading.equalTo(self.view.snp.leading).offset(20)
+         make.trailing.equalTo(self.view.snp.trailing).offset(-20)
+         make.top.equalTo(self.CanDoRegiButton.snp.bottom).offset(20)
+         make.height.equalTo(self.view.frame.height / 5)
+      }
+   }
+   
+   //MARK:- Touch Event
+   @objc func TapCanDoRegiButton(_ sender: UIButton) {
+      
+   }
+   
+   @objc func TapCanDoSeeButton(_ sender: UIButton ) {
       
    }
 
