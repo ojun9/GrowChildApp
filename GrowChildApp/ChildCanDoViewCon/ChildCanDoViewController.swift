@@ -32,13 +32,14 @@ class ChildCanDoMainViewController: UIViewController {
    }
    
    private func SetUpNavigationItemSetting() {
-      let AddAnotherChildBarButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.AddAnotherChild(_:)))
+      
       
       let ImageAndNameView = NavigationBarCustomView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: (self.navigationController?.navigationBar.frame.size.height)!))
       self.navigationItem.titleView = ImageAndNameView
       
-      self.navigationItem.title = "できたこと"
+      let AddAnotherChildBarButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.AddAnotherChild(_:)))
       self.navigationItem.setLeftBarButton(AddAnotherChildBarButton, animated: true)
+      
       self.navigationController?.navigationBar.barTintColor = UIColor.flatWatermelon()
       self.navigationController?.navigationBar.tintColor = .white
       self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]

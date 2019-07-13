@@ -88,7 +88,7 @@ class NavigationBarCustomView: UIView {
    //ImageViewの各種設定をする
    private func SetUpChildImageView() {
       ChildImageView.layer.borderColor = UIColor.flatWatermelonColorDark()?.cgColor
-      ChildImageView.layer.borderWidth = 0.5
+      ChildImageView.layer.borderWidth = 1.25
       ChildImageView.clipsToBounds = true
       ChildImageView.layer.cornerRadius = self.frame.height / 2
       self.addSubview(ChildImageView)
