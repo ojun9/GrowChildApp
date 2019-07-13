@@ -23,6 +23,9 @@ target 'GrowChildApp' do
   pod 'PopupDialog', '~> 1.1'
   pod 'VegaScrollFlowLayout'
 
+
+  pod 'SnapKit', '~> 5.0.0'
+
 end
 
 target 'GrowChildAppTests' do
@@ -32,6 +35,7 @@ target 'GrowChildAppTests' do
     pod 'TapticEngine'
     pod 'NVActivityIndicatorView'
     pod "ViewAnimator"
+    pod 'SnapKit', '~> 5.0.0'
     # Pods for testing
   end
 
@@ -43,4 +47,5 @@ target 'GrowChildAppTests' do
     pod 'TapticEngine'
     pod 'NVActivityIndicatorView'
     pod "ViewAnimator"
+    pod 'SnapKit', '~> 5.0.0'
   end
