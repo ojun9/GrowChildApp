@@ -32,10 +32,10 @@ class ChildCanDoMainViewController: UIViewController {
    }
    
    private func SetUpNavigationItemSetting() {
-      let StudyAddButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.AddStudy(sender:)))
+      let AddAnotherChildBarButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.AddAnotherChild(_:)))
       
       self.navigationItem.title = "できたこと"
-      self.navigationItem.setLeftBarButton(StudyAddButton, animated: true)
+      self.navigationItem.setLeftBarButton(AddAnotherChildBarButton, animated: true)
       self.navigationController?.navigationBar.barTintColor = UIColor.flatWatermelon()
       self.navigationController?.navigationBar.tintColor = .white
       self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -43,7 +43,7 @@ class ChildCanDoMainViewController: UIViewController {
    }
    
 
-   @objc func AddStudy(sender: UIBarButtonItem) {
+   @objc func AddAnotherChild(_ sender: UIBarButtonItem) {
       print("勉強追加ボタン押されたよ")
    }
    
