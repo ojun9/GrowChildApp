@@ -46,12 +46,9 @@ class NavigationBarCustomView: UIView {
          self.ChildNameLabel.text = name
       }else{
          print("名前が取得できません")
-         self.ChildNameLabel.text = ""
+         self.ChildNameLabel.text = "None"
       }
-   }
-   
-   private func SetUpChildNameLabel() {
-      
+      self.addSubview(ChildNameLabel)
    }
    
    private func InitChildImage() {
@@ -70,7 +67,19 @@ class NavigationBarCustomView: UIView {
    }
    
    private func SetUpImageViewPoition() {
-      
+      ChildImageView.snp.makeConstraints { make in
+         make.height.equalTo(self.snp.height)
+         make.leading.equalTo(self.snp.leading)
+         make.width.equalTo(self.snp.height)
+      }
+   }
+   
+   private func SetUpChildNameLabel() {
+      ChildNameLabel.snp.makeConstraints { make in
+         make.height.equalTo(self.snp.height)
+         make.leading.equalTo(ChildImageView.snp.trailing).offset(5)
+         make.trailing.equalTo(self.snp.trailing)
+      }
    }
    
    required init?(coder aDecoder: NSCoder) {
