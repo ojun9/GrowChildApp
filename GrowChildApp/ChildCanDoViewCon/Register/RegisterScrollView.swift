@@ -8,27 +8,85 @@
 
 import Foundation
 import UIKit
+import ChameleonFramework
 
 class RegisterScrollView: UIScrollView {
    
    var CanDoText = ""
-   var CandDoTextLabel = UILabel()
+   var CanDoTextLabel = UILabel()
    
    var CanDoTextField = UITextField()
    var CanDoTextFieldString = ""
    
    var MemoOfCanDOText = ""
+   var MemoOfCanDOTextLabel = UILabel()
    var MemoOfTextView = UITextView()
    
+   var SellectImageView: SellectImageViewForSpuare?
    
+   var CanDoRegisterButton = UIButton()
+   var CanDoCancelButton = UIButton()
    
    override init(frame: CGRect) {
       super.init(frame: frame)
    
+      InitCanDoText()
+      InitCanDoTextLabel()
+
+      InitCanDoTextField()
+
+      InitMemoOfCanDOText()
+      InitMemoOfCanDOTextLabel()
       
+      InitMemoOfTextView()
+      
+      InitSellectImageView()
+      
+      InitCanDoRegisterButton()
+      InitCanDoCancelButton()
    }
    
    
+   private func InitCanDoText() {
+      CanDoText = "できたこと・"
+   }
+   
+   private func InitCanDoTextLabel() {
+      CanDoTextLabel.text = CanDoText
+      self.addSubview(CanDoTextLabel)
+   }
+   
+   private func InitCanDoTextField() {
+      self.addSubview(CanDoTextLabel)
+   }
+   
+   private func InitMemoOfCanDOText() {
+      MemoOfCanDOText = "わたしのきもち"
+   }
+   
+   private func InitMemoOfCanDOTextLabel() {
+      MemoOfCanDOTextLabel.text = MemoOfCanDOText
+      self.addSubview(MemoOfCanDOTextLabel)
+   }
+   
+   private func InitMemoOfTextView() {
+      self.addSubview(MemoOfTextView)
+   }
+   
+   private func InitSellectImageView() {
+      SellectImageView = SellectImageViewForSpuare(frame: frame)
+      self.addSubview(SellectImageView!)
+   }
+
+   private func InitCanDoRegisterButton() {
+      CanDoRegisterButton.backgroundColor = UIColor.flatMint()
+      self.addSubview(CanDoRegisterButton)
+   }
+   
+   private func InitCanDoCancelButton() {
+      CanDoCancelButton.backgroundColor = UIColor.flatMint()
+      self.addSubview(CanDoCancelButton)
+   }
    
    required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
