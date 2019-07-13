@@ -72,7 +72,7 @@ class NavigationBarCustomView: UIView {
    
    //Imageの取得をどっかからする
    private func InitChildImage() {
-      ChildImage = UIImage(named: "test.png")
+      ChildImage = UIImage(named: "test.png")?.ResizeUIImage(width: 126, height: 126)
    }
    
    //Imageの反映をImageVeiwにする
@@ -81,7 +81,7 @@ class NavigationBarCustomView: UIView {
          ChildImageView.image = image
       }else{
          print("画像は登録されてません")
-         ChildImageView.image = UIImage(named: "flare")
+         ChildImageView.image = UIImage(named: "flare")?.ResizeUIImage(width: 126, height: 126)
       }
    }
    

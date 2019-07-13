@@ -31,6 +31,7 @@
 		BF7FE29C22D982A00027B3FE /* ChildCandoRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE29B22D982A00027B3FE /* ChildCandoRegisterViewController.swift */; };
 		BF7FE29E22D982EC0027B3FE /* ChildCanDoSeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE29D22D982EC0027B3FE /* ChildCanDoSeeViewController.swift */; };
 		BF7FE2A022D9859B0027B3FE /* NavigationBarCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE29F22D9859B0027B3FE /* NavigationBarCustomView.swift */; };
+		BF7FE2A222D99B610027B3FE /* ExUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE2A122D99B610027B3FE /* ExUIImage.swift */; };
 		E08221CF2E697363FD7F7718 /* libPods-GrowChildAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9D75C561C9A7B9559E816 /* libPods-GrowChildAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		BF7FE29B22D982A00027B3FE /* ChildCandoRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCandoRegisterViewController.swift; sourceTree = "<group>"; };
 		BF7FE29D22D982EC0027B3FE /* ChildCanDoSeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCanDoSeeViewController.swift; sourceTree = "<group>"; };
 		BF7FE29F22D9859B0027B3FE /* NavigationBarCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarCustomView.swift; sourceTree = "<group>"; };
+		BF7FE2A122D99B610027B3FE /* ExUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExUIImage.swift; sourceTree = "<group>"; };
 		DD4BC87DB6DD16D0812D35BE /* Pods-GrowChildAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7FE29622D88CF80027B3FE /* ExNotification.swift */,
+				BF7FE2A122D99B610027B3FE /* ExUIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				BF7FE28422D886330027B3FE /* MainTabBarViewController.swift in Sources */,
 				BF7FE29122D88C070027B3FE /* Child.swift in Sources */,
 				BF7FE28E22D8881D0027B3FE /* SettingMainViewController.swift in Sources */,
+				BF7FE2A222D99B610027B3FE /* ExUIImage.swift in Sources */,
 				BF1CE89A22D5990700ACF7F8 /* AppDelegate.swift in Sources */,
 				BF7FE2A022D9859B0027B3FE /* NavigationBarCustomView.swift in Sources */,
 				BF7FE28C22D887EC0027B3FE /* BreastFeedingMainViewController.swift in Sources */,
