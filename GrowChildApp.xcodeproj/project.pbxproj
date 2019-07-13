@@ -21,6 +21,7 @@
 		BF1FB7E722D9C024005E80BA /* SellectImageViewForSpuare.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7E622D9C024005E80BA /* SellectImageViewForSpuare.swift */; };
 		BF1FB7E922D9C622005E80BA /* ExShowAlart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7E822D9C622005E80BA /* ExShowAlart.swift */; };
 		BF1FB7EB22D9CDF2005E80BA /* ExImagePickUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7EA22D9CDF2005E80BA /* ExImagePickUpDelegate.swift */; };
+		BF1FB7ED22D9D217005E80BA /* ExCropImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7EC22D9D217005E80BA /* ExCropImage.swift */; };
 		BF6D3C5822D5CB4A00237F07 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */; };
 		BF6D3C5C22D5ED9500237F07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5B22D5ED9500237F07 /* R.generated.swift */; };
 		BF7FE28422D886330027B3FE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE28322D886330027B3FE /* MainTabBarViewController.swift */; };
@@ -84,6 +85,7 @@
 		BF1FB7E622D9C024005E80BA /* SellectImageViewForSpuare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellectImageViewForSpuare.swift; sourceTree = "<group>"; };
 		BF1FB7E822D9C622005E80BA /* ExShowAlart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExShowAlart.swift; sourceTree = "<group>"; };
 		BF1FB7EA22D9CDF2005E80BA /* ExImagePickUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExImagePickUpDelegate.swift; sourceTree = "<group>"; };
+		BF1FB7EC22D9D217005E80BA /* ExCropImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCropImage.swift; sourceTree = "<group>"; };
 		BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		BF6D3C5B22D5ED9500237F07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BF7FE28322D886330027B3FE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,16 @@
 			path = GrowChildAppUITests;
 			sourceTree = "<group>";
 		};
+		BF1FB7EE22D9D372005E80BA /* ExRegiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF1FB7E822D9C622005E80BA /* ExShowAlart.swift */,
+				BF1FB7EA22D9CDF2005E80BA /* ExImagePickUpDelegate.swift */,
+				BF1FB7EC22D9D217005E80BA /* ExCropImage.swift */,
+			);
+			path = ExRegiViewController;
+			sourceTree = "<group>";
+		};
 		BF7FE28522D886660027B3FE /* ChildCanDoViewCon */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,8 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7FE29B22D982A00027B3FE /* ChildCandoRegisterViewController.swift */,
-				BF1FB7E822D9C622005E80BA /* ExShowAlart.swift */,
-				BF1FB7EA22D9CDF2005E80BA /* ExImagePickUpDelegate.swift */,
+				BF1FB7EE22D9D372005E80BA /* ExRegiViewController */,
 				BF1FB7E422D9BE5D005E80BA /* RegisterScrollView.swift */,
 				BF1FB7E622D9C024005E80BA /* SellectImageViewForSpuare.swift */,
 				BF7FE2A822D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift */,
@@ -332,6 +343,7 @@
 				BF1CE8A622D5990800ACF7F8 /* Sources */,
 				BF1CE8A722D5990800ACF7F8 /* Frameworks */,
 				BF1CE8A822D5990800ACF7F8 /* Resources */,
+				A20D9BC96E0953E1536F0F83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,6 +363,7 @@
 				BF1CE8B122D5990800ACF7F8 /* Sources */,
 				BF1CE8B222D5990800ACF7F8 /* Frameworks */,
 				BF1CE8B322D5990800ACF7F8 /* Resources */,
+				85EF73D39339A74141A66256 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -449,6 +462,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrowChildApp/Pods-GrowChildApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85EF73D39339A74141A66256 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrowChildAppUITests/Pods-GrowChildAppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrowChildAppUITests/Pods-GrowChildAppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrowChildAppUITests/Pods-GrowChildAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A20D9BC96E0953E1536F0F83 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB71999D0335529E3481FAF0 /* [CP] Check Pods Manifest.lock */ = {
@@ -576,6 +623,7 @@
 				BF1CE89A22D5990700ACF7F8 /* AppDelegate.swift in Sources */,
 				BF7FE2A022D9859B0027B3FE /* NavigationBarCustomView.swift in Sources */,
 				BF7FE2A922D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift in Sources */,
+				BF1FB7ED22D9D217005E80BA /* ExCropImage.swift in Sources */,
 				BF7FE28C22D887EC0027B3FE /* BreastFeedingMainViewController.swift in Sources */,
 				BF7FE28722D886EC0027B3FE /* ChildCanDoViewController.swift in Sources */,
 				BF7FE29322D88C4B0027B3FE /* ChildCanDo.swift in Sources */,

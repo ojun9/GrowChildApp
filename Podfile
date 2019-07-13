@@ -26,7 +26,7 @@ target 'GrowChildApp' do
 
   pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftFontName', '~> 4.0.0'
-
+  pod 'RSKImageCropper'
 
 end
 
@@ -39,6 +39,7 @@ target 'GrowChildAppTests' do
     pod "ViewAnimator"
     pod 'SnapKit', '~> 5.0.0'
     pod 'SwiftFontName', '~> 4.0.0'
+    pod 'RSKImageCropper'
     # Pods for testing
   end
 
@@ -52,4 +53,5 @@ target 'GrowChildAppTests' do
     pod "ViewAnimator"
     pod 'SnapKit', '~> 5.0.0'
     pod 'SwiftFontName', '~> 4.0.0'
+    pod 'RSKImageCropper'
   end

@@ -12,6 +12,7 @@ PODS:
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - RSKImageCropper (2.2.2)
   - SCLAlertView (0.8)
   - SnapKit (5.0.0)
   - SwiftFontName (4.0.0)
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - PopupDialog (~> 1.1)
   - R.swift
+  - RSKImageCropper
   - SCLAlertView
   - SnapKit (~> 5.0.0)
   - SwiftFontName (~> 4.0.0)
@@ -43,6 +45,7 @@ SPEC REPOS:
     - PopupDialog
     - R.swift
     - R.swift.Library
+    - RSKImageCropper
     - SCLAlertView
     - SnapKit
     - SwiftFontName
@@ -59,6 +62,7 @@ SPEC CHECKSUMS:
   PopupDialog: 42fb7a0bc4fafdf89fef8b5b2b127a6023f3e1cc
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  RSKImageCropper: 05e3b82a18da83ea3c2b7bffa7f2199a621d6802
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftFontName: 08aaa0143dadc7753587c4317d9e8a5f2c2418b5
@@ -67,6 +71,6 @@ SPEC CHECKSUMS:
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
   ViewAnimator: 173932c659a43c5a15c665878750d92801ae2cf1
 
-PODFILE CHECKSUM: 29ccab6165bb515b3778b016bd80c3ea99dcb0ff
+PODFILE CHECKSUM: cae93cb6918c9fbb4ad5e8e067e0991e2419a5c9
 
 COCOAPODS: 1.7.4

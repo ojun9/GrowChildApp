@@ -11,6 +11,12 @@ import UIKit
 
 extension ChildCandoRegisterViewController {
    
+   func ShowUIImagePickerController() {
+      let PickController = UIImagePickerController()
+      PickController.delegate = self
+      present(PickController, animated: true)
+   }
+   
     @objc func OpenActionSheetNowSellectedImageCatchNotification(notification: Notification) ->Void {
       let Alert = UIAlertController(title: "(name)の写真を変更", message: nil, preferredStyle: .actionSheet)
       
