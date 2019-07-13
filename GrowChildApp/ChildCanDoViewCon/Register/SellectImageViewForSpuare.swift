@@ -27,9 +27,11 @@ class SellectImageViewForSpuare: UIImageView {
    
    @objc func TapSellectImageView(_ sender: UITapGestureRecognizer) {
       if isSellectedImage == true {
+         print("画像選択されてる状態のNotificationを出す")
          NotificationCenter.default.post(name: .SellectImageNowSellected, object: nil, userInfo: nil)
          return
       }
+      print("画像選択されてない状態のNotificationを出す")
       NotificationCenter.default.post(name: .SellectImageNowNotSellected, object: nil, userInfo: nil)
    }
    

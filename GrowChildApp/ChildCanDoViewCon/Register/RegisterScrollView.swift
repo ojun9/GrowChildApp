@@ -31,12 +31,6 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
    override init(frame: CGRect) {
       super.init(frame: frame)
       
-      let vi = UIView(frame: CGRect(x: 10, y: 100, width: 100, height: 100))
-      self.addSubview(vi)
-      
-      
-      self.backgroundColor = UIColor.flatPink()
-      print("\(self.frame)\n\n\n")
       self.contentSize = CGSize(width:self.frame.width, height:1000)
    
       InitCanDoText()
@@ -74,6 +68,12 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
       return true
    }
    
+   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+      if self.MemoOfTextView.isFirstResponder {
+         self.MemoOfTextView.resignFirstResponder()
+      }
+   }
+   
    
    private func InitCanDoText() {
       CanDoText = "できたこと・"
@@ -87,6 +87,7 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
    
    private func InitCanDoTextField() {
       CanDoTextField.backgroundColor = UIColor.blue
+      CanDoTextField.returnKeyType = .done
       CanDoTextField.delegate = self
       self.addSubview(CanDoTextField)
    }

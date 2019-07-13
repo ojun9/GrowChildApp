@@ -18,7 +18,8 @@ extension ChildCandoRegisterViewController: RSKImageCropViewControllerDelegate {
    }
    //完了を押した後の処理
    func imageCropViewController(_ controller: RSKImageCropViewController, didCropImage croppedImage: UIImage, usingCropRect cropRect: CGRect, rotationAngle: CGFloat) {
-      
+      print("クロップで画像がトリミングされました")
+      print("RegiScrollViewに画像を反映する")
       self.RegiScrollView?.SellectImageView?.SetUserSellectedImaeg(image: croppedImage)
       dismiss(animated: true)
       

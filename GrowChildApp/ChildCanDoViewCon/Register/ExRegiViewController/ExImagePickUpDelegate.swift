@@ -18,9 +18,12 @@ extension ChildCandoRegisterViewController: UIImagePickerControllerDelegate, UIN
    
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
    
+      print("イメージピッカーで画像が選択された")
+   
       let image = info[.originalImage] as! UIImage
    
       picker.dismiss(animated: false, completion: {
+         print("クロップViewに遷移")
          self.ShowCropView(image: image)
       })
    }
@@ -32,7 +35,14 @@ extension ChildCandoRegisterViewController: UIImagePickerControllerDelegate, UIN
       imageCropVC.cancelButton.setTitle("キャンセル", for: .normal)
       imageCropVC.chooseButton.setTitle("完了", for: .normal)
       imageCropVC.delegate = self
-      present(imageCropVC, animated: true)
+      
+      let transition = CATransition()
+      transition.duration = 0.5
+      transition.type = CATransitionType.push
+      transition.subtype = CATransitionSubtype.fromRight
+      transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+      view.window!.layer.add(transition, forKey: kCATransition)
+      present(imageCropVC, animated: false)
    }
 }
 
