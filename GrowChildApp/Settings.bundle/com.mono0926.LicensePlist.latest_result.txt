@@ -56,6 +56,18 @@ name: SCLAlertView, nameSpecified:
 body: Copyright (c) 2013-2…
 version: 0.8
 
+name: SnapKit, nameSpecified: 
+body: Copyright (c) 2011-P…
+version: 5.0.0
+
+name: SnapKit, nameSpecified: 
+body: Copyright (c) 2011-P…
+version: 5.0.0
+
+name: SnapKit, nameSpecified: 
+body: Copyright (c) 2011-P…
+version: 5.0.0
+
 name: SwiftyStoreKit, nameSpecified: 
 body: Copyright (c) 2015-2…
 version: 0.15.0

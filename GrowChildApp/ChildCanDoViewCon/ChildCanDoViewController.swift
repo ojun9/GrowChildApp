@@ -9,7 +9,7 @@
 import UIKit
 import ChameleonFramework
 import SCLAlertView
-
+import SnapKit
 
 class ChildCanDoMainViewController: UIViewController {
    
@@ -55,13 +55,16 @@ class ChildCanDoMainViewController: UIViewController {
    //MARK:- 初期化
    private func InitCanDoRegiButton() {
       CanDoRegiButton.backgroundColor = .purple
-      CanDoRegiButton.translatesAutoresizingMaskIntoConstraints = false
-      self.view.addSubview(CanDoRegiButton)
+      //self.view.addSubview(CanDoRegiButton)
       
-      CanDoRegiButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
-      CanDoRegiButton.widthAnchor.constraint(equalToConstant: self.view.frame.width - 40).isActive = true
-      CanDoRegiButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
-      CanDoRegiButton.heightAnchor.constraint(equalToConstant: self.view.frame.height / 5).isActive = true
+      CanDoRegiButton.snp.makeConstraints { make in
+         make.leading.equalTo(self.view.snp.leading).offset(20)
+         make.trailing.equalTo(self.view.snp.trailing).offset(-20)
+         make.top.equalTo(self.view.snp.top).offset(200)
+         make.height.equalTo(self.view.frame.height / 5)
+      }
+      self.view.addSubview(CanDoRegiButton)
+
    }
    
    private func InitCanDoSeeButton() {
