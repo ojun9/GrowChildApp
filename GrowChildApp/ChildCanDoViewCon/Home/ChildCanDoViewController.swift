@@ -33,11 +33,11 @@ class ChildCanDoMainViewController: UIViewController {
    
    private func SetUpNavigationItemSetting() {
       
-      
       let ImageAndNameView = NavigationBarCustomViewImageAndName(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: (self.navigationController?.navigationBar.frame.size.height)!))
       self.navigationItem.titleView = ImageAndNameView
       
       let AddAnotherChildBarButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.AddAnotherChild(_:)))
+      AddAnotherChildBarButton.accessibilityIdentifier = "AddAnotherChildBarButton"
       self.navigationItem.setLeftBarButton(AddAnotherChildBarButton, animated: true)
       
       self.navigationController?.navigationBar.barTintColor = UIColor.flatWatermelon()
@@ -51,6 +51,8 @@ class ChildCanDoMainViewController: UIViewController {
    }
    
    private func SetUpaccessibilityIdentifierForAllObject() {
+      self.view.accessibilityIdentifier = "ChildCanDoMainViewControllerView"
+      self.navigationController?.navigationBar.accessibilityIdentifier = "ChildCanDoMainViewControllerNabiTabBar"
       CanDoRegiButton.accessibilityIdentifier = "CanDoRegiButton"
       CanDoSeeButton.accessibilityIdentifier = "CanDoSeeButton"
    }

@@ -1,5 +1,5 @@
 //
-//  NavigationBarCustomView.swift
+//  NavigationBarCustomViewImageAndText.swift
 //  GrowChildApp
 //
 //  Created by jun on 2019/07/13.
@@ -12,21 +12,21 @@ import SnapKit
 import SwiftFontName
 import ChameleonFramework
 
-class NavigationBarCustomViewImageAndName: UIView {
+class NavigationBarCustomViewImageAndText: UIView {
    
-   var ChildName: String?
-   var ChildNameLabel = UILabel()
+   var ViewTexts: String?
+   var ViewTextLabel = UILabel()
    var ChildImageView = UIImageView()
    var ChildImage: UIImage?
    
-   override init(frame: CGRect) {
+   init(frame: CGRect, ViewText: String) {
       super.init(frame: frame)
-
+      
       //self.backgroundColor = .black
       
       SetUpaccessibilityIdentifierForAllObject()
       
-      InitChildName()
+      InitViewTexts(Text: ViewText)
       InitStringOFChildNameLabel()
       SetUpChildNameLabel()
       
@@ -39,36 +39,36 @@ class NavigationBarCustomViewImageAndName: UIView {
    }
    
    private func SetUpaccessibilityIdentifierForAllObject() {
-      self.accessibilityIdentifier = "NavigationBarCustomViewImageAndName"
-      ChildNameLabel.accessibilityIdentifier = "ChildNameLabel"
+      self.accessibilityIdentifier = "NavigationBarCustomViewImageAndText"
+      ViewTextLabel.accessibilityIdentifier = "ViewTextLabel"
       ChildImageView.accessibilityIdentifier = "ChildImageView"
    }
    
-   //名前の取得をどっかからする
-   private func InitChildName() {
-      ChildName = "とりあえず"
+   //名前の取得を反映
+   private func InitViewTexts(Text: String) {
+      ViewTexts = Text
    }
    
    //名前のを取り出してLabelに反映させる
    private func InitStringOFChildNameLabel() {
-      if let name = ChildName {
-         self.ChildNameLabel.text = name
+      if let name = ViewTexts {
+         self.ViewTextLabel.text = name
       }else{
-         print("名前が取得できません")
-         self.ChildNameLabel.text = "None"
+         print("ViewTextsが取得できません")
+         self.ViewTextLabel.text = "None"
       }
    }
    
    //Labelの各種設定をする
    private func SetUpChildNameLabel() {
-      ChildNameLabel.minimumScaleFactor = 0.3
-      ChildNameLabel.adjustsFontSizeToFitWidth = true
-      ChildNameLabel.numberOfLines = 1
-      ChildNameLabel.textAlignment = .center
-      ChildNameLabel.baselineAdjustment = .alignCenters
-      ChildNameLabel.font = UIFont(name: FontName.HiraMaruProNW4, size: 22)
-      ChildNameLabel.textColor = UIColor.flatWhite()
-      self.addSubview(ChildNameLabel)
+      ViewTextLabel.minimumScaleFactor = 0.3
+      ViewTextLabel.adjustsFontSizeToFitWidth = true
+      ViewTextLabel.numberOfLines = 1
+      ViewTextLabel.textAlignment = .center
+      ViewTextLabel.baselineAdjustment = .alignCenters
+      ViewTextLabel.font = UIFont(name: FontName.HiraMaruProNW4, size: 22)
+      ViewTextLabel.textColor = UIColor.flatWhite()
+      self.addSubview(ViewTextLabel)
    }
    
    //Imageの取得をどっかからする
@@ -88,7 +88,7 @@ class NavigationBarCustomViewImageAndName: UIView {
    
    //ImageViewの各種設定をする
    private func SetUpChildImageView() {
-      ChildImageView.layer.borderColor = UIColor.flatWatermelonColorDark()?.cgColor
+      ChildImageView.layer.borderColor = UIColor.flatWhite()?.cgColor
       ChildImageView.layer.borderWidth = 1.25
       ChildImageView.clipsToBounds = true
       ChildImageView.layer.cornerRadius = self.frame.height / 2
@@ -105,7 +105,7 @@ class NavigationBarCustomViewImageAndName: UIView {
    }
    
    private func SetUpChildNameLabelMakeConstraints() {
-      ChildNameLabel.snp.makeConstraints { make in
+      ViewTextLabel.snp.makeConstraints { make in
          make.height.equalTo(self.snp.height)
          make.leading.equalTo(ChildImageView.snp.trailing).offset(10)
          make.trailing.equalTo(self.snp.trailing).offset(-self.frame.height / 4)
