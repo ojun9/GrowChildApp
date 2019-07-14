@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		14EE3893CDF2A00A0C47FC43 /* libPods-GrowChildAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C61E1ED0DB60C0D90887C7 /* libPods-GrowChildAppUITests.a */; };
-		7BB0B722F53B858995E4B531 /* Pods_GrowChildApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B26642AF8B76A502286FDD /* Pods_GrowChildApp.framework */; };
 		BF1CE89A22D5990700ACF7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE89922D5990700ACF7F8 /* AppDelegate.swift */; };
 		BF1CE89C22D5990700ACF7F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE89B22D5990700ACF7F8 /* ViewController.swift */; };
 		BF1CE89F22D5990700ACF7F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1CE89D22D5990700ACF7F8 /* Main.storyboard */; };
@@ -22,6 +21,7 @@
 		BF1FB7E922D9C622005E80BA /* ExShowAlart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7E822D9C622005E80BA /* ExShowAlart.swift */; };
 		BF1FB7EB22D9CDF2005E80BA /* ExImagePickUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7EA22D9CDF2005E80BA /* ExImagePickUpDelegate.swift */; };
 		BF1FB7ED22D9D217005E80BA /* ExCropImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7EC22D9D217005E80BA /* ExCropImage.swift */; };
+		BF5F51FB22DA022A00D52B51 /* Pods_GrowChildApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B26642AF8B76A502286FDD /* Pods_GrowChildApp.framework */; };
 		BF6D3C5822D5CB4A00237F07 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */; };
 		BF6D3C5C22D5ED9500237F07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5B22D5ED9500237F07 /* R.generated.swift */; };
 		BF7FE28422D886330027B3FE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE28322D886330027B3FE /* MainTabBarViewController.swift */; };
@@ -111,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BB0B722F53B858995E4B531 /* Pods_GrowChildApp.framework in Frameworks */,
+				BF5F51FB22DA022A00D52B51 /* Pods_GrowChildApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +690,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -751,6 +752,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -807,10 +809,47 @@
 			baseConfigurationReference = 201A5BF13DD3A33D7D1D08A7 /* Pods-GrowChildApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 28;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DynamicBlurView\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PopupDialog\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/R.swift.Library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RSKImageCropper-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SCLAlertView-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftFontName-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/TapticEngine-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/VegaScrollFlowLayout\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ViewAnimator-framework\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework-framework/ChameleonFramework.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DynamicBlurView/DynamicBlurView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView-framework/NVActivityIndicatorView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PopupDialog/PopupDialog.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/R.swift.Library/Rswift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RSKImageCropper-framework/RSKImageCropper.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SCLAlertView-framework/SCLAlertView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-framework/SnapKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftFontName-framework/SwiftFontName.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/TapticEngine-framework/TapticEngine.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/VegaScrollFlowLayout/VegaScrollFlowLayout.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ViewAnimator-framework/ViewAnimator.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/ChameleonFramework\"",
+					"\"${PODS_ROOT}/Headers/Public/RSKImageCropper\"",
+					"\"${PODS_ROOT}/Headers/Public/SwiftFontName\"",
+				);
 				INFOPLIST_FILE = GrowChildApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -830,9 +869,46 @@
 			baseConfigurationReference = 9BA1FDC5A471ED3D47C5E8A1 /* Pods-GrowChildApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DynamicBlurView\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PopupDialog\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/R.swift.Library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RSKImageCropper-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SCLAlertView-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftFontName-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/TapticEngine-framework\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/VegaScrollFlowLayout\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ViewAnimator-framework\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework-framework/ChameleonFramework.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DynamicBlurView/DynamicBlurView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView-framework/NVActivityIndicatorView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PopupDialog/PopupDialog.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/R.swift.Library/Rswift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RSKImageCropper-framework/RSKImageCropper.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SCLAlertView-framework/SCLAlertView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-framework/SnapKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftFontName-framework/SwiftFontName.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/TapticEngine-framework/TapticEngine.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/VegaScrollFlowLayout/VegaScrollFlowLayout.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ViewAnimator-framework/ViewAnimator.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/ChameleonFramework\"",
+					"\"${PODS_ROOT}/Headers/Public/RSKImageCropper\"",
+					"\"${PODS_ROOT}/Headers/Public/SwiftFontName\"",
+				);
 				INFOPLIST_FILE = GrowChildApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -853,6 +929,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildAppTests/Info.plist;
@@ -875,6 +952,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildAppTests/Info.plist;
@@ -896,6 +974,7 @@
 			baseConfigurationReference = 552004489C9EA1859B5D3913 /* Pods-GrowChildAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildAppUITests/Info.plist;
@@ -917,6 +996,7 @@
 			baseConfigurationReference = A2A89AC8424258AB5EE7F56A /* Pods-GrowChildAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = GrowChildAppUITests/Info.plist;

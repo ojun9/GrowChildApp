@@ -7,21 +7,23 @@
 //
 
 import Foundation
-import RSKImageCropper
 import UIKit
+import CropViewController
 
-extension ChildCandoRegisterViewController: RSKImageCropViewControllerDelegate {
+extension ChildCandoRegisterViewController: CropViewControllerDelegate {
    //キャンセルを押した時の処理
-   func imageCropViewControllerDidCancelCrop(_ controller: RSKImageCropViewController) {
+   func cropViewController(_ cropViewController: CropViewController, didFinishCancelled cancelled: Bool) {
       print("Cropperでキャンセル押された")
       dismiss(animated: true, completion: nil)
    }
+   
+  
    //完了を押した後の処理
-   func imageCropViewController(_ controller: RSKImageCropViewController, didCropImage croppedImage: UIImage, usingCropRect cropRect: CGRect, rotationAngle: CGFloat) {
+   func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+      //加工した画像が取得できる
       print("クロップで画像がトリミングされました")
       print("RegiScrollViewに画像を反映する")
-      self.RegiScrollView?.SellectImageView?.SetUserSellectedImaeg(image: croppedImage)
+      self.RegiScrollView?.SellectImageView?.SetUserSellectedImaeg(image: image)
       dismiss(animated: true)
-      
    }
 }

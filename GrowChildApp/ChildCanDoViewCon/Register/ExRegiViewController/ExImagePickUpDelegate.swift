@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import RSKImageCropper
+import CropViewController
 
 extension ChildCandoRegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -30,11 +30,14 @@ extension ChildCandoRegisterViewController: UIImagePickerControllerDelegate, UIN
    
    
    func ShowCropView(image: UIImage) {
-      let imageCropVC = RSKImageCropViewController(image: image, cropMode: .square)
-      imageCropVC.moveAndScaleLabel.text = "切り取り範囲を選択"
-      imageCropVC.cancelButton.setTitle("キャンセル", for: .normal)
-      imageCropVC.chooseButton.setTitle("完了", for: .normal)
-      imageCropVC.delegate = self
+      let CropVC = CropViewController(croppingStyle: .default, image: image)
+      CropVC.cancelButtonTitle = "キャンセル"
+      CropVC.doneButtonTitle = "完了"
+      CropVC.resetButtonHidden = true
+      CropVC.aspectRatioPreset = .presetSquare
+      CropVC.resetAspectRatioEnabled = false
+      CropVC.aspectRatioLockEnabled = true
+      CropVC.delegate = self
       
       let transition = CATransition()
       transition.duration = 0.5
@@ -42,7 +45,7 @@ extension ChildCandoRegisterViewController: UIImagePickerControllerDelegate, UIN
       transition.subtype = CATransitionSubtype.fromRight
       transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
       view.window!.layer.add(transition, forKey: kCATransition)
-      present(imageCropVC, animated: false)
+      present(CropVC, animated: false)
    }
 }
 
