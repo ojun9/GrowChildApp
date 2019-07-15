@@ -17,6 +17,17 @@ extension ChildCandoRegisterViewController {
       present(PickController, animated: true)
    }
    
+   func ShowCamera() {
+      
+      // create instanse
+      let CameraPickerer = UIImagePickerController()
+      CameraPickerer.sourceType = .camera
+      CameraPickerer.delegate = self
+      present(CameraPickerer, animated: true)
+      
+    
+   }
+   
     @objc func OpenActionSheetNowSellectedImageCatchNotification(notification: Notification) ->Void {
       print(" --- Sellect Image CatchNotificaion --- ")
       let Alert = UIAlertController(title: "(name)の写真を変更", message: nil, preferredStyle: .actionSheet)
@@ -28,6 +39,7 @@ extension ChildCandoRegisterViewController {
       
       let TakeImageAction = UIAlertAction(title: "写真を撮る", style: .default, handler: { (action: UIAlertAction!) -> Void in
          print("写真を撮るが押された")
+         self.ShowCamera()
       })
       
       let ChoseImageFromLibraryAction = UIAlertAction(title: "ライブラリから選択", style: .default, handler: { (action: UIAlertAction!) -> Void in
@@ -53,6 +65,7 @@ extension ChildCandoRegisterViewController {
       
       let TakeImageAction = UIAlertAction(title: "写真を撮る", style: .default, handler: { (action: UIAlertAction!) -> Void in
           print("写真を撮るが押された")
+         self.ShowCamera()
       })
       
       let ChoseImageFromLibraryAction = UIAlertAction(title: "ライブラリから選択", style: .default, handler: { (action: UIAlertAction!) -> Void in

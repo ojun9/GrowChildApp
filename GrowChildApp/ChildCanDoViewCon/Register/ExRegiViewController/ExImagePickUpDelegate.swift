@@ -14,6 +14,7 @@ extension ChildCandoRegisterViewController: UIImagePickerControllerDelegate, UIN
    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
       // キャンセルボタンを押された時に呼ばれる
       print("イメージピッカーでキャンセル押された")
+      picker.dismiss(animated: true, completion: nil)
    }
    
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -38,6 +39,8 @@ extension ChildCandoRegisterViewController: UIImagePickerControllerDelegate, UIN
       CropVC.resetAspectRatioEnabled = false
       CropVC.aspectRatioLockEnabled = true
       CropVC.delegate = self
+      CropVC.rotateButtonsHidden = true
+      CropVC.rotateClockwiseButtonHidden = false
       
       let transition = CATransition()
       transition.duration = 0.5
