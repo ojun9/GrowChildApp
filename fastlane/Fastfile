@@ -35,12 +35,18 @@ platform :ios do
     increment_build_number
     snapshot(
  	devices: [
-  		"iPhone 8",
-  		"iPhone 8 Plus",
-  		"iPhone SE",
-  		"iPhone X",
-  		"iPad Pro (12.9-inch)",
-  		"iPad Pro (9.7-inch)",
+  		"iPhone 5s",
+                "iPhone 8",
+                "iPhone 8 Plus",
+                "iPhone SE",
+                "iPhone X",
+                "iPhone Xʀ",
+                "iPhone Xs Max",
+                "iPad Pro (12.9-inch) (3rd generation)",
+                "iPad Pro (10.5-inch)",
+                "iPad (6th generation)",
+                "iPad Air (3rd generation)",
+                "iPad mini (5th generation)",
 	],
 	languages: [
  		 "en-US",
@@ -57,12 +63,18 @@ platform :ios do
     
     snapshot(
  	devices: [
-  		"iPhone 8",
+  		"iPhone 5s",
+		"iPhone 8",
   		"iPhone 8 Plus",
   		"iPhone SE",
   		"iPhone X",
-  		"iPad Pro (12.9-inch)",
-  		"iPad Pro (9.7-inch)",
+		"iPhone Xʀ",
+		"iPhone Xs Max",
+  		"iPad Pro (12.9-inch) (3rd generation)",
+  		"iPad Pro (10.5-inch)",
+		"iPad (6th generation)",
+		"iPad Air (3rd generation)",
+		"iPad mini (5th generation)",
 	],
 	languages: [
  		 "en-US",
