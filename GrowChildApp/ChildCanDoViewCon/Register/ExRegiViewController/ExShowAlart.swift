@@ -56,6 +56,14 @@ extension ChildCandoRegisterViewController {
       Alert.addAction(ChoseImageFromLibraryAction)
       Alert.addAction(CancelAction)
       
+      Alert.popoverPresentationController?.sourceView = self.view
+      
+      let screenSize = UIScreen.main.bounds
+      // ここで表示位置を調整
+      // xは画面中央、yは画面下部になる様に指定
+      Alert.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
+      
+      
       present(Alert, animated: true, completion: nil)
    }
    
@@ -80,6 +88,14 @@ extension ChildCandoRegisterViewController {
       Alert.addAction(TakeImageAction)
       Alert.addAction(ChoseImageFromLibraryAction)
       Alert.addAction(CancelAction)
+      
+      Alert.popoverPresentationController?.sourceView = self.view
+      
+      let screenSize = UIScreen.main.bounds
+      // ここで表示位置を調整
+      // xは画面中央、yは画面下部になる様に指定
+      Alert.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
+      
       
       present(Alert, animated: true, completion: nil)
    }

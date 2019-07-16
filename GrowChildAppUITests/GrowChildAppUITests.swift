@@ -39,118 +39,75 @@ class GrowChildAppUITests: XCTestCase {
       
       
       let app = XCUIApplication()
-      app/*@START_MENU_TOKEN@*/.buttons["CanDoRegiButton"]/*[[".otherElements[\"ChildCanDoMainViewControllerView\"].buttons[\"CanDoRegiButton\"]",".buttons[\"CanDoRegiButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
       
       snapshot("1")
       
-      let scrollViewsQuery = app.scrollViews
-      scrollViewsQuery.children(matching: .textField).element.tap()
-      app/*@START_MENU_TOKEN@*/.keys["た"]/*[[".keyboards.keys[\"た\"]",".keys[\"た\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeDown()
+      app.buttons["CanDoRegiButton"].tap()
       
       snapshot("2")
       
-      let key = app/*@START_MENU_TOKEN@*/.keys["あ"]/*[[".keyboards.keys[\"あ\"]",".keys[\"あ\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-      
+      let nosellectedimagePngImage = app/*@START_MENU_TOKEN@*/.images["NoSellectedImage.png"]/*[[".scrollViews.images[\"NoSellectedImage.png\"]",".images[\"NoSellectedImage.png\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+      nosellectedimagePngImage.tap()
       
       snapshot("3")
       
-      key.tap()
-      key.tap()
-      app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"確定\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-      app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"完了\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-      scrollViewsQuery.children(matching: .textView).element.tap()
-      
-      let key2 = app/*@START_MENU_TOKEN@*/.keys["か"]/*[[".keyboards.keys[\"か\"]",".keys[\"か\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+      let nameSheet = app.sheets["(name)の写真を登録"]
+      nameSheet.buttons["ライブラリから選択"].tap()
       
       snapshot("4")
       
-      key2.tap()
-      key2.tap()
-      
-      snapshot("5")
-      
-      let key3 = app/*@START_MENU_TOKEN@*/.keys["は"]/*[[".keyboards.keys[\"は\"]",".keys[\"は\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-      key3.tap()
-      key3.tap()
-      
-      snapshot("6")
-      
-      app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"確定\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-      app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"改行\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-      
-      snapshot("7")
-      
-      app/*@START_MENU_TOKEN@*/.scrollViews.containing(.staticText, identifier:"できたこと・").element/*[[".scrollViews.containing(.image, identifier:\"NoSellectedImage.png\").element",".scrollViews.containing(.staticText, identifier:\"わたしのきもち\").element",".scrollViews.containing(.staticText, identifier:\"できたこと・\").element"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-     
-      
-      snapshot("8")
-      
-      
-      
-     
+
+   
     }
    
 
    
 
    func testPart3() {
+  
+      
+      
+      
       let app = XCUIApplication()
       
-      
-      snapshot("9")
-      
+      snapshot("6")
       app/*@START_MENU_TOKEN@*/.buttons["CanDoRegiButton"]/*[[".otherElements[\"ChildCanDoMainViewControllerView\"].buttons[\"CanDoRegiButton\"]",".buttons[\"CanDoRegiButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
       
+      snapshot("7")
+      app.scrollViews.children(matching: .textField).element.tap()
+      snapshot("8")
+      
+      app.keys["H"].tap()
+      app.keys["e"].tap()
+      snapshot("9")
+      app.keys["space"].tap()
+      app.keys["c"].tap()
+      app.keys["a"].tap()
+      app.keys["n"].tap()
       snapshot("10")
-      
-      
-      let nosellectedimagePngImage = app/*@START_MENU_TOKEN@*/.images["NoSellectedImage.png"]/*[[".scrollViews.images[\"NoSellectedImage.png\"]",".images[\"NoSellectedImage.png\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-      nosellectedimagePngImage.tap()
-      
+      app.keys["space"].tap()
+      app.keys["p"].tap()
+      app.keys["l"].tap()
+      app.keys["a"].tap()
+      app.keys["y"].tap()
       snapshot("11")
-      
-      let nameSheet = app.sheets["(name)の写真を登録"]
-      
-      
-      nameSheet.buttons["キャンセル"].tap()
-      
-      
+      app.keys["space"].tap()
+      app.keys["t"].tap()
+      app.keys["e"].tap()
+      app.keys["n"].tap()
+      app.keys["n"].tap()
+      app.keys["i"].tap()
+      app.keys["s"].tap()
       snapshot("12")
       
-      nosellectedimagePngImage.tap()
-      nameSheet.buttons["写真を撮る"].tap()
-      
+      app.keys["space"].tap()
       snapshot("13")
-      
-      
-      app/*@START_MENU_TOKEN@*/.buttons["PhotoCapture"]/*[[".buttons[\"Take Picture\"]",".buttons[\"PhotoCapture\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-      
-      
+      app.buttons["Done"].tap()
       snapshot("14")
-      
-      app.buttons["Use Photo"].tap()
-      
+      let childcandomainviewcontrollernabitabbarNavigationBar = app.navigationBars["ChildCanDoMainViewControllerNabiTabBar"]
+      childcandomainviewcontrollernabitabbarNavigationBar.staticTexts["NavigationBarCustomViewImageAndText"].tap()
+      childcandomainviewcontrollernabitabbarNavigationBar.buttons["Back"].tap()
       snapshot("15")
-      
-      app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).children(matching: .scrollView).element.tap()
-      
-      
-      snapshot("16")
-      
-      app.buttons["完了"].tap()
-      
-      
-      snapshot("17")
-      
-      app.scrollViews.children(matching: .image).element.tap()
-      
-      
-      snapshot("18")
-      
-      app.sheets["(name)の写真を変更"].buttons["現在の写真を削除"].tap()
-   
-      
-      snapshot("19")
    }
 
 }

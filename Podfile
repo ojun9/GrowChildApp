@@ -26,7 +26,7 @@ target 'GrowChildApp' do
 
   pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftFontName', '~> 4.0.0'
-  pod 'CropViewController'
+ 
 
 end
 
@@ -39,11 +39,10 @@ target 'GrowChildAppTests' do
     pod "ViewAnimator"
     pod 'SnapKit', '~> 5.0.0'
     pod 'SwiftFontName', '~> 4.0.0'
-    pod 'CropViewController'
     # Pods for testing
-  end
+end
 
-  target 'GrowChildAppUITests' do
+target 'GrowChildAppUITests' do
     inherit! :search_paths
     # Pods for testing
     pod 'ChameleonFramework/Swift'
@@ -53,5 +52,5 @@ target 'GrowChildAppTests' do
     pod "ViewAnimator"
     pod 'SnapKit', '~> 5.0.0'
     pod 'SwiftFontName', '~> 4.0.0'
-    pod 'CropViewController'
-  end
+
+end
