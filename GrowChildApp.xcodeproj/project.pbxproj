@@ -413,6 +413,7 @@
 		BF1FB7EE22D9D372005E80BA /* ExRegiViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BF7FE29B22D982A00027B3FE /* ChildCandoRegisterViewController.swift */,
 				BF1FB7E822D9C622005E80BA /* ExShowAlart.swift */,
 				BF1FB7EA22D9CDF2005E80BA /* ExImagePickUpDelegate.swift */,
 				BF1FB7EC22D9D217005E80BA /* ExCropImage.swift */,
@@ -477,7 +478,8 @@
 		BF7FE2A522D99F6C0027B3FE /* See */ = {
 			isa = PBXGroup;
 			children = (
-				BF7FE29D22D982EC0027B3FE /* ChildCanDoSeeViewController.swift */,
+				BFC8CF1722DDD4A200AF87E6 /* ExViewController */,
+				BFC8CF1822DDD4B800AF87E6 /* CustomView */,
 			);
 			path = See;
 			sourceTree = "<group>";
@@ -485,11 +487,8 @@
 		BF7FE2A622D99F790027B3FE /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				BF7FE29B22D982A00027B3FE /* ChildCandoRegisterViewController.swift */,
 				BF1FB7EE22D9D372005E80BA /* ExRegiViewController */,
-				BF1FB7E422D9BE5D005E80BA /* RegisterScrollView.swift */,
-				BF1FB7E622D9C024005E80BA /* SellectImageViewForSpuare.swift */,
-				BF7FE2A822D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift */,
+				BFC8CF1622DDD48600AF87E6 /* ScrollView */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -791,6 +790,31 @@
 				BFC8CEE522DC713500AF87E6 /* E51F6BB9-E182-3335-B6A9-6F71C5FF14E9.bcsymbolmap */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		BFC8CF1622DDD48600AF87E6 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				BF1FB7E422D9BE5D005E80BA /* RegisterScrollView.swift */,
+				BF1FB7E622D9C024005E80BA /* SellectImageViewForSpuare.swift */,
+				BF7FE2A822D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		BFC8CF1722DDD4A200AF87E6 /* ExViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF7FE29D22D982EC0027B3FE /* ChildCanDoSeeViewController.swift */,
+			);
+			path = ExViewController;
+			sourceTree = "<group>";
+		};
+		BFC8CF1822DDD4B800AF87E6 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

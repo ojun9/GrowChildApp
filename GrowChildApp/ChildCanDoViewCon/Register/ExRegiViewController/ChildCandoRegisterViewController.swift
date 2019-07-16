@@ -37,10 +37,7 @@ class ChildCandoRegisterViewController: UIViewController {
    
    private func InitRegiScrollView() {
       RegiScrollView = RegisterScrollView(frame: self.view.frame)
-      
       self.view.addSubview(RegiScrollView!)
-     
-      
    }
    
    private func SetUpNavigationItemSetting() {
