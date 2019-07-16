@@ -14,11 +14,32 @@ import TapticEngine
 
 class ChildCanDoSeeViewController: UIViewController {
    
+   var SeeCollection: SeeCollectionView?
+   let fruits: [String] = ["apple", "grape", "lemon", "banana", "cherry", "strobery", "peach", "orange"]
+   
+   
    override func viewDidLoad() {
       super.viewDidLoad()
       InitViewSetting()
       SetUpNavigationItemSetting()
+      
+      InitCollectionView()
    }
+   
+   
+   private func InitCollectionView() {
+      let StatusBarHeight = UIApplication.shared.statusBarFrame.size.height
+      let NavigationBarHeight = self.navigationController?.navigationBar.frame.size.height
+      let Flame = CGRect(x: 0, y: StatusBarHeight + NavigationBarHeight!, width: self.view.frame.width, height: self.view.frame.height)
+      SeeCollection = SeeCollectionView(frame: Flame)
+      SeeCollection?.delegate = self
+      SeeCollection?.dataSource = self
+      SeeCollection?.register(SeeCollectionViewCell.self, forCellWithReuseIdentifier: "SeeCollectionViewCell")
+      
+      view.addSubview(SeeCollection!)
+   }
+   
+   
    
    private func InitViewSetting() {
       self.view.backgroundColor = UIColor.flatWhite()
