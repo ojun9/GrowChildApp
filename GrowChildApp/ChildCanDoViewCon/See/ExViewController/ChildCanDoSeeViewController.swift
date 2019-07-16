@@ -15,7 +15,7 @@ import TapticEngine
 class ChildCanDoSeeViewController: UIViewController {
    
    var SeeCollection: SeeCollectionView?
-   let fruits: [String] = ["apple", "grape", "lemon", "banana", "cherry", "strobery", "peach", "orange"]
+   let fruits: [String] = ["apple", "grape", "lemon", "banana", "cherry", "strobery", "peach", "orange", "lock", "dor", "dex", "foxy", "dexex", "low"]
    
    
    override func viewDidLoad() {
@@ -30,7 +30,10 @@ class ChildCanDoSeeViewController: UIViewController {
    private func InitCollectionView() {
       let StatusBarHeight = UIApplication.shared.statusBarFrame.size.height
       let NavigationBarHeight = self.navigationController?.navigationBar.frame.size.height
-      let Flame = CGRect(x: 0, y: StatusBarHeight + NavigationBarHeight!, width: self.view.frame.width, height: self.view.frame.height)
+      let TabBarHeight = self.tabBarController?.tabBar.frame.size.height
+      let StartY = StatusBarHeight + NavigationBarHeight!
+      let CollectionViewHeight = self.view.frame.height - (StartY + TabBarHeight!)
+      let Flame = CGRect(x: 0, y: StartY, width: self.view.frame.width, height: CollectionViewHeight)
       SeeCollection = SeeCollectionView(frame: Flame)
       SeeCollection?.delegate = self
       SeeCollection?.dataSource = self

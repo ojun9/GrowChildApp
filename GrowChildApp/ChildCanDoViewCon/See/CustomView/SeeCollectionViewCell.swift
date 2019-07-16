@@ -26,14 +26,21 @@ class SeeCollectionViewCell: UICollectionViewCell {
    }
    
    private func setup() {
-      layer.borderColor = UIColor.darkGray.cgColor
-      layer.borderWidth = 3.0
-      
+      layer.borderColor = UIColor.black.cgColor
+      layer.cornerRadius = 14
+      layer.shadowColor = UIColor.black.cgColor
+      layer.shadowOpacity = 0.3
+      layer.shadowOffset = CGSize(width: 0, height: 5)
+      layer.masksToBounds = false
+      backgroundColor = UIColor.flatWhiteColorDark()
       contentView.addSubview(fruitsNameLabel)
+      
+   
    }
    
    func setupContents(textName: String) {
       fruitsNameLabel.text = textName
+      fruitsNameLabel.textColor = UIColor.gray
    }
    
    required init?(coder aDecoder: NSCoder) {
