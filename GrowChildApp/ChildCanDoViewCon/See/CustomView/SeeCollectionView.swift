@@ -23,6 +23,7 @@ class SeeCollectionView: UICollectionView {
       super.init(frame: frame, collectionViewLayout: Layout)
       
       
+      
       configureCollectionViewLayout()
       self.backgroundColor = UIColor.flatWhite()
    }
