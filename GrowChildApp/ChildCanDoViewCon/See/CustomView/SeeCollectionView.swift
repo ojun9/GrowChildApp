@@ -33,8 +33,7 @@ class SeeCollectionView: UICollectionView {
       
       Layout.minimumLineSpacing = lineSpacing
       Layout.sectionInset = UIEdgeInsets(top: topInset, left: 0, bottom: 50, right: 0)
-      //let itemWidth = UIScreen.main.bounds.width - 2 * xInset
-      let itemWidth = ( UIScreen.main.bounds.width - 2 * xInset).rounded(.toNearestOrAwayFromZero)
+      let itemWidth = UIScreen.main.bounds.width - 2 * xInset
       Layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
       Layout.springHardness = 0
       Layout.isPagingEnabled = false
