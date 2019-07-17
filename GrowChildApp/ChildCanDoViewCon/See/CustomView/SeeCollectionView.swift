@@ -14,9 +14,9 @@ import ChameleonFramework
 class SeeCollectionView: UICollectionView {
    
    let Layout = VegaScrollFlowLayout()
-   private let itemHeight: CGFloat = 84
+   private let itemHeight: CGFloat = 180
    private let lineSpacing: CGFloat = 20
-   private let xInset: CGFloat = 20
+   private let xInset: CGFloat = 10
    private let topInset: CGFloat = 30
    
    init(frame: CGRect) {
@@ -37,7 +37,7 @@ class SeeCollectionView: UICollectionView {
       Layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
       Layout.springHardness = 0
       Layout.isPagingEnabled = false
-      
+      //Layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
       self.collectionViewLayout.invalidateLayout()
    }
    

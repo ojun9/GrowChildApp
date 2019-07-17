@@ -109,5 +109,25 @@ class GrowChildAppUITests: XCTestCase {
       childcandomainviewcontrollernabitabbarNavigationBar.buttons["Back"].tap()
       snapshot("15")
    }
+   
+   func testPart4() {
+      
+      let app = XCUIApplication()
+      snapshot("16")
+      app/*@START_MENU_TOKEN@*/.buttons["CanDoSeeButton"]/*[[".otherElements[\"ChildCanDoMainViewControllerView\"].buttons[\"CanDoSeeButton\"]",".buttons[\"CanDoSeeButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+      snapshot("17")
+      
+      let tabBarsQuery = app.tabBars
+      
+      tabBarsQuery.buttons["Bookmarks"].tap()
+      snapshot("18")
+      tabBarsQuery.buttons["Favorites"].tap()
+      snapshot("19")
+      
+      app.swipeUp()
+      
+      app.navigationBars["ChildCanDoMainViewControllerNabiTabBar"].buttons["Back"].tap()
+      snapshot("20")
+   }
 
 }

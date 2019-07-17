@@ -37,6 +37,8 @@ class ChildCanDoSeeViewController: UIViewController {
       SeeCollection = SeeCollectionView(frame: Flame)
       SeeCollection?.delegate = self
       SeeCollection?.dataSource = self
+      
+      
       SeeCollection?.register(SeeCollectionViewCell.self, forCellWithReuseIdentifier: "SeeCollectionViewCell")
       
       view.addSubview(SeeCollection!)

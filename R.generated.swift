@@ -57,6 +57,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `SeeCollectionViewCells`.
+    static let seeCollectionViewCells = _R.nib._SeeCollectionViewCells()
+    
+    /// `UINib(name: "SeeCollectionViewCells", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.seeCollectionViewCells) instead")
+    static func seeCollectionViewCells(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.seeCollectionViewCells)
+    }
+    
+    static func seeCollectionViewCells(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SeeCollectionViewCells? {
+      return R.nib.seeCollectionViewCells.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SeeCollectionViewCells
+    }
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
@@ -93,6 +111,21 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     try storyboard.validate()
+  }
+  
+  struct nib {
+    struct _SeeCollectionViewCells: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SeeCollectionViewCells"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SeeCollectionViewCells? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SeeCollectionViewCells
+      }
+      
+      fileprivate init() {}
+    }
+    
+    fileprivate init() {}
   }
   
   struct storyboard: Rswift.Validatable {
