@@ -46,6 +46,7 @@
 		BFC8CF1A22DDD50700AF87E6 /* SeeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8CF1922DDD50700AF87E6 /* SeeCollectionView.swift */; };
 		BFC8CF1C22DDD71100AF87E6 /* SeeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8CF1B22DDD71100AF87E6 /* SeeCollectionViewCell.swift */; };
 		BFC8CF1E22DDD80A00AF87E6 /* CollectionViewInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8CF1D22DDD80A00AF87E6 /* CollectionViewInfoCell.swift */; };
+		BFC8CF4122E1A3E900AF87E6 /* CanDoRegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8CF4022E1A3E900AF87E6 /* CanDoRegisterButton.swift */; };
 		E08221CF2E697363FD7F7718 /* libPods-GrowChildAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9D75C561C9A7B9559E816 /* libPods-GrowChildAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -293,6 +294,7 @@
 		BFC8CF1922DDD50700AF87E6 /* SeeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeCollectionView.swift; sourceTree = "<group>"; };
 		BFC8CF1B22DDD71100AF87E6 /* SeeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFC8CF1D22DDD80A00AF87E6 /* CollectionViewInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewInfoCell.swift; sourceTree = "<group>"; };
+		BFC8CF4022E1A3E900AF87E6 /* CanDoRegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanDoRegisterButton.swift; sourceTree = "<group>"; };
 		DD4BC87DB6DD16D0812D35BE /* Pods-GrowChildAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowChildAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GrowChildAppTests/Pods-GrowChildAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -802,6 +804,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1FB7E422D9BE5D005E80BA /* RegisterScrollView.swift */,
+				BFC8CF3922E1A3CB00AF87E6 /* CustomObject */,
 				BF1FB7E622D9C024005E80BA /* SellectImageViewForSpuare.swift */,
 				BF7FE2A822D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift */,
 			);
@@ -824,6 +827,14 @@
 				BFC8CF1B22DDD71100AF87E6 /* SeeCollectionViewCell.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		BFC8CF3922E1A3CB00AF87E6 /* CustomObject */ = {
+			isa = PBXGroup;
+			children = (
+				BFC8CF4022E1A3E900AF87E6 /* CanDoRegisterButton.swift */,
+			);
+			path = CustomObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1237,6 +1248,7 @@
 				BF7FE29122D88C070027B3FE /* Child.swift in Sources */,
 				BF7FE28E22D8881D0027B3FE /* SettingMainViewController.swift in Sources */,
 				BF7FE2A222D99B610027B3FE /* ExUIImage.swift in Sources */,
+				BFC8CF4122E1A3E900AF87E6 /* CanDoRegisterButton.swift in Sources */,
 				BF1CE89A22D5990700ACF7F8 /* AppDelegate.swift in Sources */,
 				BF7FE2A022D9859B0027B3FE /* NavigationBarCustomView.swift in Sources */,
 				BF7FE2A922D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift in Sources */,
@@ -1511,7 +1523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1572,7 +1584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

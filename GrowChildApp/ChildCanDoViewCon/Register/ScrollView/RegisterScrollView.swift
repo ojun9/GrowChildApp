@@ -55,15 +55,11 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
       SetUpSellectImageView()
       SetUpCanDoRegisterButton()
       SetUpCanDoCancelButton()
-      
-//      self.snp.makeConstraints { make in
-//         make.bottom.equalTo(CanDoCancelButton.snp.bottom).offset(20)
-//         make.top.equalTo(CanDoTextLabel.snp.top).offset(30)
-//      }
+
    }
    
+   // キーボードを閉じる
    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-      // キーボードを閉じる
       textField.resignFirstResponder()
       return true
    }
@@ -113,14 +109,24 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
 
    private func InitCanDoRegisterButton() {
       CanDoRegisterButton.backgroundColor = UIColor.flatMint()
+      CanDoRegisterButton.addTarget(self, action: #selector(self.TapCanDoRegiButton(_:)), for: .touchUpInside)
       self.addSubview(CanDoRegisterButton)
    }
    
    private func InitCanDoCancelButton() {
       CanDoCancelButton.backgroundColor = UIColor.flatMint()
+      CanDoCancelButton.addTarget(self, action: #selector(self.TapCanDoCancelButton(_:)), for: .touchUpInside)
       self.addSubview(CanDoCancelButton)
    }
    
+   
+   @objc func TapCanDoRegiButton(_ sender: UIButton) {
+      
+   }
+   
+   @objc func TapCanDoCancelButton(_ sender: UIButton) {
+      
+   }
    
    private func SetUpCanDoTextLabel() {
       CanDoTextLabel.snp.makeConstraints { make in
@@ -178,7 +184,7 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
    
    private func SetUpCanDoCancelButton() {
       CanDoCancelButton.snp.makeConstraints { make in
-         make.top.equalTo(CanDoRegisterButton.snp.bottom).offset(self.frame.width / 20 * 3)
+         make.top.equalTo(CanDoRegisterButton.snp.bottom).offset(self.frame.width / 20 * 2.5 / 2)
          make.leading.equalTo(self.snp.leading).offset(self.frame.width / 20 * 2)
          make.width.equalTo(self.frame.width / 20 * 16)
          make.height.equalTo(self.frame.width / 20 * 2.5)
