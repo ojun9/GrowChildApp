@@ -61,33 +61,36 @@ class SeeCollectionViewCell: UICollectionViewCell {
    }
    
    private func OutLayoutCellLabel() {
-      CellDayLabel.snp.makeConstraints { make in
-         make.top.equalTo(self.snp.top).offset(5)
-         make.leading.equalTo(self.snp.leading).offset(5)
-         make.width.equalTo(self.frame.width / 3)
-         make.height.equalTo(self.frame.height / 10)
-      }
-      
-      CellTitleLabel.snp.makeConstraints { make in
-         make.top.equalTo(CellDayLabel.snp.bottom).offset(5)
-         make.leading.equalTo(self.snp.leading).offset(5)
-         make.width.equalTo(self.frame.width / 2)
-         make.height.equalTo(self.frame.height / 3)
-      }
-      
-      CellMainDiscriptionLabel.snp.makeConstraints { make in
-         make.top.equalTo(CellTitleLabel.snp.bottom).offset(5)
-         make.leading.equalTo(self.snp.leading).offset(5)
-         make.width.equalTo(self.frame.width / 2)
-         make.height.equalTo(self.frame.height / 4)
-      }
       
       CellChildImageView.snp.makeConstraints { make in
-         make.top.equalTo(self.snp.top).offset(5)
-         make.leading.equalTo(CellTitleLabel.snp.trailing).offset(5)
+         make.top.equalTo(self.snp.top).offset(self.frame.height / 10)
+         make.trailing.equalTo(self.snp.trailing).offset(-self.frame.height / 10)
          make.width.equalTo(self.frame.height / 10 * 8)
          make.height.equalTo(self.frame.height / 10 * 8)
       }
+      
+      CellDayLabel.snp.makeConstraints { make in
+         make.top.equalTo(self.snp.top).offset(self.frame.height / 10 / 2)
+         make.leading.equalTo(self.snp.leading).offset(self.frame.height / 10 / 2)
+         make.width.equalTo(self.frame.width / 3)
+         make.height.equalTo(self.frame.height / 10 / 2 * 1.5)
+      }
+      
+      CellTitleLabel.snp.makeConstraints { make in
+         make.top.equalTo(CellDayLabel.snp.bottom).offset(self.frame.height / 10 / 2)
+         make.leading.equalTo(self.snp.leading).offset(self.frame.height / 10)
+         make.trailing.equalTo(CellChildImageView.snp.leading).offset(-self.frame.height / 10)
+         make.height.equalTo(self.frame.height / 10 * 3)
+      }
+      
+      CellMainDiscriptionLabel.snp.makeConstraints { make in
+         make.top.equalTo(CellTitleLabel.snp.bottom).offset(self.frame.height / 10)
+         make.leading.equalTo(self.frame.height / 10 * 1.5)
+         make.trailing.equalTo(CellChildImageView.snp.leading).offset(-self.frame.height / 10)
+         make.bottom.equalTo(self.snp.bottom).offset(-self.frame.height / 10)
+      }
+      
+      
    }
    
    func setupContents(textName: String) {
