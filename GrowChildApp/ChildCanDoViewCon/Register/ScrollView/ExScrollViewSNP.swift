@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import SnapKit
+import UIKit
 
 extension RegisterScrollView {
+   
    func SetUpCanDoTextLabel() {
       CanDoTextLabel.snp.makeConstraints { make in
          make.top.equalTo(self.snp.top).offset(30)
