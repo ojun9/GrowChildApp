@@ -48,6 +48,8 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
       InitCanDoRegisterButton()
       InitCanDoCancelButton()
       
+      InitObjectIdentify()
+      
       SetUpCanDoTextLabel()
       SetUpCanDoTextField()
       SetUpMemoOfCanDOTextLabel()
@@ -71,53 +73,6 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
    }
    
    
-   private func InitCanDoText() {
-      CanDoText = "できたこと・"
-   }
-   
-   private func InitCanDoTextLabel() {
-      CanDoTextLabel.text = CanDoText
-      CanDoTextLabel.backgroundColor = UIColor.blue
-      self.addSubview(CanDoTextLabel)
-   }
-   
-   private func InitCanDoTextField() {
-      CanDoTextField.backgroundColor = UIColor.blue
-      CanDoTextField.returnKeyType = .done
-      CanDoTextField.delegate = self
-      self.addSubview(CanDoTextField)
-   }
-   
-   private func InitMemoOfCanDOText() {
-      MemoOfCanDOText = "わたしのきもち"
-   }
-   
-   private func InitMemoOfCanDOTextLabel() {
-      MemoOfCanDOTextLabel.text = MemoOfCanDOText
-      self.addSubview(MemoOfCanDOTextLabel)
-   }
-   
-   private func InitMemoOfTextView() {
-      MemoOfTextView.backgroundColor = UIColor.blue
-      self.addSubview(MemoOfTextView)
-   }
-   
-   private func InitSellectImageView() {
-      SellectImageView = SellectImageViewForSpuare(frame: frame)
-      self.addSubview(SellectImageView!)
-   }
-
-   private func InitCanDoRegisterButton() {
-      CanDoRegisterButton.backgroundColor = UIColor.flatMint()
-      CanDoRegisterButton.addTarget(self, action: #selector(self.TapCanDoRegiButton(_:)), for: .touchUpInside)
-      self.addSubview(CanDoRegisterButton)
-   }
-   
-   private func InitCanDoCancelButton() {
-      CanDoCancelButton.backgroundColor = UIColor.flatMint()
-      CanDoCancelButton.addTarget(self, action: #selector(self.TapCanDoCancelButton(_:)), for: .touchUpInside)
-      self.addSubview(CanDoCancelButton)
-   }
    
    
    @objc func TapCanDoRegiButton(_ sender: UIButton) {
