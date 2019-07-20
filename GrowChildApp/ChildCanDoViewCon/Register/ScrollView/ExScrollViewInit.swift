@@ -17,12 +17,12 @@ extension RegisterScrollView {
    
    func InitCanDoTextLabel() {
       CanDoTextLabel.text = CanDoText
-      CanDoTextLabel.backgroundColor = UIColor.blue
+      CanDoTextLabel.backgroundColor = UIColor.flatPowderBlue()
       self.addSubview(CanDoTextLabel)
    }
    
    func InitCanDoTextField() {
-      CanDoTextField.backgroundColor = UIColor.blue
+      CanDoTextField.backgroundColor = UIColor.flatPowderBlue()
       CanDoTextField.returnKeyType = .done
       CanDoTextField.delegate = self
       self.addSubview(CanDoTextField)
@@ -38,7 +38,7 @@ extension RegisterScrollView {
    }
    
    func InitMemoOfTextView() {
-      MemoOfTextView.backgroundColor = UIColor.blue
+      MemoOfTextView.backgroundColor = UIColor.flatPowderBlue()
       self.addSubview(MemoOfTextView)
    }
    

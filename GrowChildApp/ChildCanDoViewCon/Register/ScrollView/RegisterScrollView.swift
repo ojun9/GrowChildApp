@@ -76,13 +76,12 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
    
    
    @objc func TapCanDoRegiButton(_ sender: UIButton) {
-      
+      print("登録ボタンタップされました")
    }
    
    @objc func TapCanDoCancelButton(_ sender: UIButton) {
-      
+      print("キャンセルボタンタップされました")
    }
-   
    
    
    required init?(coder aDecoder: NSCoder) {

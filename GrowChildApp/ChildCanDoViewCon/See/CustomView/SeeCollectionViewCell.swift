@@ -84,10 +84,10 @@ class SeeCollectionViewCell: UICollectionViewCell {
       }
       
       CellMainDiscriptionLabel.snp.makeConstraints { make in
-         make.top.equalTo(CellTitleLabel.snp.bottom).offset(self.frame.height / 10)
+         make.top.equalTo(CellTitleLabel.snp.bottom).offset(self.frame.height / 10 / 2)
          make.leading.equalTo(self.frame.height / 10 * 1.5)
          make.trailing.equalTo(CellChildImageView.snp.leading).offset(-self.frame.height / 10)
-         make.bottom.equalTo(self.snp.bottom).offset(-self.frame.height / 10)
+         make.bottom.equalTo(self.snp.bottom).offset(-self.frame.height / 10 / 2)
       }
       
       

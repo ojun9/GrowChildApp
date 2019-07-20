@@ -37,6 +37,7 @@ class ChildCandoRegisterViewController: UIViewController {
    
    private func InitRegiScrollView() {
       RegiScrollView = RegisterScrollView(frame: self.view.frame)
+      RegiScrollView?.accessibilityIdentifier = "RegiScrollView"
       self.view.addSubview(RegiScrollView!)
    }
    
