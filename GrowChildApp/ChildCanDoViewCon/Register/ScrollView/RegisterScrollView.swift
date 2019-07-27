@@ -82,10 +82,13 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
          ImageData = SellectImageView?.GetSellectedImageData()
       }
       
+      let formatter = DateFormatter()
+      formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale.current)
+      print("day = \(String(describing: formatter.string(from: Date())))")
       print("Title = \(String(describing: CanDoTextField.text!))")
       print("Memo = \(String(describing: MemoOfTextView.text))")
       
-      SaveDataBase.AddCanDo(Title: CanDoTextField.text!, Memo: MemoOfTextView.text, ImageData: ImageData)
+      SaveDataBase.AddCanDo(Day: formatter.string(from: Date()),Title: CanDoTextField.text!, Memo: MemoOfTextView.text, ImageData: ImageData)
    }
    
    

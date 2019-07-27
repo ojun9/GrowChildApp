@@ -15,7 +15,6 @@ import TapticEngine
 class ChildCanDoSeeViewController: UIViewController {
    
    var SeeCollection: SeeCollectionView?
-   let fruits: [String] = ["apple", "grape", "lemon", "banana", "cherry", "strobery", "peach", "orange", "lock", "dor", "dex", "foxy", "dexex", "low"]
    let CanDoDataBase = CanDoRegiDataBase()
    
    override func viewDidLoad() {

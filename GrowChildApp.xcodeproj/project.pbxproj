@@ -40,6 +40,7 @@
 		BF7FE2A222D99B610027B3FE /* ExUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE2A122D99B610027B3FE /* ExUIImage.swift */; };
 		BF7FE2A922D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE2A822D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift */; };
 		BF98B7D022DC4D7D00F557FE /* TOCropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF98B7CE22DC4D7200F557FE /* TOCropViewController.framework */; };
+		BFB63B1522EC018B00DBE840 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFB63B1722EC018B00DBE840 /* Localizable.strings */; };
 		BFC8CEF822DC715300AF87E6 /* CropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC8CEE122DC713500AF87E6 /* CropViewController.framework */; };
 		BFC8CEF922DC715E00AF87E6 /* TOCropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC8CEE422DC713500AF87E6 /* TOCropViewController.framework */; };
 		BFC8CEFE22DC72BF00AF87E6 /* CropViewController.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF98B7C322DC4D6A00F557FE /* CropViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -191,6 +192,14 @@
 		BF98B7CD22DC4D7200F557FE /* 5E2DB5A5-C654-3895-BBBA-D7F1289A12D2.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "5E2DB5A5-C654-3895-BBBA-D7F1289A12D2.bcsymbolmap"; sourceTree = "<group>"; };
 		BF98B7CE22DC4D7200F557FE /* TOCropViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TOCropViewController.framework; sourceTree = "<group>"; };
 		BF98B7CF22DC4D7200F557FE /* E51F6BB9-E182-3335-B6A9-6F71C5FF14E9.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "E51F6BB9-E182-3335-B6A9-6F71C5FF14E9.bcsymbolmap"; sourceTree = "<group>"; };
+		BFB63B0822EC00D100DBE840 /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/Main.strings"; sourceTree = "<group>"; };
+		BFB63B0922EC00D100DBE840 /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BFB63B0A22EC00D100DBE840 /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BFB63B0B22EC00D200DBE840 /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/Main.strings"; sourceTree = "<group>"; };
+		BFB63B1022EC00D200DBE840 /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BFB63B1122EC00D300DBE840 /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/Main.strings"; sourceTree = "<group>"; };
+		BFB63B1622EC018B00DBE840 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BFB63B1822EC019800DBE840 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFC8CE6222DC713400AF87E6 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 		BFC8CE6322DC713400AF87E6 /* CropViewController.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CropViewController.podspec; sourceTree = "<group>"; };
 		BFC8CE6422DC713400AF87E6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -399,6 +408,7 @@
 				BF1CE89D22D5990700ACF7F8 /* Main.storyboard */,
 				BF1CE8A022D5990800ACF7F8 /* Assets.xcassets */,
 				BF1CE8A222D5990800ACF7F8 /* LaunchScreen.storyboard */,
+				BFB63B1722EC018B00DBE840 /* Localizable.strings */,
 				BF1CE8C922D5A19500ACF7F8 /* Settings.bundle */,
 				BF1CE8A522D5990800ACF7F8 /* Info.plist */,
 			);
@@ -966,6 +976,7 @@
 				nl,
 				pt,
 				ro,
+				"ja-JP",
 			);
 			mainGroup = BF1CE88D22D5990700ACF7F8;
 			productRefGroup = BF1CE89722D5990700ACF7F8 /* Products */;
@@ -1035,6 +1046,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB63B1522EC018B00DBE840 /* Localizable.strings in Resources */,
 				BF1CE8CA22D5A19500ACF7F8 /* Settings.bundle in Resources */,
 				BF1CE8A422D5990800ACF7F8 /* LaunchScreen.storyboard in Resources */,
 				BF1CE8A122D5990800ACF7F8 /* Assets.xcassets in Resources */,
@@ -1312,6 +1324,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BF1CE89E22D5990700ACF7F8 /* Base */,
+				BFB63B0822EC00D100DBE840 /* ja-JP */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1320,14 +1333,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				BF1CE8A322D5990800ACF7F8 /* Base */,
+				BFB63B0922EC00D100DBE840 /* ja-JP */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BFB63B1722EC018B00DBE840 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFB63B1622EC018B00DBE840 /* en */,
+				BFB63B1822EC019800DBE840 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		BFC8CE7622DC713400AF87E6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BFC8CE7722DC713400AF87E6 /* Base */,
+				BFB63B0A22EC00D100DBE840 /* ja-JP */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1336,6 +1360,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFC8CE7922DC713400AF87E6 /* Base */,
+				BFB63B0B22EC00D200DBE840 /* ja-JP */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1395,6 +1420,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFC8CED022DC713500AF87E6 /* Base */,
+				BFB63B1022EC00D200DBE840 /* ja-JP */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -1403,6 +1429,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFC8CED222DC713500AF87E6 /* Base */,
+				BFB63B1122EC00D300DBE840 /* ja-JP */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

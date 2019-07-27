@@ -93,6 +93,10 @@ class SeeCollectionViewCell: UICollectionViewCell {
       
    }
    
+   public func SetUpCellDayLabel(Day: String) {
+      CellDayLabel.text = Day
+   }
+   
    public func SetUpCellTitleLabel(Title: String) {
       CellTitleLabel.text = Title
    }

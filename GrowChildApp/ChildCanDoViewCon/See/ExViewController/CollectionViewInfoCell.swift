@@ -18,16 +18,12 @@ extension ChildCanDoSeeViewController: UICollectionViewDataSource, UICollectionV
    }
    
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeeCollectionViewCell", for: indexPath) as! SeeCollectionViewCell
       
-      print(indexPath.item)
-      print(indexPath.row)
-      
+      cell.SetUpCellDayLabel(Day: CanDoDataBase.GetDayFromDataNumber(DataNum: indexPath.item))
       cell.SetUpCellTitleLabel(Title: CanDoDataBase.GetTitleFromDataNumber(DataNum: indexPath.item))
       cell.SetUpCellMainDiscriptionLabel(Memo: CanDoDataBase.GetMemoFromDataNumber(DataNum: indexPath.item))
       cell.SetUpCellChildImageView(ImageData: CanDoDataBase.GetImageDataFromDataNumber(DataNum: indexPath.item))
-      
       
       return cell
    }

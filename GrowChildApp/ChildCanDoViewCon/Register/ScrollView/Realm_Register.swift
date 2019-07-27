@@ -14,6 +14,7 @@ class CanDoRegiData: Object {
    
    static let realm = try! Realm()
    
+   @objc dynamic var Day: String = ""
    @objc dynamic var Title: String = ""
    @objc dynamic var Memo: String = ""
    @objc dynamic var ImageData: NSData? = nil
@@ -29,8 +30,9 @@ class CanDoRegiData: Object {
 class CanDoRegiDataBase {
    let realm = try! Realm()
    
-   public func AddCanDo(Title: String, Memo: String, ImageData: NSData?) {
+   public func AddCanDo(Day: String, Title: String, Memo: String, ImageData: NSData?) {
       let AddData = CanDoRegiData()
+      AddData.Day = Day
       AddData.Title = Title
       AddData.Memo = Memo
       AddData.ImageData = ImageData
@@ -38,6 +40,10 @@ class CanDoRegiDataBase {
       try! realm.write {
          realm.add(AddData)
       }
+   }
+   
+   public func GetDayFromDataNumber(DataNum: Int) -> String {
+      return realm.objects(CanDoRegiData.self)[DataNum].Day
    }
    
    public func GetDataCountOfDataBaseDataCount() -> Int {
@@ -55,6 +61,8 @@ class CanDoRegiDataBase {
    public func GetImageDataFromDataNumber(DataNum: Int) -> NSData? {
       return realm.objects(CanDoRegiData.self)[DataNum].ImageData
    }
+   
+   
    
    
 }
