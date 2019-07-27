@@ -40,6 +40,10 @@ class SellectImageViewForSpuare: UIImageView {
    public func ChangeFalseisSellectedImage() { isSellectedImage = false }
    public func GetSellectedImage() -> UIImage { return self.image!}
    
+   public func GetSellectedImageData() -> NSData {
+      return self.image?.pngData() as! NSData
+   }
+   
    //現在セットされている写真を削除する
    public func DeletNowImage() {
       self.image = DefaultImage
@@ -48,7 +52,7 @@ class SellectImageViewForSpuare: UIImageView {
    
    //ある写真をセットする関数
    public func SetUserSellectedImaeg(image: UIImage) {
-      self.image = image
+      self.image = image.resize(size: CGSize(width: 128, height: 128))
       ChangeTrueisSellectedImage()
    }
    

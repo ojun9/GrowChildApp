@@ -74,17 +74,18 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
    
    
    private func RegiSterInfomation() {
-      let Title = CanDoTextField.text
-      let Memo = MemoOfTextView.text
-      var Image: UIImage? = nil
+      let SaveDataBase = CanDoRegiDataBase()
+      var ImageData: NSData? = nil
       
       if SellectImageView?.GetisSellectedImage() == true {
          print("画像は選択されている")
-         Image = SellectImageView?.GetSellectedImage()
+         ImageData = SellectImageView?.GetSellectedImageData()
       }
       
-      print("Title = \(Title)")
-      print("Memo = \(Memo)")
+      print("Title = \(String(describing: CanDoTextField.text!))")
+      print("Memo = \(String(describing: MemoOfTextView.text))")
+      
+      SaveDataBase.AddCanDo(Title: CanDoTextField.text!, Memo: MemoOfTextView.text, ImageData: ImageData)
    }
    
    

@@ -93,10 +93,19 @@ class SeeCollectionViewCell: UICollectionViewCell {
       
    }
    
-   func setupContents(textName: String) {
-      //fruitsNameLabel.text = textName
-      //fruitsNameLabel.textColor = UIColor.gray
-  
+   public func SetUpCellTitleLabel(Title: String) {
+      CellTitleLabel.text = Title
+   }
+   
+   public func SetUpCellMainDiscriptionLabel(Memo: String) {
+      CellMainDiscriptionLabel.text = Memo
+   }
+   
+   public func SetUpCellChildImageView(ImageData: NSData?) {
+      if let Data = ImageData {
+         let Image = UIImage(data: Data as Data)
+         CellChildImageView.image = Image
+      }
    }
    
    required init?(coder aDecoder: NSCoder) {

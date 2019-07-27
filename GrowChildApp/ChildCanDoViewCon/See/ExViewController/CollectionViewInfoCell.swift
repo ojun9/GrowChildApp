@@ -13,15 +13,20 @@ extension ChildCanDoSeeViewController: UICollectionViewDataSource, UICollectionV
    
    //cellの個数設定
    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      return fruits.count
+      print("データベースのデータ数は,\(CanDoDataBase.GetDataCountOfDataBaseDataCount())")
+      return CanDoDataBase.GetDataCountOfDataBaseDataCount()
    }
    
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeeCollectionViewCell", for: indexPath) as! SeeCollectionViewCell
       
-      let cellText = fruits[indexPath.item]
-      cell.setupContents(textName: cellText)
+      print(indexPath.item)
+      print(indexPath.row)
+      
+      cell.SetUpCellTitleLabel(Title: CanDoDataBase.GetTitleFromDataNumber(DataNum: indexPath.item))
+      cell.SetUpCellMainDiscriptionLabel(Memo: CanDoDataBase.GetMemoFromDataNumber(DataNum: indexPath.item))
+      cell.SetUpCellChildImageView(ImageData: CanDoDataBase.GetImageDataFromDataNumber(DataNum: indexPath.item))
       
       
       return cell
