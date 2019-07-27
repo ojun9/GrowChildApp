@@ -73,10 +73,26 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
    }
    
    
+   private func RegiSterInfomation() {
+      let Title = CanDoTextField.text
+      let Memo = MemoOfTextView.text
+      var Image: UIImage? = nil
+      
+      if SellectImageView?.GetisSellectedImage() == true {
+         print("画像は選択されている")
+         Image = SellectImageView?.GetSellectedImage()
+      }
+      
+      print("Title = \(Title)")
+      print("Memo = \(Memo)")
+   }
+   
    
    
    @objc func TapCanDoRegiButton(_ sender: UIButton) {
       print("登録ボタンタップされました")
+      
+      RegiSterInfomation()
    }
    
    @objc func TapCanDoCancelButton(_ sender: UIButton) {

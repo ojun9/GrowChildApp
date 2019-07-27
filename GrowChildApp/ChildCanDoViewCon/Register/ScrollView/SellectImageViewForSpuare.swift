@@ -14,7 +14,7 @@ class SellectImageViewForSpuare: UIImageView {
    var SellectedImage = UIImage()
    var DefaultImage = UIImage(named: "NoSellectedImage.png")
    
-   var isSellectedImage = false
+   private var isSellectedImage = false
    
    override init(frame: CGRect) {
       super.init(frame: frame)
@@ -38,7 +38,7 @@ class SellectImageViewForSpuare: UIImageView {
    public func GetisSellectedImage() -> Bool { return self.isSellectedImage }
    public func ChangeTrueisSellectedImage() { isSellectedImage = true }
    public func ChangeFalseisSellectedImage() { isSellectedImage = false }
-   
+   public func GetSellectedImage() -> UIImage { return self.image!}
    
    //現在セットされている写真を削除する
    public func DeletNowImage() {

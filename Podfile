@@ -18,7 +18,7 @@ target 'GrowChildApp' do
   pod 'SCLAlertView'
 
 
-
+  pod 'RealmSwift'
   pod 'R.swift'
   pod 'PopupDialog', '~> 1.1'
   pod 'VegaScrollFlowLayout'
@@ -52,5 +52,4 @@ target 'GrowChildAppUITests' do
     pod "ViewAnimator"
     pod 'SnapKit', '~> 5.0.0'
     pod 'SwiftFontName', '~> 4.0.0'
-
 end

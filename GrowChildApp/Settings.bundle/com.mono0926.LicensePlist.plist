@@ -62,6 +62,22 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/Realm</string>
+			<key>Title</key>
+			<string>Realm</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/RealmSwift</string>
+			<key>Title</key>
+			<string>RealmSwift</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/SCLAlertView</string>
 			<key>Title</key>
 			<string>SCLAlertView</string>
@@ -97,14 +113,6 @@
 			<string>com.mono0926.LicensePlist/TapticEngine</string>
 			<key>Title</key>
 			<string>TapticEngine</string>
-			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
-		</dict>
-		<dict>
-			<key>File</key>
-			<string>com.mono0926.LicensePlist/TOCropViewController</string>
-			<key>Title</key>
-			<string>TOCropViewController</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>

@@ -44,6 +44,18 @@ name: R.swift.Library, nameSpecified:
 body: The MIT License (MIT…
 version: 5.0.1
 
+name: Realm, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 3.17.0
+
+name: RealmSwift, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 3.17.0
+
 name: SCLAlertView, nameSpecified: 
 body: Copyright (c) 2013-2…
 version: 0.8

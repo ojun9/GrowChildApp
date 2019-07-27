@@ -38,24 +38,17 @@ class GrowChildAppUITests: XCTestCase {
       
       
       
+      
       let app = XCUIApplication()
-      
       snapshot("1")
-      
-      app.buttons["CanDoRegiButton"].tap()
-      
+      app/*@START_MENU_TOKEN@*/.buttons["CanDoRegiButton"]/*[[".otherElements[\"ChildCanDoMainViewControllerView\"].buttons[\"CanDoRegiButton\"]",".buttons[\"CanDoRegiButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
       snapshot("2")
-      
-      let nosellectedimagePngImage = app/*@START_MENU_TOKEN@*/.images["NoSellectedImage.png"]/*[[".scrollViews.images[\"NoSellectedImage.png\"]",".images[\"NoSellectedImage.png\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-      nosellectedimagePngImage.tap()
-      
+      app/*@START_MENU_TOKEN@*/.images["SellectImageView"]/*[[".scrollViews[\"RegiScrollView\"].images[\"SellectImageView\"]",".images[\"SellectImageView\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
       snapshot("3")
-      
-      let nameSheet = app.sheets["(name)の写真を登録"]
-      nameSheet.buttons["ライブラリから選択"].tap()
-      
+      app.sheets["(name)の写真を登録"].buttons["キャンセル"].tap()
       snapshot("4")
-      
+      app/*@START_MENU_TOKEN@*/.buttons["CanDoRegisterButton"]/*[[".scrollViews[\"RegiScrollView\"].buttons[\"CanDoRegisterButton\"]",".buttons[\"CanDoRegisterButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+     snapshot("5")
 
    
     }
@@ -128,6 +121,12 @@ class GrowChildAppUITests: XCTestCase {
       
       app.navigationBars["ChildCanDoMainViewControllerNabiTabBar"].buttons["Back"].tap()
       snapshot("20")
+   }
+   
+   
+   func testPart5() {
+      
+   
    }
 
 }
