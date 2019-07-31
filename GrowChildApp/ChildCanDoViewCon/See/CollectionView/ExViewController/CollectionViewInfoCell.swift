@@ -32,8 +32,7 @@ extension ChildCanDoSeeViewController: UICollectionViewDataSource, UICollectionV
 
    // Cell が選択された場合
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      print("Cell tap")
-      print(indexPath.row)
+      print("Cell tap \(indexPath.row)")
       //performSegue(withIdentifier: "toSubViewController",sender: nil)
       
    }
