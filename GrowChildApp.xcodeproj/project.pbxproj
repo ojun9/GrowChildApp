@@ -502,8 +502,8 @@
 		BF7FE2A522D99F6C0027B3FE /* See */ = {
 			isa = PBXGroup;
 			children = (
-				BFC8CF1722DDD4A200AF87E6 /* ExViewController */,
-				BFC8CF1822DDD4B800AF87E6 /* CustomView */,
+				BFCA086D22F15F9100B27E26 /* CollectionView */,
+				BFCA086622F15F8C00B27E26 /* ShowTappedCellView */,
 			);
 			path = See;
 			sourceTree = "<group>";
@@ -854,6 +854,22 @@
 				BFC8CF4022E1A3E900AF87E6 /* CanDoRegisterButton.swift */,
 			);
 			path = CustomObject;
+			sourceTree = "<group>";
+		};
+		BFCA086622F15F8C00B27E26 /* ShowTappedCellView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShowTappedCellView;
+			sourceTree = "<group>";
+		};
+		BFCA086D22F15F9100B27E26 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				BFC8CF1722DDD4A200AF87E6 /* ExViewController */,
+				BFC8CF1822DDD4B800AF87E6 /* CustomView */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

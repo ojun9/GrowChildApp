@@ -22,7 +22,7 @@ class NavigationBarCustomViewImageAndText: UIView {
    init(frame: CGRect, ViewText: String) {
       super.init(frame: frame)
       
-      //self.backgroundColor = .black
+
       
       SetUpaccessibilityIdentifierForAllObject()
       

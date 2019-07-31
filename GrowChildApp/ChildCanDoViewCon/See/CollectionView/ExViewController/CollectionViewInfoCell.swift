@@ -17,6 +17,7 @@ extension ChildCanDoSeeViewController: UICollectionViewDataSource, UICollectionV
       return CanDoDataBase.GetDataCountOfDataBaseDataCount()
    }
    
+   //cellをそれぞれ返す
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeeCollectionViewCell", for: indexPath) as! SeeCollectionViewCell
       
@@ -28,8 +29,21 @@ extension ChildCanDoSeeViewController: UICollectionViewDataSource, UICollectionV
       return cell
    }
    
+
+   // Cell が選択された場合
+   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      print("Cell tap")
+      print(indexPath.row)
+      //performSegue(withIdentifier: "toSubViewController",sender: nil)
+      
+   }
    
-   
+   // Segue 準備
+   override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+      if (segue.identifier == "toSubViewController") {
+
+      }
+   }
  
    
 }
