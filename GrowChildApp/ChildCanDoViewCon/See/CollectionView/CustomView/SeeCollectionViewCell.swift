@@ -41,11 +41,10 @@ class SeeCollectionViewCell: UICollectionViewCell {
       layer.borderColor = UIColor.black.cgColor
       layer.cornerRadius = 5
       layer.shadowColor = UIColor.black.cgColor
-      layer.shadowOpacity = 0.9
-      layer.shadowOffset = CGSize(width: 2, height: 2)
+      layer.shadowOpacity = 0.4
+      layer.shadowOffset = CGSize(width: 2.5, height: 2.5)
       layer.masksToBounds = false
       self.backgroundColor = UIColor.white
-      //contentView.addSubview(fruitsNameLabel)
    }
    
    private func InitCellLabel() {
