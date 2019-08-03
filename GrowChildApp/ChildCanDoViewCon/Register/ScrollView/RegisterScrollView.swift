@@ -80,6 +80,9 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
       if SellectImageView?.GetisSellectedImage() == true {
          print("画像は選択されている")
          ImageData = SellectImageView?.GetSellectedImageData()
+      }else{
+         print("画像は選択されていない")
+         ImageData = SellectImageView?.GetDefaultImageData()
       }
       
       let formatter = DateFormatter()

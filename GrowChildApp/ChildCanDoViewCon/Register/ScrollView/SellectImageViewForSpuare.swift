@@ -44,6 +44,10 @@ class SellectImageViewForSpuare: UIImageView {
       return self.image?.pngData() as! NSData
    }
    
+   public func GetDefaultImageData() -> NSData {
+      return self.DefaultImage!.pngData() as! NSData
+   }
+   
    //現在セットされている写真を削除する
    public func DeletNowImage() {
       self.image = DefaultImage

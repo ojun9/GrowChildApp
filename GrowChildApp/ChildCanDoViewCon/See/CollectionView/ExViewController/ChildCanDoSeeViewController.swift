@@ -36,6 +36,10 @@ class ChildCanDoSeeViewController: UIViewController {
    }
    
    private func InitAllUserItemArry() {
+      guard MaxDataBaseNum != 0 else {
+         print("何も保存されてません")
+         return
+      }
       for tmp in 0 ... MaxDataBaseNum - 1 {
          let ImageData = CanDoDataBase.GetImageDataFromDataNumber(DataNum: tmp)
          if let Data = ImageData {
