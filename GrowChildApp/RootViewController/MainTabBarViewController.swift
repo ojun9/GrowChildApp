@@ -32,7 +32,7 @@ class MainTabBarViewController: UITabBarController {
       let NaviVCForCanDoViewCon = UINavigationController(rootViewController: CanDoViewCon)
       let NaviVCForBreastFeedingViewCon = UINavigationController(rootViewController: BreastFeedingViewCon)
       let NaviVCForSettingViewCon = UINavigationController(rootViewController: SettingViewCon)
-
+      
       setViewControllers([NaviVCForCanDoViewCon, NaviVCForBreastFeedingViewCon, NaviVCForSettingViewCon], animated: true)
    }
    

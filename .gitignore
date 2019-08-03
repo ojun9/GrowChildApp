@@ -3,6 +3,10 @@
 
 *.ipa
 
+Carthage/Checkouts
+Carthage/Build
+
+fastlane
 
 # Pods
 # CococaPodsを使用した際にライブラリがインストールされる場所

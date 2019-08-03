@@ -31,7 +31,6 @@ class SeeCollectionViewCell: UICollectionViewCell {
       super.init(frame: frame)
       setup()
       
-      print(self.frame)
       
       InitCellLabel()
       OutLayoutCellLabel()
@@ -46,6 +45,7 @@ class SeeCollectionViewCell: UICollectionViewCell {
       layer.masksToBounds = false
       self.backgroundColor = UIColor.white
    }
+   
    
    private func InitCellLabel() {
       CellDayLabel.backgroundColor = UIColor.flatLime()
