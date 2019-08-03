@@ -17,12 +17,34 @@ class ChildCanDoSeeViewController: UIViewController {
    var SeeCollection: SeeCollectionView?
    let CanDoDataBase = CanDoRegiDataBase()
    
+   var MaxDataBaseNum = 0
+   var AllUsersImagesInRealm: [UIImage] = Array()
+   
    override func viewDidLoad() {
       super.viewDidLoad()
       InitViewSetting()
       SetUpNavigationItemSetting()
       
+      InitMaxDataBaseNum()
+      InitAllUserItemArry()
+      
       InitCollectionView()
+   }
+   
+   private func InitMaxDataBaseNum() {
+      MaxDataBaseNum = CanDoDataBase.GetDataCountOfDataBaseDataCount()
+   }
+   
+   private func InitAllUserItemArry() {
+      for tmp in 0 ... MaxDataBaseNum - 1 {
+         let ImageData = CanDoDataBase.GetImageDataFromDataNumber(DataNum: tmp)
+         if let Data = ImageData {
+            let Image = UIImage(data: Data as Data)!
+            AllUsersImagesInRealm.append(Image)
+         }else{
+            fatalError("For文でImageDataゲットしたらnil入ってた。")
+         }
+      }
    }
    
    

@@ -111,6 +111,10 @@ class SeeCollectionViewCell: UICollectionViewCell {
       }
    }
    
+   public func SetImage(Image: UIImage) {
+      self.CellChildImageView.image = Image
+   }
+   
    required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented.")
    }
