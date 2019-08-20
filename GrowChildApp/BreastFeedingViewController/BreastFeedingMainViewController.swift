@@ -27,22 +27,16 @@ class BreastFeedingMainViewController: UIViewController {
    
    
    private func SetUpNavigationItemSetting() {
-      let StudyAddButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.AddStudy(sender:)))
+      let ImageAndNameView = NavigationBarCustomViewImageAndName(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: (self.navigationController?.navigationBar.frame.size.height)!))
+      self.navigationItem.titleView = ImageAndNameView
       
-      self.navigationItem.title = "授乳タイマー"
-      self.navigationItem.setLeftBarButton(StudyAddButton, animated: true)
+      
       self.navigationController?.navigationBar.barTintColor = UIColor.flatWatermelon()
       self.navigationController?.navigationBar.tintColor = .white
       self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-      self.tabBarItem.title = "授乳タイマー"
    }
    
-   
-   @objc func AddStudy(sender: UIBarButtonItem) {
-      print("勉強追加ボタン押されたよ")
-      
-      
-   }
+
    
 }
 
