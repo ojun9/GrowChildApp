@@ -20,6 +20,18 @@ body: MIT License
 Copyrig…
 version: 2.5.0
 
+name: NumberMorphView, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.2.0
+
+name: NumberMorphView, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.2.0
+
+name: NumberMorphView, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.2.0
+
 name: NVActivityIndicatorView, nameSpecified: 
 body: The MIT License (MIT…
 version: 4.7.0

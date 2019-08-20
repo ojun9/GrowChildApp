@@ -8,8 +8,15 @@
 
 import Foundation
 import UIKit
+import NumberMorphView
+
 
 class BreastFeedingRecordViewController: UIViewController {
+   
+   let numberView = NumberMorphView()
+   
+   private var BreastTimer = Timer()
+   private var TimeCount = 0
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -17,9 +24,34 @@ class BreastFeedingRecordViewController: UIViewController {
       InitViewSetting()
       SetUpNavigationItemSetting()
       
+      InitNumberView()
+
+
   
    }
    
+   private func InitNumberView() {
+      numberView.fontSize = 64
+      numberView.currentDigit = 0
+      numberView.frame = CGRect(x: 10, y: 100, width: self.view.frame.width / 3, height: self.view.frame.height / 10);
+      self.view.addSubview(numberView)
+      //change animation
+      numberView.interpolator = NumberMorphView.LinearInterpolator()
+      
+      if !BreastTimer.isValid {
+         BreastTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(BreastFeedingRecordViewController.updateTimer), userInfo: nil, repeats: true)
+      }
+      
+//      dispatch_after(5, dispatch_get_main_queue()) {
+//         numberView.nextDigit = 7;
+//      }
+   }
+   
+   @objc private func updateTimer() {
+      TimeCount += 1
+      if TimeCount == 10 { TimeCount = 0}
+      numberView.nextDigit = TimeCount
+   }
    
    private func InitViewSetting() {
       self.view.backgroundColor = UIColor.flatWhite()
