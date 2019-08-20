@@ -112,6 +112,10 @@ class NavigationBarCustomViewImageAndName: UIView {
       }
    }
    
+   public func SetUpTitleLabel(Title: String) {
+      self.ChildNameLabel.text = Title
+   }
+   
    required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }

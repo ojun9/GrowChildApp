@@ -28,6 +28,7 @@ class BreastFeedingMainViewController: UIViewController {
    
    private func SetUpNavigationItemSetting() {
       let ImageAndNameView = NavigationBarCustomViewImageAndName(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: (self.navigationController?.navigationBar.frame.size.height)!))
+      ImageAndNameView.SetUpTitleLabel(Title: "授乳タイマー")
       self.navigationItem.titleView = ImageAndNameView
       
       
