@@ -26,7 +26,8 @@ extension ChildCanDoSeeViewController: UICollectionViewDataSource, UICollectionV
       cell.SetUpCellDayLabel(Day: CanDoDataBase.GetDayFromDataNumber(DataNum: indexPath.item))
       cell.SetUpCellTitleLabel(Title: CanDoDataBase.GetTitleFromDataNumber(DataNum: indexPath.item))
       cell.SetUpCellMainDiscriptionLabel(Memo: CanDoDataBase.GetMemoFromDataNumber(DataNum: indexPath.item))
-      //cell.SetUpCellChildImageView(ImageData: CanDoDataBase.GetImageDataFromDataNumber(DataNum: indexPath.item))
+      
+      
       cell.SetImage(Image: AllUsersImagesInRealm[indexPath.item])
       
       return cell
