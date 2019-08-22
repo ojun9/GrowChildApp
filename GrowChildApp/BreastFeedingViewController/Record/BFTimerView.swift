@@ -30,6 +30,8 @@ class BFTimerView: UIView {
    private var NumberViewH: CGFloat = 0
    private var NumberViewW: CGFloat = 0
    
+   var Digit = 0
+   
    override init(frame: CGRect) {
       super.init(frame: frame)
       
@@ -73,7 +75,29 @@ class BFTimerView: UIView {
    }
    
    @objc private func UpdateTimer() {
+      let date = Date();
+      let components = Calendar(identifier: .gregorian).dateComponents([.hour, .minute, .second], from: date);
+      let minute = components.minute ?? 0
+      let second = components.second ?? 0
       
+      print("second = \(second)")
+      print("minute = \(minute)")
+      
+      if minute / 10 != Minutes1.currentDigit || Minutes1.currentDigit == 0 {
+         Minutes1.nextDigit = minute / 10;
+      }
+      if minute % 10 != Minutes0.currentDigit || Minutes0.currentDigit == 0 {
+         Minutes0.nextDigit = minute % 10;
+      }
+      
+      if second / 10 != Second1.currentDigit || Second1.currentDigit == 0 {
+         Second1.nextDigit = second / 10;
+      }
+      if second % 10 != Second0.currentDigit || Second0.currentDigit == 0 {
+         Second0.nextDigit = second % 10;
+      }
+      
+      Digit = (Digit + 1) % 10;
    }
    
    
