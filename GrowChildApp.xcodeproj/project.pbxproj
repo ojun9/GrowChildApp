@@ -23,6 +23,10 @@
 		BF1FB7ED22D9D217005E80BA /* ExCropImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FB7EC22D9D217005E80BA /* ExCropImage.swift */; };
 		BF2FB136230BB89B0033C104 /* BreastFeedingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB135230BB89B0033C104 /* BreastFeedingRecordViewController.swift */; };
 		BF2FB138230BB8CA0033C104 /* BreastFeedingSeeViewConteoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB137230BB8CA0033C104 /* BreastFeedingSeeViewConteoller.swift */; };
+		BF2FB13C230E67890033C104 /* BreastFeedingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB13B230E67890033C104 /* BreastFeedingTimer.swift */; };
+		BF2FB144230E68D70033C104 /* BFTimerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB143230E68D70033C104 /* BFTimerLabel.swift */; };
+		BF2FB146230E68EA0033C104 /* BFStartStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB145230E68EA0033C104 /* BFStartStopButton.swift */; };
+		BF2FB148230E68F60033C104 /* BFTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB147230E68F60033C104 /* BFTimerView.swift */; };
 		BF32DDB022E2D646009231A6 /* Realm_Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32DDAF22E2D646009231A6 /* Realm_Register.swift */; };
 		BF5F51FB22DA022A00D52B51 /* Pods_GrowChildApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B26642AF8B76A502286FDD /* Pods_GrowChildApp.framework */; };
 		BF6D3C5822D5CB4A00237F07 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */; };
@@ -169,6 +173,10 @@
 		BF1FB7EC22D9D217005E80BA /* ExCropImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCropImage.swift; sourceTree = "<group>"; };
 		BF2FB135230BB89B0033C104 /* BreastFeedingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreastFeedingRecordViewController.swift; sourceTree = "<group>"; };
 		BF2FB137230BB8CA0033C104 /* BreastFeedingSeeViewConteoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreastFeedingSeeViewConteoller.swift; sourceTree = "<group>"; };
+		BF2FB13B230E67890033C104 /* BreastFeedingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreastFeedingTimer.swift; sourceTree = "<group>"; };
+		BF2FB143230E68D70033C104 /* BFTimerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTimerLabel.swift; sourceTree = "<group>"; };
+		BF2FB145230E68EA0033C104 /* BFStartStopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStartStopButton.swift; sourceTree = "<group>"; };
+		BF2FB147230E68F60033C104 /* BFTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTimerView.swift; sourceTree = "<group>"; };
 		BF32DDAF22E2D646009231A6 /* Realm_Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm_Register.swift; sourceTree = "<group>"; };
 		BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		BF6D3C5B22D5ED9500237F07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -463,6 +471,10 @@
 			isa = PBXGroup;
 			children = (
 				BF2FB135230BB89B0033C104 /* BreastFeedingRecordViewController.swift */,
+				BF2FB13B230E67890033C104 /* BreastFeedingTimer.swift */,
+				BF2FB143230E68D70033C104 /* BFTimerLabel.swift */,
+				BF2FB145230E68EA0033C104 /* BFStartStopButton.swift */,
+				BF2FB147230E68F60033C104 /* BFTimerView.swift */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -1304,6 +1316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2FB148230E68F60033C104 /* BFTimerView.swift in Sources */,
 				BF1FB7EB22D9CDF2005E80BA /* ExImagePickUpDelegate.swift in Sources */,
 				BFC8CF1A22DDD50700AF87E6 /* SeeCollectionView.swift in Sources */,
 				BF1CE89C22D5990700ACF7F8 /* ViewController.swift in Sources */,
@@ -1312,15 +1325,18 @@
 				BF2FB138230BB8CA0033C104 /* BreastFeedingSeeViewConteoller.swift in Sources */,
 				BF1FB7E522D9BE5D005E80BA /* RegisterScrollView.swift in Sources */,
 				BF7FE29A22D8910E0027B3FE /* ChildDateOfBirth.swift in Sources */,
+				BF2FB146230E68EA0033C104 /* BFStartStopButton.swift in Sources */,
 				BFC8CF4522E1A77600AF87E6 /* ExScrollViewSNP.swift in Sources */,
 				BF7FE29C22D982A00027B3FE /* ChildCandoRegisterViewController.swift in Sources */,
 				BF7FE29522D88CC50027B3FE /* BreastFeedingManager.swift in Sources */,
 				BF1FB7E722D9C024005E80BA /* SellectImageViewForSpuare.swift in Sources */,
 				BF7FE28422D886330027B3FE /* MainTabBarViewController.swift in Sources */,
 				BF7FE29122D88C070027B3FE /* Child.swift in Sources */,
+				BF2FB144230E68D70033C104 /* BFTimerLabel.swift in Sources */,
 				BF7FE28E22D8881D0027B3FE /* SettingMainViewController.swift in Sources */,
 				BF7FE2A222D99B610027B3FE /* ExUIImage.swift in Sources */,
 				BFC8CF4122E1A3E900AF87E6 /* CanDoRegisterButton.swift in Sources */,
+				BF2FB13C230E67890033C104 /* BreastFeedingTimer.swift in Sources */,
 				BF1CE89A22D5990700ACF7F8 /* AppDelegate.swift in Sources */,
 				BF7FE2A022D9859B0027B3FE /* NavigationBarCustomView.swift in Sources */,
 				BF7FE2A922D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift in Sources */,
