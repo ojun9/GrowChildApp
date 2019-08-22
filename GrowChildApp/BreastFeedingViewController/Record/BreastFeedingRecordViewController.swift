@@ -31,7 +31,7 @@ class BreastFeedingRecordViewController: UIViewController {
    }
    
    private func InitNumberView() {
-      numberView.fontSize = 64
+      numberView.fontSize = 124
       numberView.currentDigit = 0
       numberView.frame = CGRect(x: 10, y: 100, width: self.view.frame.width / 3, height: self.view.frame.height / 10);
       self.view.addSubview(numberView)

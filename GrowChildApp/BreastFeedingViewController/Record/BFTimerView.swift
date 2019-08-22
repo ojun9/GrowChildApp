@@ -9,6 +9,7 @@
 import Foundation
 import NumberMorphView
 import UIKit
+import SwiftFontName
 
 class BFTimerView: UIView {
   
@@ -23,17 +24,46 @@ class BFTimerView: UIView {
    private var BreastTimer = Timer()
    private var TimeCount = 0
    
+   private var ViewH: CGFloat = 0
+   private var ViewW: CGFloat = 0
+   
+   private var NumberViewH: CGFloat = 0
+   private var NumberViewW: CGFloat = 0
    
    override init(frame: CGRect) {
       super.init(frame: frame)
+      
+      EachVeiwLength()
+      
+      InitNumberMorphView(sender: Minutes1, StartX: NumberViewW * 1)
+      InitNumberMorphView(sender: Minutes0, StartX: NumberViewW * 2)
+      InitNumberMorphView(sender: Second1, StartX: NumberViewW * 5)
+      InitNumberMorphView(sender: Second0, StartX: NumberViewW * 6)
    }
    
-   private func InitNumberMorphView(sender: NumberMorphView) {
+   private func EachVeiwLength() {
+      ViewH = self.frame.height
+      ViewW = self.frame.width
+      
+      NumberViewH = ViewH
+      NumberViewW = ViewW / 8
+   }
+   
+   private func InitNumberMorphView(sender: NumberMorphView, StartX: CGFloat) {
+      
       sender.fontSize = 64
       sender.currentDigit = 0
-      sender.frame = CGRect(x: 10, y: 100, width: self.frame.width / 3, height: self.frame.height / 10);
+      sender.frame = CGRect(x: StartX, y: 0, width: NumberViewW, height: NumberViewH);
       self.addSubview(sender)
       sender.interpolator = NumberMorphView.LinearInterpolator()
+   }
+   
+   private func InitColonLabel() {
+      let Frame = CGRect(x: NumberViewW * 3.5, y: 0, width: NumberViewW, height: NumberViewH)
+      ColonLabel = UILabel(frame: Frame)
+      ColonLabel.text = ":"
+      ColonLabel.adjustsFontSizeToFitWidth = true
+      ColonLabel.font = UIFont(name: FontName.HiraKakuProNW6, size: 64)
    }
    
    private func SetUpTimer() {
