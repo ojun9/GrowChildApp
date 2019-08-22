@@ -10,11 +10,36 @@ import Foundation
 import UIKit
 import NumberMorphView
 
-class BreastFeedingTimer: UIView {
+class BreastFeedingTimersView: UIView {
+   
+   var TimerLabel: BFTimerLabel?
+   var TimerView: BFTimerView?
+   var StartStopButton: BFStartStopButton?
    
    init(frame: CGRect, LabelName: String) {
       super.init(frame: frame)
       
+      InitTimerLabel()
+      InitTimerViewl()
+      InitStartStopButton()
+   }
+   
+   private func InitTimerLabel() {
+      let Flame = CGRect(x: 0, y: frame.height / 16, width: frame.width, height: frame.height / 4)
+      TimerLabel = BFTimerLabel(frame: Flame)
+      addSubview(TimerLabel!)
+   }
+   
+   private func InitTimerViewl() {
+      let Flame = CGRect(x: 0, y: frame.height / 16 * 6, width: frame.width, height: frame.height / 4)
+      TimerView = BFTimerView(frame: Flame)
+      addSubview(TimerView!)
+   }
+   
+   private func InitStartStopButton() {
+      let Flame = CGRect(x: 0, y: frame.height / 16 * 11, width: frame.width, height: frame.height / 4)
+      StartStopButton = BFStartStopButton(frame: Flame)
+      addSubview(StartStopButton!)
    }
    
    required init?(coder aDecoder: NSCoder) {

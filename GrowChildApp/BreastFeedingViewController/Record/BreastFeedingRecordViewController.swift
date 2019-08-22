@@ -13,7 +13,8 @@ import NumberMorphView
 
 class BreastFeedingRecordViewController: UIViewController {
    
-   let numberView = NumberMorphView()
+   var BFTimersViewLeft: BreastFeedingTimersView?
+   var BFTimersViewRight: BreastFeedingTimersView?
    
    private var BreastTimer = Timer()
    private var TimeCount = 0
@@ -23,42 +24,15 @@ class BreastFeedingRecordViewController: UIViewController {
       
       InitViewSetting()
       SetUpNavigationItemSetting()
-      
-      InitNumberView()
 
-
-  
-   }
-   
-   private func InitNumberView() {
-      numberView.fontSize = 124
-      numberView.currentDigit = 0
-      numberView.frame = CGRect(x: 10, y: 100, width: self.view.frame.width / 3, height: self.view.frame.height / 10);
-      self.view.addSubview(numberView)
-      //change animation
-      numberView.interpolator = NumberMorphView.LinearInterpolator()
-      
-      if !BreastTimer.isValid {
-         BreastTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(BreastFeedingRecordViewController.updateTimer), userInfo: nil, repeats: true)
-      }
-      
-//      dispatch_after(5, dispatch_get_main_queue()) {
-//         numberView.nextDigit = 7;
-//      }
-   }
-   
-   @objc private func updateTimer() {
-      TimeCount += 1
-      if TimeCount == 10 { TimeCount = 0}
-      numberView.nextDigit = TimeCount
+      InitTimersViewLeft()
+      InitTimersViewRight()
    }
    
    private func InitViewSetting() {
       self.view.backgroundColor = UIColor.flatWhite()
    }
-   
- 
-   
+
    private func SetUpNavigationItemSetting() {
       let ImageAndNameView = NavigationBarCustomViewImageAndText(
          frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: (self.navigationController?.navigationBar.frame.size.height)!),
@@ -69,4 +43,19 @@ class BreastFeedingRecordViewController: UIViewController {
       self.navigationController?.navigationBar.tintColor = .white
       self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
    }
+   
+   private func InitTimersViewLeft() {
+      let Frame = CGRect(x: view.frame.width / 21, y: view.frame.height / 20 * 8, width: view.frame.width / 21 * 9, height: view.frame.height / 20 * 8)
+      
+      BFTimersViewLeft = BreastFeedingTimersView(frame: Frame, LabelName: "Left")
+      view.addSubview(BFTimersViewLeft!)
+   }
+   
+   private func InitTimersViewRight() {
+      let Frame = CGRect(x: view.frame.width / 21 * 11, y: view.frame.height / 20 * 8, width: view.frame.width / 21 * 9, height: view.frame.height / 20 * 8)
+      
+      BFTimersViewRight = BreastFeedingTimersView(frame: Frame, LabelName: "Right")
+      view.addSubview(BFTimersViewRight!)
+   }
+   
 }
