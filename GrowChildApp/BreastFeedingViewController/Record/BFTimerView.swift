@@ -12,6 +12,8 @@ import UIKit
 import SwiftFontName
 
 class BFTimerView: UIView {
+   
+   private let TimeInterval = 0.5
   
    private var Second0 = NumberMorphView()
    private var Second1 = NumberMorphView()
@@ -73,6 +75,8 @@ class BFTimerView: UIView {
 
    
    @objc private func UpdateTimer() {
+      TimerCount += TimeInterval
+      
       let TimeMinutes = Int(TimerCount) / 60
       let TimeSecond = Int(TimerCount) % 60
       
@@ -91,8 +95,6 @@ class BFTimerView: UIView {
       if Second0.currentDigit != TimeSecond % 10 {
          Second0.nextDigit = TimeSecond %  10
       }
-      
-      TimerCount += 0.5
    }
    
    
@@ -101,7 +103,7 @@ class BFTimerView: UIView {
    }
    
    public func StartTimer() {
-      BreastTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(BFTimerView.UpdateTimer), userInfo: nil, repeats: true)
+      BreastTimer = Timer.scheduledTimer(timeInterval: TimeInterval, target: self, selector: #selector(BFTimerView.UpdateTimer), userInfo: nil, repeats: true)
    }
    
    
