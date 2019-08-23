@@ -12,7 +12,10 @@ import ChameleonFramework
 
 class BFStartStopButton: UIButton {
    
-   override init(frame: CGRect) {
+   var ButtonLabelName = ""
+   
+   init(frame: CGRect, ButtonName: String) {
+      ButtonLabelName = ButtonName
       super.init(frame: frame)
       
       self.backgroundColor = UIColor.flatMint()
@@ -21,8 +24,8 @@ class BFStartStopButton: UIButton {
    
    @objc func TapStartStopButton(_ sender: UIButton) {
       print("タイマーボタンタップされた。)")
-      
-      NotificationCenter.default.post(name: .TapStartStopButton, object: nil, userInfo: nil)
+      let SentObject: [String : Any] = ["LabelName": self.ButtonLabelName as String]
+      NotificationCenter.default.post(name: .TapStartStopButton, object: nil, userInfo: SentObject)
    }
    
    
