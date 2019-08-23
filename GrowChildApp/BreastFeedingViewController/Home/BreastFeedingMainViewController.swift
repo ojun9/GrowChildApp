@@ -28,6 +28,10 @@ class BreastFeedingMainViewController: UIViewController {
       
    }
    
+   override func viewWillAppear(_ animated: Bool) {
+      tabBarController?.tabBar.isHidden = false
+   }
+   
    private func InitViewSetting() {
       self.view.backgroundColor = UIColor.flatWhite()
    }

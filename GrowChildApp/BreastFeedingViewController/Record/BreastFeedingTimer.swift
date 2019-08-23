@@ -52,7 +52,7 @@ class BreastFeedingTimersView: UIView {
    
    private func ChangeTimerOrderChatchNotificationInfo(Name: String) {
       if Name == self.TimerLabelName! {
-         print("\(Name) のタイマーを変更します")
+         print("\(Name) のタイマーを変更します\n")
          TimerView?.ChangeTimer()
       }
    }

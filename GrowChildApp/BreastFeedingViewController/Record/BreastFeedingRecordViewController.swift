@@ -30,6 +30,7 @@ class BreastFeedingRecordViewController: UIViewController {
    }
    
    private func InitViewSetting() {
+      tabBarController?.tabBar.isHidden = true
       self.view.backgroundColor = UIColor.flatWhite()
    }
 

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import ChameleonFramework
+import SwiftFontName
 
 class BFTimerLabel: UILabel {
    
@@ -16,6 +17,9 @@ class BFTimerLabel: UILabel {
       super.init(frame: frame)
       
       self.backgroundColor = UIColor.flatPink()
+      self.text = "test"
+      self.font = UIFont(name: FontName.PingFangTCLight, size: 32)
+      self.adjustsFontSizeToFitWidth = true
    }
    
    required init?(coder aDecoder: NSCoder) {
