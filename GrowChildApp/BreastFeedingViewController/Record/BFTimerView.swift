@@ -30,13 +30,12 @@ class BFTimerView: UIView {
    private var NumberViewH: CGFloat = 0
    private var NumberViewW: CGFloat = 0
    
-   var TimerCount = 0
+   var TimerCount = 0.0
    
    override init(frame: CGRect) {
       super.init(frame: frame)
       
       EachVeiwLength()
-      InitNotificationCenter()
       
       InitNumberMorphView(sender: Minutes1, StartX: NumberViewW * 1)
       InitNumberMorphView(sender: Minutes0, StartX: NumberViewW * 2)
@@ -52,9 +51,7 @@ class BFTimerView: UIView {
       NumberViewW = ViewW / 8
    }
    
-   private func InitNotificationCenter() {
-      NotificationCenter.default.addObserver(self, selector: #selector(TapStartStopButtonCatchNotification(notification:)), name: .TapStartStopButton, object: nil)
-   }
+   
    
    private func InitNumberMorphView(sender: NumberMorphView, StartX: CGFloat) {
       
@@ -76,16 +73,26 @@ class BFTimerView: UIView {
 
    
    @objc private func UpdateTimer() {
-      let TimeMinutes = TimerCount / 60
-      let TimeSecond = TimerCount % 60
+      let TimeMinutes = Int(TimerCount) / 60
+      let TimeSecond = Int(TimerCount) % 60
       
-      Minutes1.nextDigit = TimeMinutes / 10
-      Minutes0.nextDigit = TimeMinutes %  10
+      if Minutes1.currentDigit != TimeMinutes / 10 {
+         Minutes1.nextDigit = TimeMinutes / 10
+      }
       
-      Second1.nextDigit = TimeSecond / 10
-      Second0.nextDigit = TimeSecond %  10
+      if Minutes0.currentDigit != TimeMinutes %  10 {
+         Minutes0.nextDigit = TimeMinutes %  10
+      }
       
-      TimerCount += 1
+      if Second1.currentDigit != TimeSecond / 10 {
+         Second1.nextDigit = TimeSecond / 10
+      }
+
+      if Second0.currentDigit != TimeSecond % 10 {
+         Second0.nextDigit = TimeSecond %  10
+      }
+      
+      TimerCount += 0.5
    }
    
    
@@ -94,14 +101,14 @@ class BFTimerView: UIView {
    }
    
    public func StartTimer() {
-      BreastTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(BFTimerView.UpdateTimer), userInfo: nil, repeats: true)
+      BreastTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(BFTimerView.UpdateTimer), userInfo: nil, repeats: true)
    }
    
    
-   @objc func TapStartStopButtonCatchNotification(notification: Notification) -> Void {
+   public func ChangeTimer() {
       if BreastTimer.isValid {
          StopTimer()
-      }else{
+      } else {
          StartTimer()
       }
    }

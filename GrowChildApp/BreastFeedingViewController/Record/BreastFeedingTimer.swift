@@ -19,9 +19,14 @@ class BreastFeedingTimersView: UIView {
    init(frame: CGRect, LabelName: String) {
       super.init(frame: frame)
       
+      InitNotificationCenter()
       InitTimerLabel()
       InitTimerViewl()
       InitStartStopButton()
+   }
+   
+   private func InitNotificationCenter() {
+      NotificationCenter.default.addObserver(self, selector: #selector(TapStartStopButtonCatchNotification(notification:)), name: .TapStartStopButton, object: nil)
    }
    
    private func InitTimerLabel() {
@@ -40,6 +45,10 @@ class BreastFeedingTimersView: UIView {
       let Flame = CGRect(x: 0, y: frame.height / 16 * 11, width: frame.width, height: frame.height / 4)
       StartStopButton = BFStartStopButton(frame: Flame)
       addSubview(StartStopButton!)
+   }
+   
+   @objc func TapStartStopButtonCatchNotification(notification: Notification) -> Void {
+      
    }
    
    required init?(coder aDecoder: NSCoder) {

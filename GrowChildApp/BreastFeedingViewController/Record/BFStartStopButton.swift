@@ -20,7 +20,7 @@ class BFStartStopButton: UIButton {
    }
    
    @objc func TapStartStopButton(_ sender: UIButton) {
-      print("タイマーボタンタップされた。")
+      print("タイマーボタンタップされた。)")
       
       NotificationCenter.default.post(name: .TapStartStopButton, object: nil, userInfo: nil)
    }
