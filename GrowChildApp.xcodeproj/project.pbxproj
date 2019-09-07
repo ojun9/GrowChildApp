@@ -27,6 +27,9 @@
 		BF2FB144230E68D70033C104 /* BFTimerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB143230E68D70033C104 /* BFTimerLabel.swift */; };
 		BF2FB146230E68EA0033C104 /* BFStartStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB145230E68EA0033C104 /* BFStartStopButton.swift */; };
 		BF2FB148230E68F60033C104 /* BFTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB147230E68F60033C104 /* BFTimerView.swift */; };
+		BF2FB151230FDD120033C104 /* BreastFeedingMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB150230FDD120033C104 /* BreastFeedingMemoView.swift */; };
+		BF2FB153230FDEFC0033C104 /* BreastFeedingAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB152230FDEFC0033C104 /* BreastFeedingAddButton.swift */; };
+		BF2FB155230FDFAB0033C104 /* BreastFeedingAdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FB154230FDFAB0033C104 /* BreastFeedingAdBannerView.swift */; };
 		BF32DDB022E2D646009231A6 /* Realm_Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32DDAF22E2D646009231A6 /* Realm_Register.swift */; };
 		BF5F51FB22DA022A00D52B51 /* Pods_GrowChildApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B26642AF8B76A502286FDD /* Pods_GrowChildApp.framework */; };
 		BF6D3C5822D5CB4A00237F07 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */; };
@@ -177,6 +180,9 @@
 		BF2FB143230E68D70033C104 /* BFTimerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTimerLabel.swift; sourceTree = "<group>"; };
 		BF2FB145230E68EA0033C104 /* BFStartStopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStartStopButton.swift; sourceTree = "<group>"; };
 		BF2FB147230E68F60033C104 /* BFTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTimerView.swift; sourceTree = "<group>"; };
+		BF2FB150230FDD120033C104 /* BreastFeedingMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreastFeedingMemoView.swift; sourceTree = "<group>"; };
+		BF2FB152230FDEFC0033C104 /* BreastFeedingAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BreastFeedingAddButton.swift; path = GrowChildApp/BreastFeedingViewController/Record/MemoView/BreastFeedingAddButton.swift; sourceTree = SOURCE_ROOT; };
+		BF2FB154230FDFAB0033C104 /* BreastFeedingAdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreastFeedingAdBannerView.swift; sourceTree = "<group>"; };
 		BF32DDAF22E2D646009231A6 /* Realm_Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm_Register.swift; sourceTree = "<group>"; };
 		BF6D3C5722D5CB4A00237F07 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		BF6D3C5B22D5ED9500237F07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -471,10 +477,10 @@
 			isa = PBXGroup;
 			children = (
 				BF2FB135230BB89B0033C104 /* BreastFeedingRecordViewController.swift */,
-				BF2FB13B230E67890033C104 /* BreastFeedingTimer.swift */,
-				BF2FB143230E68D70033C104 /* BFTimerLabel.swift */,
-				BF2FB145230E68EA0033C104 /* BFStartStopButton.swift */,
-				BF2FB147230E68F60033C104 /* BFTimerView.swift */,
+				BF2FB14D230FDC6A0033C104 /* BFTimer */,
+				BF2FB14C230FDC660033C104 /* MemoView */,
+				BF2FB14F230FDCE60033C104 /* AddButton */,
+				BF2FB14B230FDC630033C104 /* AdView */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -485,6 +491,42 @@
 				BF7FE28B22D887EB0027B3FE /* BreastFeedingMainViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		BF2FB14B230FDC630033C104 /* AdView */ = {
+			isa = PBXGroup;
+			children = (
+				BF2FB154230FDFAB0033C104 /* BreastFeedingAdBannerView.swift */,
+			);
+			path = AdView;
+			sourceTree = "<group>";
+		};
+		BF2FB14C230FDC660033C104 /* MemoView */ = {
+			isa = PBXGroup;
+			children = (
+				BF2FB150230FDD120033C104 /* BreastFeedingMemoView.swift */,
+			);
+			path = MemoView;
+			sourceTree = "<group>";
+		};
+		BF2FB14D230FDC6A0033C104 /* BFTimer */ = {
+			isa = PBXGroup;
+			children = (
+				BF2FB13B230E67890033C104 /* BreastFeedingTimer.swift */,
+				BF2FB143230E68D70033C104 /* BFTimerLabel.swift */,
+				BF2FB145230E68EA0033C104 /* BFStartStopButton.swift */,
+				BF2FB147230E68F60033C104 /* BFTimerView.swift */,
+			);
+			path = BFTimer;
+			sourceTree = "<group>";
+		};
+		BF2FB14F230FDCE60033C104 /* AddButton */ = {
+			isa = PBXGroup;
+			children = (
+				BF2FB152230FDEFC0033C104 /* BreastFeedingAddButton.swift */,
+			);
+			name = AddButton;
+			path = "New Group/AddButton";
 			sourceTree = "<group>";
 		};
 		BF7FE28522D886660027B3FE /* ChildCanDoViewCon */ = {
@@ -1325,6 +1367,7 @@
 				BF2FB138230BB8CA0033C104 /* BreastFeedingSeeViewConteoller.swift in Sources */,
 				BF1FB7E522D9BE5D005E80BA /* RegisterScrollView.swift in Sources */,
 				BF7FE29A22D8910E0027B3FE /* ChildDateOfBirth.swift in Sources */,
+				BF2FB153230FDEFC0033C104 /* BreastFeedingAddButton.swift in Sources */,
 				BF2FB146230E68EA0033C104 /* BFStartStopButton.swift in Sources */,
 				BFC8CF4522E1A77600AF87E6 /* ExScrollViewSNP.swift in Sources */,
 				BF7FE29C22D982A00027B3FE /* ChildCandoRegisterViewController.swift in Sources */,
@@ -1336,6 +1379,7 @@
 				BF7FE28E22D8881D0027B3FE /* SettingMainViewController.swift in Sources */,
 				BF7FE2A222D99B610027B3FE /* ExUIImage.swift in Sources */,
 				BFC8CF4122E1A3E900AF87E6 /* CanDoRegisterButton.swift in Sources */,
+				BF2FB155230FDFAB0033C104 /* BreastFeedingAdBannerView.swift in Sources */,
 				BF2FB13C230E67890033C104 /* BreastFeedingTimer.swift in Sources */,
 				BF1CE89A22D5990700ACF7F8 /* AppDelegate.swift in Sources */,
 				BF7FE2A022D9859B0027B3FE /* NavigationBarCustomView.swift in Sources */,
@@ -1346,6 +1390,7 @@
 				BFC8CF1C22DDD71100AF87E6 /* SeeCollectionViewCell.swift in Sources */,
 				BF7FE28C22D887EC0027B3FE /* BreastFeedingMainViewController.swift in Sources */,
 				BF7FE28722D886EC0027B3FE /* ChildCanDoViewController.swift in Sources */,
+				BF2FB151230FDD120033C104 /* BreastFeedingMemoView.swift in Sources */,
 				BF7FE29322D88C4B0027B3FE /* ChildCanDo.swift in Sources */,
 				BFC8CF4D22E1A91C00AF87E6 /* ExScrollViewInit.swift in Sources */,
 				BF7FE29722D88CF90027B3FE /* ExNotification.swift in Sources */,
