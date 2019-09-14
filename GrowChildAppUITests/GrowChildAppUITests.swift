@@ -78,12 +78,13 @@ class GrowChildAppUITests: XCTestCase {
    func test4() {
       let app = XCUIApplication()
       app.buttons["CanDoSeeButton"].tap()
-      
-      app.swipeUp()
-      sleep(1)
-      app.swipeUp()
-      sleep(1)
-      app.swipeUp()
+    
+     
+      for tmp in 0...15 {
+         app.swipeUp()
+         sleep(1)
+         if tmp % 5 == 0 { snapshot("スワイプした, count = \(tmp)") }
+      }
    }
 
 }
