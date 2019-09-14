@@ -63,8 +63,7 @@ class GrowChildAppUITests: XCTestCase {
       let RegiButton = app.buttons["CanDoRegisterButton"]
       RegiButton.tap()
       
-      
-      
+            
             
    }
    

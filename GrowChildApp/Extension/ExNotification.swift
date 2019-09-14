@@ -12,4 +12,5 @@ extension Notification.Name {
    static let SellectImageNowSellected = Notification.Name("SellectImageNowSellected")
    static let SellectImageNowNotSellected = Notification.Name("SellectImageNowNotSellected")
    static let TapStartStopButton = Notification.Name("TapStartStopButton")
+   static let FinishRegiButtonTap = Notification.Name("FinishRegiButtonTap")
 }
