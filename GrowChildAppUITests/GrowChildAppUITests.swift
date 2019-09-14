@@ -36,8 +36,9 @@ class GrowChildAppUITests: XCTestCase {
       let app = XCUIApplication()
       app.buttons["CanDoRegiButton"].tap()
       app/*@START_MENU_TOKEN@*/.images["SellectImageView"]/*[[".scrollViews[\"RegiScrollView\"].images[\"SellectImageView\"]",".images[\"SellectImageView\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-      app.sheets["(name)の写真を登録"].buttons["キャンセル"].tap()
       snapshot("4")
+      app.sheets["(name)の写真を登録"].buttons["キャンセル"].tap()
+      
       app/*@START_MENU_TOKEN@*/.buttons["CanDoRegisterButton"]/*[[".scrollViews[\"RegiScrollView\"].buttons[\"CanDoRegisterButton\"]",".buttons[\"CanDoRegisterButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
    
@@ -45,30 +46,44 @@ class GrowChildAppUITests: XCTestCase {
       let app = XCUIApplication()
       app.buttons["CanDoRegiButton"].tap()
       
+      snapshot("画面遷移後")
+      
       let CanDoTextField = app.textFields["CanDoTextField"]
       CanDoTextField.tap()
       CanDoTextField.typeText("ハイハイ")
+      
+      snapshot("できたこと入力後")
       
       let MemoOfTextView = app.textViews["MemoOfTextView"]
       MemoOfTextView.tap()
       MemoOfTextView.typeText("朝にできた。\n嬉しかったよ。")
       
+      snapshot("メモの入力後")
       
       let CandoTextLabel = app.staticTexts["CanDoTextLabel"]
       CandoTextLabel.tap()
+      
+      snapshot("キーボードとじた")
 
       MemoOfTextView.swipeUp()
       
-      
+      snapshot("登録ボタン押す前")
       let RegiButton = app.buttons["CanDoRegisterButton"]
       RegiButton.tap()
       
-            
+      snapshot("登録ボタン押した後")
             
    }
    
    func test4() {
-                  
+      let app = XCUIApplication()
+      app.buttons["CanDoSeeButton"].tap()
+      
+      app.swipeUp()
+      sleep(1)
+      app.swipeUp()
+      sleep(1)
+      app.swipeUp()
    }
 
 }

@@ -98,8 +98,9 @@ class RegisterScrollView: UIScrollView, UITextFieldDelegate {
    
    @objc func TapCanDoRegiButton(_ sender: UIButton) {
       print("登録ボタンタップされました")
+      RegiSterInfomation() 
       
-      RegiSterInfomation()
+      NotificationCenter.default.post(Notification(name: .FinishRegiButtonTap))
    }
    
    @objc func TapCanDoCancelButton(_ sender: UIButton) {

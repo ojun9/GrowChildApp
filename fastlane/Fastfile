@@ -84,6 +84,11 @@ platform :ios do
 
   end
 
+  lane :test do
+    increment_build_number
+    scan(scheme: "GrowChildApp")
+  end
+
   lane :release do
 
     increment_build_number
