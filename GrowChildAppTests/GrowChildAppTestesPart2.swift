@@ -1,15 +1,16 @@
 //
-//  GrowChildAppTests.swift
+//  GrowChildAppTestesPart2.swift
 //  GrowChildAppTests
 //
-//  Created by jun on 2019/07/10.
+//  Created by jun on 2019/09/14.
 //  Copyright © 2019 jun. All rights reserved.
 //
 
 import XCTest
 @testable import GrowChildApp
 
-class GrowChildAppTests: XCTestCase {
+
+class GrowChildAppTestsPart2: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,7 +24,6 @@ class GrowChildAppTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
       //XCTAssertEqual("test", ViewController().getSt(text: "test"))
-      
     }
 
     func testPerformanceExample() {

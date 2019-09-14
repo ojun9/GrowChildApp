@@ -34,15 +34,42 @@ class GrowChildAppUITests: XCTestCase {
 
    func testExample() {
       let app = XCUIApplication()
-      snapshot("1")
-      app/*@START_MENU_TOKEN@*/.buttons["CanDoRegiButton"]/*[[".otherElements[\"ChildCanDoMainViewControllerView\"].buttons[\"CanDoRegiButton\"]",".buttons[\"CanDoRegiButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-      snapshot("2")
+      app.buttons["CanDoRegiButton"].tap()
       app/*@START_MENU_TOKEN@*/.images["SellectImageView"]/*[[".scrollViews[\"RegiScrollView\"].images[\"SellectImageView\"]",".images[\"SellectImageView\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-      snapshot("3")
       app.sheets["(name)の写真を登録"].buttons["キャンセル"].tap()
       snapshot("4")
       app/*@START_MENU_TOKEN@*/.buttons["CanDoRegisterButton"]/*[[".scrollViews[\"RegiScrollView\"].buttons[\"CanDoRegisterButton\"]",".buttons[\"CanDoRegisterButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-     snapshot("5")
     }
+   
+   func testRegisterChildCanDo() {
+      let app = XCUIApplication()
+      app.buttons["CanDoRegiButton"].tap()
+      
+      let CanDoTextField = app.textFields["CanDoTextField"]
+      CanDoTextField.tap()
+      CanDoTextField.typeText("ハイハイ")
+      
+      let MemoOfTextView = app.textViews["MemoOfTextView"]
+      MemoOfTextView.tap()
+      MemoOfTextView.typeText("朝にできた。\n嬉しかったよ。")
+      
+      
+      let CandoTextLabel = app.staticTexts["CanDoTextLabel"]
+      CandoTextLabel.tap()
+
+      MemoOfTextView.swipeUp()
+      
+      
+      let RegiButton = app.buttons["CanDoRegisterButton"]
+      RegiButton.tap()
+      
+      
+      
+            
+   }
+   
+   func test4() {
+                  
+   }
 
 }

@@ -61,6 +61,7 @@ extension RegisterScrollView {
    
    
    func InitObjectIdentify() {
+      self.accessibilityIdentifier = "RegisterScrollView"
       CanDoTextLabel.accessibilityIdentifier = "CanDoTextLabel"
       CanDoTextField.accessibilityIdentifier = "CanDoTextField"
       MemoOfCanDOTextLabel.accessibilityIdentifier = "MemoOfCanDOTextLabel"

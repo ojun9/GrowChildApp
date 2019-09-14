@@ -59,7 +59,7 @@ class ChildCanDoMainViewController: UIViewController {
    
    //MARK:- Init
    private func InitCanDoRegiButton() {
-      CanDoRegiButton.backgroundColor = .purple
+      CanDoRegiButton.backgroundColor = UIColor.flatTeal()
       CanDoRegiButton.addTarget(self, action: #selector(TapCanDoRegiButton(_:)), for: .touchUpInside)
       self.view.addSubview(CanDoRegiButton)
       
@@ -72,7 +72,7 @@ class ChildCanDoMainViewController: UIViewController {
    }
    
    private func InitCanDoSeeButton() {
-      CanDoSeeButton.backgroundColor = .blue
+      CanDoSeeButton.backgroundColor = UIColor.flatBlue()
       CanDoSeeButton.addTarget(self, action: #selector(TapCanDoSeeButton(_:)), for: .touchUpInside)
       self.view.addSubview(CanDoSeeButton)
       
