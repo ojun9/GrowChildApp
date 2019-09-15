@@ -82,7 +82,6 @@ class GrowChildAppUITests: XCTestCase {
      
       for tmp in 0...15 {
          app.swipeUp()
-         sleep(1)
          if tmp % 5 == 0 { snapshot("スワイプした, count = \(tmp)") }
       }
    }

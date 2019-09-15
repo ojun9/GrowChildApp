@@ -1,5 +1,5 @@
 //
-//  ShowTappedCellView.swift
+//  ShowTapeedCellViewController.swift
 //  GrowChildApp
 //
 //  Created by jun on 2019/07/31.
@@ -9,14 +9,51 @@
 import Foundation
 import UIKit
 
-class ShowTapeedCellView: UIView {
+class ShowTapeedCellViewController: UIViewController {
    
-   override init(frame: CGRect) {
-      super.init(frame: frame)
+//   let TitleLabel: UILabel?
+//   let ChildImage: UIImage?
+//   let MemoView: UITextView?
+//   let UserSellectImage: UIImage?
+//   let AfterMemoView: UITextView?
+//   let DeleteButton: UIButton?
+//   
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+   
+//      InitTitleLabel()
+//      InitChildImage()
+//      InitMemoView()
+//      InitUserSellectImage()
+//      InitAfterMemoView()
+//      InitDeleteButton()
+      
    }
    
    
-   required init?(coder aDecoder: NSCoder) {
-      fatalError("cannt init ")
+   func InitTitleLabel() {
+      
    }
+   
+   func InitChildImage() {
+        
+   }
+     
+   func InitMemoView() {
+        
+    }
+     
+   func InitUserSellectImage() {
+        
+   }
+     
+   func InitAfterMemoView() {
+        
+   }
+     
+   func InitDeleteButton() {
+        
+   }
+     
 }
