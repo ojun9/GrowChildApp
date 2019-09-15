@@ -38,7 +38,10 @@ extension ChildCanDoSeeViewController: UICollectionViewDataSource, UICollectionV
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       print("Cell tap \(indexPath.row)")
       //performSegue(withIdentifier: "toSubViewController",sender: nil)
+      let TappdCellVC = ShowTapeedCellViewController()
+      navigationController?.pushViewController(TappdCellVC, animated: true)
       
+     
    }
    
    // Segue 準備

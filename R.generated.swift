@@ -120,10 +120,16 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "Main"
+      let showTapeedCellVC = StoryboardViewControllerResource<ShowTapeedCellViewController>(identifier: "ShowTapeedCellVC")
+      
+      func showTapeedCellVC(_: Void = ()) -> ShowTapeedCellViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: showTapeedCellVC)
+      }
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
+        if _R.storyboard.main().showTapeedCellVC() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'showTapeedCellVC' could not be loaded from storyboard 'Main' as 'ShowTapeedCellViewController'.") }
       }
       
       fileprivate init() {}
