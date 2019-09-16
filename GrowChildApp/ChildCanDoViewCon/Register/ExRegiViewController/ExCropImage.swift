@@ -14,7 +14,14 @@ extension ChildCandoRegisterViewController: CropViewControllerDelegate {
    //キャンセルを押した時の処理
    func cropViewController(_ cropViewController: CropViewController, didFinishCancelled cancelled: Bool) {
       print("Cropperでキャンセル押された")
-      dismiss(animated: true, completion: nil)
+
+      if #available(iOS 13.0, *) {
+         let viewController = cropViewController.children.first!
+         viewController.modalTransitionStyle = .coverVertical
+         viewController.presentingViewController?.dismiss(animated: true, completion: nil)
+      }else{
+         dismiss(animated: true, completion: nil)
+      }
    }
    
   

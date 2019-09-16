@@ -141,13 +141,19 @@ class ShowTapeedCellViewController: UIViewController {
       }
    }
    
+   public func GetTitle(SetTitle: String) {
+      self.TitleLabel.text = SetTitle
+   }
+   
+   //ユーザが最初に登録した画像
    public func GetChildImage(SetImage: UIImage) {
       self.ChildImage = SetImage
       print("画像のセット完了")
    }
-   
+   //ユーザがお好むで保存した画像
    public func GetUserSellectImage(SetImage: UIImage) {
       self.UserSellectImage = SetImage
+      self.UserSellectImageView.image = UserSellectImage
       print("UserSellectImageのセット完了")
    }
      

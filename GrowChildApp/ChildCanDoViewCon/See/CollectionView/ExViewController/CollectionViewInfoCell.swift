@@ -35,11 +35,13 @@ extension ChildCanDoSeeViewController: UICollectionViewDataSource, UICollectionV
    
 
    // Cell が選択された場合
+   // ここで値を渡して画面遷移を行なっている。
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       print("Cell tap \(indexPath.row)")
       
       if let TappedCell = collectionView.cellForItem(at: indexPath) as? SeeCollectionViewCell {
          let TappdCellVC = ShowTapeedCellViewController()
+         TappdCellVC.GetTitle(SetTitle: TappedCell.CellTitleLabel.text!)
          TappdCellVC.GetUserSellectImage(SetImage: TappedCell.CellChildImageView.image!)
          navigationController?.pushViewController(TappdCellVC, animated: true)
       }
