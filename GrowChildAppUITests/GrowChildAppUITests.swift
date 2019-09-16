@@ -75,11 +75,32 @@ class GrowChildAppUITests: XCTestCase {
             
    }
    
-   func test4() {
+   func testCellCheck() {
+      let app = XCUIApplication()
+      app.buttons["CanDoRegiButton"].tap()
+      let CanDoTextField = app.textFields["CanDoTextField"]
+      CanDoTextField.tap()
+      CanDoTextField.typeText("ハイハイ")
+
+      let MemoOfTextView = app.textViews["MemoOfTextView"]
+      MemoOfTextView.tap()
+      MemoOfTextView.typeText("朝にできた。\n嬉しかったよ。")
+
+      let CandoTextLabel = app.staticTexts["CanDoTextLabel"]
+      CandoTextLabel.tap()
+      MemoOfTextView.swipeUp()
+
+      let RegiButton = app.buttons["CanDoRegisterButton"]
+      RegiButton.tap()
+      
+      app.buttons["CanDoSeeButton"].tap()
+
+   }
+   
+   func testScanScrollCell() {
       let app = XCUIApplication()
       app.buttons["CanDoSeeButton"].tap()
     
-     
       for tmp in 0...15 {
          app.swipeUp()
          if tmp % 5 == 0 { snapshot("スワイプした, count = \(tmp)") }

@@ -49,7 +49,7 @@
 		BF7FE2A222D99B610027B3FE /* ExUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE2A122D99B610027B3FE /* ExUIImage.swift */; };
 		BF7FE2A922D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FE2A822D9A00B0027B3FE /* NavigationBarCustomViewImageAndText.swift */; };
 		BF98B7D022DC4D7D00F557FE /* TOCropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF98B7CE22DC4D7200F557FE /* TOCropViewController.framework */; };
-		BFAB92A8232CCD810090F1A7 /* GrowChildAppTestesPart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB92A7232CCD810090F1A7 /* GrowChildAppTestesPart2.swift */; };
+		BFAB92A8232CCD810090F1A7 /* GrowChildAppTestsInShowTapeedCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB92A7232CCD810090F1A7 /* GrowChildAppTestsInShowTapeedCellViewController.swift */; };
 		BFB63B1522EC018B00DBE840 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFB63B1722EC018B00DBE840 /* Localizable.strings */; };
 		BFC8CEF822DC715300AF87E6 /* CropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC8CEE122DC713500AF87E6 /* CropViewController.framework */; };
 		BFC8CEF922DC715E00AF87E6 /* TOCropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC8CEE422DC713500AF87E6 /* TOCropViewController.framework */; };
@@ -212,7 +212,7 @@
 		BF98B7CD22DC4D7200F557FE /* 5E2DB5A5-C654-3895-BBBA-D7F1289A12D2.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "5E2DB5A5-C654-3895-BBBA-D7F1289A12D2.bcsymbolmap"; sourceTree = "<group>"; };
 		BF98B7CE22DC4D7200F557FE /* TOCropViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TOCropViewController.framework; sourceTree = "<group>"; };
 		BF98B7CF22DC4D7200F557FE /* E51F6BB9-E182-3335-B6A9-6F71C5FF14E9.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "E51F6BB9-E182-3335-B6A9-6F71C5FF14E9.bcsymbolmap"; sourceTree = "<group>"; };
-		BFAB92A7232CCD810090F1A7 /* GrowChildAppTestesPart2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowChildAppTestesPart2.swift; sourceTree = "<group>"; };
+		BFAB92A7232CCD810090F1A7 /* GrowChildAppTestsInShowTapeedCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowChildAppTestsInShowTapeedCellViewController.swift; sourceTree = "<group>"; };
 		BFB63B0822EC00D100DBE840 /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/Main.strings"; sourceTree = "<group>"; };
 		BFB63B0922EC00D100DBE840 /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BFB63B0A22EC00D100DBE840 /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -441,7 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1CE8AE22D5990800ACF7F8 /* GrowChildAppTests.swift */,
-				BFAB92A7232CCD810090F1A7 /* GrowChildAppTestesPart2.swift */,
+				BFAB92A7232CCD810090F1A7 /* GrowChildAppTestsInShowTapeedCellViewController.swift */,
 				BF1CE8B022D5990800ACF7F8 /* Info.plist */,
 			);
 			path = GrowChildAppTests;
@@ -1408,7 +1408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1CE8AF22D5990800ACF7F8 /* GrowChildAppTests.swift in Sources */,
-				BFAB92A8232CCD810090F1A7 /* GrowChildAppTestesPart2.swift in Sources */,
+				BFAB92A8232CCD810090F1A7 /* GrowChildAppTestsInShowTapeedCellViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
