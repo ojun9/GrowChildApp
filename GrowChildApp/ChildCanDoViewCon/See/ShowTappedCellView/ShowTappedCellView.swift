@@ -21,8 +21,10 @@ class ShowTapeedCellViewController: UIViewController {
    var NaviAndStatusBarHeight: CGFloat = 0
    
    var TitleLabel = UILabel()
+   var ChildImage = UIImage()
    var ChildImageView = UIImageView()
    var MemoView = UITextView()
+   var UserSellectImage = UIImage()
    var UserSellectImageView = UIImageView()
    var AfterMemoView = UITextView()
    var DeleteButton = UIButton()
@@ -37,13 +39,16 @@ class ShowTapeedCellViewController: UIViewController {
       SetUpBarHeight()
    
       InitTitleLabel()
-      InitChildImage()
+      InitChildImageView()
       InitMemoView()
-      InitUserSellectImage()
-      InitAfterMemoView()
+      InitUserSellectImageView()
       InitDeleteButton()
       
       SNPTitleLabel()
+      SNPChildImageView()
+      SNPMemoView()
+      SNPUserSellectImageView()
+      SNPDeleteButton()
    }
    
    func InitViewSizeInfo() {
@@ -62,37 +67,88 @@ class ShowTapeedCellViewController: UIViewController {
    }
    
    func InitTitleLabel() {
-      TitleLabel.backgroundColor = UIColor.flatRed()
+      TitleLabel.backgroundColor = UIColor.flatBlue()
       self.view.addSubview(TitleLabel)
    }
    
    func SNPTitleLabel() {
       TitleLabel.snp.makeConstraints { make in
-         make.top.equalTo(self.view.snp.top).offset(NaviAndStatusBarHeight + 1)
+         make.top.equalTo(self.view.snp.top).offset(NaviAndStatusBarHeight + 15)
+         make.leading.equalTo(self.view.snp.leading).offset(ViewW / 20)
+         make.width.equalTo(ViewW / 20 * 13)
+         make.height.equalTo(ViewH / 20)
+      }
+   }
+   
+   func InitChildImageView() {
+      ChildImageView.image = ChildImage
+      //NOTE: このバックグラウンドは決しておけ
+      ChildImageView.backgroundColor = UIColor.flatBlue()
+      self.view.addSubview(ChildImageView)
+   }
+   
+   func SNPChildImageView() {
+      ChildImageView.snp.makeConstraints { make in
+         make.top.equalTo(self.view.snp.top).offset(NaviAndStatusBarHeight + 15)
+         make.leading.equalTo(TitleLabel.snp.trailing).offset(ViewW / 20)
+         make.width.equalTo(ViewW / 20 * 4)
+         make.height.equalTo(ViewH / 20)
+      }
+   }
+     
+   func InitMemoView() {
+      MemoView.backgroundColor = UIColor.flatGray()
+      self.view.addSubview(MemoView)
+    }
+   
+   func SNPMemoView() {
+      MemoView.snp.makeConstraints { make in
+         make.top.equalTo(TitleLabel.snp.bottom).offset(15)
+         make.leading.equalTo(self.view.snp.leading).offset(ViewW / 18)
+         make.width.equalTo(ViewW / 18 * 16)
+         make.height.equalTo(ViewH / 20 * 5)
+      }
+   }
+     
+   func InitUserSellectImageView() {
+      UserSellectImageView.backgroundColor = UIColor.flatCoffee()
+      self.view.addSubview(UserSellectImageView)
+   }
+   
+   func SNPUserSellectImageView() {
+      let WideSize = ViewH / 20 * 5
+      let leadingAnchor = (ViewW - WideSize) / 2
+      UserSellectImageView.snp.makeConstraints { make in
+         make.top.equalTo(MemoView.snp.bottom).offset(15)
+         make.leading.equalTo(self.view.snp.leading).offset(leadingAnchor)
+         make.width.equalTo(ViewH / 20 * 5)
+         make.height.equalTo(ViewH / 20 * 5)
+      }
+   }
+     
+     
+   func InitDeleteButton() {
+      DeleteButton.backgroundColor = UIColor.flatMagenta()
+      self.view.addSubview(DeleteButton)
+   }
+   
+   func SNPDeleteButton() {
+      DeleteButton.snp.makeConstraints { make in
+         make.top.equalTo(UserSellectImageView.snp.bottom).offset(15)
          make.leading.equalTo(self.view.snp.leading).offset(ViewW / 20)
          make.width.equalTo(ViewW / 20 * 18)
          make.height.equalTo(ViewH / 20)
       }
    }
    
-   func InitChildImage() {
-        
+   public func GetChildImage(SetImage: UIImage) {
+      self.ChildImage = SetImage
+      print("画像のセット完了")
    }
-     
-   func InitMemoView() {
-        
-    }
-     
-   func InitUserSellectImage() {
-        
-   }
-     
-   func InitAfterMemoView() {
-        
-   }
-     
-   func InitDeleteButton() {
-        
+   
+   public func GetUserSellectImage(SetImage: UIImage) {
+      self.UserSellectImage = SetImage
+      print("UserSellectImageのセット完了")
    }
      
 }
