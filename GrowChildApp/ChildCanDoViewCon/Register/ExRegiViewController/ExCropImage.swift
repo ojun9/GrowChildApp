@@ -22,7 +22,6 @@ extension ChildCandoRegisterViewController: CropViewControllerDelegate {
          dismiss(animated: true, completion: nil)
       }
    }
-   
   
    //完了を押した後の処理
    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
