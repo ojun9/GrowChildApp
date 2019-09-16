@@ -31,6 +31,12 @@ extension ChildCandoRegisterViewController: CropViewControllerDelegate {
       print("クロップで画像がトリミングされました")
       print("RegiScrollViewに画像を反映する")
       self.RegiScrollView?.SellectImageView?.SetUserSellectedImaeg(image: image)
-      dismiss(animated: true)
+       if #available(iOS 13.0, *) {
+         let viewController = cropViewController.children.first!
+         viewController.modalTransitionStyle = .coverVertical
+         viewController.presentingViewController?.dismiss(animated: true, completion: nil)
+      }else{
+         dismiss(animated: true, completion: nil)
+      }
    }
 }
