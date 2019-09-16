@@ -75,25 +75,13 @@ class GrowChildAppUITests: XCTestCase {
             
    }
    
-   func testCellCheck() {
+   func testAfterTappCellVC() {
       let app = XCUIApplication()
-      app.buttons["CanDoRegiButton"].tap()
-      let CanDoTextField = app.textFields["CanDoTextField"]
-      CanDoTextField.tap()
-      CanDoTextField.typeText("ハイハイ")
-
-      let MemoOfTextView = app.textViews["MemoOfTextView"]
-      MemoOfTextView.tap()
-      MemoOfTextView.typeText("朝にできた。\n嬉しかったよ。")
-
-      let CandoTextLabel = app.staticTexts["CanDoTextLabel"]
-      CandoTextLabel.tap()
-      MemoOfTextView.swipeUp()
-
-      let RegiButton = app.buttons["CanDoRegisterButton"]
-      RegiButton.tap()
-      
       app.buttons["CanDoSeeButton"].tap()
+      
+      let cell = app.collectionViews.cells.element(boundBy: 2)
+      cell.tap()
+      snapshot("Cellをタップした後")
 
    }
    

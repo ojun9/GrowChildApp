@@ -76,7 +76,7 @@ class ShowTapeedCellViewController: UIViewController {
          make.top.equalTo(self.view.snp.top).offset(NaviAndStatusBarHeight + 15)
          make.leading.equalTo(self.view.snp.leading).offset(ViewW / 20)
          make.width.equalTo(ViewW / 20 * 13)
-         make.height.equalTo(ViewH / 20)
+         make.height.equalTo(ViewH / 20 * 2)
       }
    }
    
@@ -92,7 +92,7 @@ class ShowTapeedCellViewController: UIViewController {
          make.top.equalTo(self.view.snp.top).offset(NaviAndStatusBarHeight + 15)
          make.leading.equalTo(TitleLabel.snp.trailing).offset(ViewW / 20)
          make.width.equalTo(ViewW / 20 * 4)
-         make.height.equalTo(ViewH / 20)
+         make.height.equalTo(ViewH / 20 * 2)
       }
    }
      

@@ -37,19 +37,14 @@ extension ChildCanDoSeeViewController: UICollectionViewDataSource, UICollectionV
    // Cell が選択された場合
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       print("Cell tap \(indexPath.row)")
-      //performSegue(withIdentifier: "toSubViewController",sender: nil)
-      let TappdCellVC = ShowTapeedCellViewController()
-      navigationController?.pushViewController(TappdCellVC, animated: true)
       
-     
-   }
-   
-   // Segue 準備
-   override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-      if (segue.identifier == "toSubViewController") {
-
+      if let TappedCell = collectionView.cellForItem(at: indexPath) as? SeeCollectionViewCell {
+         let TappdCellVC = ShowTapeedCellViewController()
+         TappdCellVC.GetUserSellectImage(SetImage: TappedCell.CellChildImageView.image!)
+         navigationController?.pushViewController(TappdCellVC, animated: true)
       }
    }
+
  
    
 }
